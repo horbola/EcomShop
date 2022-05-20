@@ -1,212 +1,1289 @@
-22:39:06.717 [RunLevelControllerThread-1579451924418] DEBUG javax.servlet.Filter - init()
-22:39:10.024 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
-22:39:21.620 [admin-listener(2)] DEBUG javax.servlet.Filter - init()
-22:39:29.133 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - showAllProducts()
-22:40:27.887 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-22:40:27.892 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-22:40:27.893 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is - /authorize/MakeOrder?cartJson=[{%22productId%22:%221%22,%22mfrId%22:%22aci%22,%22description%22:%22Mosquito%20Coil%22,%22price%22:%22100.0%22,%22quantity%22:%22500%22},{%22productId%22:%222%22,%22mfrId%22:%22aci%22,%22description%22:%22Mosquito%20Spray%22,%22price%22:%22100.0%22,%22quantity%22:%22500%22}]
-22:40:27.896 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-22:40:27.897 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-22:40:27.936 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder()
-22:40:27.938 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from sql is: 16
-22:40:27.941 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from order bean is: 17
-22:40:27.943 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",17,1,"aci",500);
-22:40:27.944 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",17,2,"aci",500);
-22:40:28.089 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",17,1,"aci",500);
-22:40:28.174 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",17,2,"aci",500);
-22:40:28.174 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - feedbackOrderSql is: select orderId, productId, mfrId, quantity from OrdersTemp where uName = "shamim"and orderId = 17;
-22:40:28.185 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 17
-22:40:28.185 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 1
-22:40:28.185 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: aci
-22:40:28.186 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 500
-22:40:28.187 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 17
-22:40:28.187 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 2
-22:40:28.188 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: aci
-22:40:28.188 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 500
-22:40:41.021 [http-listener-1(2)] DEBUG javax.servlet.Filter - doFilter()
-22:40:41.022 [http-listener-1(2)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-22:40:41.023 [http-listener-1(2)] DEBUG javax.servlet.Filter - processing()
-22:40:41.024 [http-listener-1(2)] DEBUG javax.servlet.Filter - getContextRelativeUri()= /authorize/MakeOrder?cartJson=[{%22productId%22:%223%22,%22mfrId%22:%22ulv%22,%22description%22:%22petrolium%20jelly%22,%22price%22:%2250.0%22,%22quantity%22:%2220%22},{%22productId%22:%224%22,%22mfrId%22:%22sqr%22,%22description%22:%22fexo%20fenadin%22,%22price%22:%22300.0%22,%22quantity%22:%225%22},{%22productId%22:%22654%22,%22mfrId%22:%22sss%22,%22description%22:%22adsfadf%22,%22price%22:%22345.0%22,%22quantity%22:%224%22}]
-22:40:41.024 [http-listener-1(2)] DEBUG javax.servlet.Filter - Redirect url from filter: /jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired.+Please+login..&origUrl=%2Fauthorize%2FMakeOrder%3FcartJson%3D%5B%7B%2522productId%2522%3A%25223%2522%2C%2522mfrId%2522%3A%2522ulv%2522%2C%2522description%2522%3A%2522petrolium%2520jelly%2522%2C%2522price%2522%3A%252250.0%2522%2C%2522quantity%2522%3A%252220%2522%7D%2C%7B%2522productId%2522%3A%25224%2522%2C%2522mfrId%2522%3A%2522sqr%2522%2C%2522description%2522%3A%2522fexo%2520fenadin%2522%2C%2522price%2522%3A%2522300.0%2522%2C%2522quantity%2522%3A%25225%2522%7D%2C%7B%2522productId%2522%3A%2522654%2522%2C%2522mfrId%2522%3A%2522sss%2522%2C%2522description%2522%3A%2522adsfadf%2522%2C%2522price%2522%3A%2522345.0%2522%2C%2522quantity%2522%3A%25224%2522%7D%5D
-22:40:41.686 [http-listener-1(2)] DEBUG javax.servlet.Filter - processing(): after redirect
-22:40:41.686 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-22:40:41.687 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-22:40:41.688 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder()
-22:40:41.690 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from sql is: 17
-22:40:41.691 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from order bean is: 18
-22:40:41.700 [http-listener-1(2)] DEBUG javax.servlet.Filter - doAfterProcessing()
-22:40:51.592 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-22:40:51.594 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-22:40:51.594 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is - /authorize/MakeOrder?cartJson=[{%22productId%22:%223%22,%22mfrId%22:%22ulv%22,%22description%22:%22petrolium%20jelly%22,%22price%22:%2250.0%22,%22quantity%22:%2220%22},{%22productId%22:%224%22,%22mfrId%22:%22sqr%22,%22description%22:%22fexo%20fenadin%22,%22price%22:%22300.0%22,%22quantity%22:%225%22},{%22productId%22:%22654%22,%22mfrId%22:%22sss%22,%22description%22:%22adsfadf%22,%22price%22:%22345.0%22,%22quantity%22:%224%22}]
-22:40:51.595 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-22:40:51.596 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-22:40:51.597 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder()
-22:40:51.599 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from sql is: 17
-22:40:51.600 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from order bean is: 18
-22:40:51.600 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",18,3,"ulv",20);
-22:40:51.600 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",18,4,"sqr",5);
-22:40:51.601 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",18,654,"sss",4);
-22:40:51.780 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",18,3,"ulv",20);
-22:40:51.907 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",18,4,"sqr",5);
-22:40:52.007 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("shamim",18,654,"sss",4);
-22:40:52.007 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - feedbackOrderSql is: select orderId, productId, mfrId, quantity from OrdersTemp where uName = "shamim"and orderId = 18;
-22:40:52.024 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 18
-22:40:52.024 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 3
-22:40:52.024 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: ulv
-22:40:52.025 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 20
-22:40:52.025 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 18
-22:40:52.025 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 4
-22:40:52.025 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: sqr
-22:40:52.025 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 5
-22:40:52.025 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 18
-22:40:52.026 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 654
-22:40:52.026 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: sss
-22:40:52.026 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 4
-22:52:56.724 [http-listener-1(3)] DEBUG javax.servlet.Filter - doFilter()
-22:52:56.725 [http-listener-1(3)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-22:52:56.726 [http-listener-1(3)] DEBUG javax.servlet.Filter - processing()
-22:52:56.727 [http-listener-1(3)] DEBUG javax.servlet.Filter - getContextRelativeUri()= /jsp/protected/Profile.jsp
-22:52:56.727 [http-listener-1(3)] DEBUG javax.servlet.Filter - Redirect url from filter: /jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired.+Please+login..&origUrl=%2Fjsp%2Fprotected%2FProfile.jsp
-22:52:56.738 [http-listener-1(3)] DEBUG javax.servlet.Filter - processing(): after redirect
-22:52:56.745 [http-listener-1(3)] DEBUG javax.servlet.Filter - doAfterProcessing()
-22:53:09.550 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-22:53:09.552 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-22:53:09.553 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is - /jsp/protected/Profile.jsp
-22:53:09.553 [http-listener-1(2)] DEBUG javax.servlet.Filter - doFilter()
-22:53:09.554 [http-listener-1(2)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-22:53:09.555 [http-listener-1(2)] DEBUG javax.servlet.Filter - processing()
-22:53:09.560 [http-listener-1(2)] DEBUG javax.servlet.Filter - doAfterProcessing()
-22:53:50.754 [admin-listener(6)] DEBUG javax.servlet.Filter - destroy()
-22:53:55.620 [admin-listener(4)] DEBUG javax.servlet.Filter - init()
-22:53:57.409 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - showAllProducts()
-22:54:23.574 [http-listener-1(3)] DEBUG javax.servlet.Filter - doFilter()
-22:54:23.575 [http-listener-1(3)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-22:54:23.576 [http-listener-1(3)] DEBUG javax.servlet.Filter - processing()
-22:54:23.577 [http-listener-1(3)] DEBUG javax.servlet.Filter - getContextRelativeUri()= /authorize/MakeOrder?cartJson=[{%22productId%22:%221%22,%22mfrId%22:%22aci%22,%22description%22:%22Mosquito%20Coil%22,%22price%22:%22100.0%22,%22quantity%22:%22500%22},{%22productId%22:%222%22,%22mfrId%22:%22aci%22,%22description%22:%22Mosquito%20Spray%22,%22price%22:%22100.0%22,%22quantity%22:%22500%22}]
-22:54:23.577 [http-listener-1(3)] DEBUG javax.servlet.Filter - Redirect url from filter: /jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired.+Please+login..&origUrl=%2Fauthorize%2FMakeOrder%3FcartJson%3D%5B%7B%2522productId%2522%3A%25221%2522%2C%2522mfrId%2522%3A%2522aci%2522%2C%2522description%2522%3A%2522Mosquito%2520Coil%2522%2C%2522price%2522%3A%2522100.0%2522%2C%2522quantity%2522%3A%2522500%2522%7D%2C%7B%2522productId%2522%3A%25222%2522%2C%2522mfrId%2522%3A%2522aci%2522%2C%2522description%2522%3A%2522Mosquito%2520Spray%2522%2C%2522price%2522%3A%2522100.0%2522%2C%2522quantity%2522%3A%2522500%2522%7D%5D
-22:54:24.002 [http-listener-1(3)] DEBUG javax.servlet.Filter - processing(): after redirect
-22:54:24.003 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-22:54:24.003 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-22:54:24.073 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder()
-22:54:24.079 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from sql is: 18
-22:54:24.080 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from order bean is: 19
-22:54:24.084 [http-listener-1(3)] DEBUG javax.servlet.Filter - doAfterProcessing()
-22:54:37.375 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-22:54:37.379 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-22:54:37.380 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is - /authorize/MakeOrder?cartJson=[{%22productId%22:%221%22,%22mfrId%22:%22aci%22,%22description%22:%22Mosquito%20Coil%22,%22price%22:%22100.0%22,%22quantity%22:%22500%22},{%22productId%22:%222%22,%22mfrId%22:%22aci%22,%22description%22:%22Mosquito%20Spray%22,%22price%22:%22100.0%22,%22quantity%22:%22500%22}]
-22:54:37.380 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-22:54:37.381 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-22:54:37.381 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder()
-22:54:37.383 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from sql is: 18
-22:54:37.383 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from order bean is: 19
-22:54:37.387 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",19,1,"aci",500);
-22:54:37.390 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",19,2,"aci",500);
-22:54:37.608 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",19,1,"aci",500);
-22:54:37.725 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",19,2,"aci",500);
-22:54:37.725 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - feedbackOrderSql is: select orderId, productId, mfrId, quantity from OrdersTemp where uName = "saif"and orderId = 19;
-22:54:37.736 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 19
-22:54:37.736 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 1
-22:54:37.737 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: aci
-22:54:37.737 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 500
-22:54:37.738 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 19
-22:54:37.739 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 2
-22:54:37.739 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: aci
-22:54:37.740 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 500
-22:55:01.616 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter()
-22:55:01.619 [http-listener-1(4)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-22:55:01.621 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing()
-22:55:01.622 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-22:55:01.622 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-22:55:01.626 [http-listener-1(4)] DEBUG javax.servlet.Filter - doAfterProcessing()
-22:55:18.175 [http-listener-1(3)] DEBUG javax.servlet.Filter - doFilter()
-22:55:18.176 [http-listener-1(3)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-22:55:18.177 [http-listener-1(3)] DEBUG javax.servlet.Filter - processing()
-22:55:18.177 [http-listener-1(3)] DEBUG javax.servlet.Filter - getContextRelativeUri()= /authorize/MakeOrder
-22:55:18.177 [http-listener-1(3)] DEBUG javax.servlet.Filter - Redirect url from filter: /jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired.+Please+login..&origUrl=%2Fauthorize%2FMakeOrder
-22:55:18.181 [http-listener-1(3)] DEBUG javax.servlet.Filter - processing(): after redirect
-22:55:18.182 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-22:55:18.182 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-22:55:18.189 [http-listener-1(3)] DEBUG javax.servlet.Filter - doAfterProcessing()
-22:55:30.772 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-22:55:30.775 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-22:55:30.776 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is - /authorize/MakeOrder
-22:55:30.777 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-22:55:30.777 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-22:55:57.235 [http-listener-1(5)] DEBUG javax.servlet.Filter - doFilter()
-22:55:57.236 [http-listener-1(5)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-22:55:57.237 [http-listener-1(5)] DEBUG javax.servlet.Filter - processing()
-22:55:57.238 [http-listener-1(5)] DEBUG javax.servlet.Filter - doAfterProcessing()
-23:02:11.612 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
-23:02:16.744 [admin-listener(1)] DEBUG javax.servlet.Filter - init()
-23:02:18.821 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - showAllProducts()
-23:02:37.429 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - showAllProducts()
-23:02:50.312 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - showAllProducts()
-23:02:54.181 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - showAllProducts()
-23:02:58.642 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter()
-23:02:58.642 [http-listener-1(4)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-23:02:58.643 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing()
-23:02:58.643 [http-listener-1(4)] DEBUG javax.servlet.Filter - getContextRelativeUri()= /authorize/MakeOrder?cartJson=[{%22productId%22:%223%22,%22mfrId%22:%22ulv%22,%22description%22:%22petrolium%20jelly%22,%22price%22:%2250.0%22,%22quantity%22:%2220%22},{%22productId%22:%224%22,%22mfrId%22:%22sqr%22,%22description%22:%22fexo%20fenadin%22,%22price%22:%22300.0%22,%22quantity%22:%225%22}]
-23:02:58.644 [http-listener-1(4)] DEBUG javax.servlet.Filter - Redirect url from filter: /jsp/request/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired.+Please+login..&origUrl=%2Fauthorize%2FMakeOrder%3FcartJson%3D%5B%7B%2522productId%2522%3A%25223%2522%2C%2522mfrId%2522%3A%2522ulv%2522%2C%2522description%2522%3A%2522petrolium%2520jelly%2522%2C%2522price%2522%3A%252250.0%2522%2C%2522quantity%2522%3A%252220%2522%7D%2C%7B%2522productId%2522%3A%25224%2522%2C%2522mfrId%2522%3A%2522sqr%2522%2C%2522description%2522%3A%2522fexo%2520fenadin%2522%2C%2522price%2522%3A%2522300.0%2522%2C%2522quantity%2522%3A%25225%2522%7D%5D
-23:02:59.029 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(): after redirect
-23:02:59.029 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-23:02:59.030 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-23:02:59.129 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder()
-23:02:59.131 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from sql is: 19
-23:02:59.132 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from order bean is: 20
-23:02:59.134 [http-listener-1(4)] DEBUG javax.servlet.Filter - doAfterProcessing()
-23:03:11.792 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-23:03:11.796 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-23:03:11.797 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is - /authorize/MakeOrder?cartJson=[{%22productId%22:%223%22,%22mfrId%22:%22ulv%22,%22description%22:%22petrolium%20jelly%22,%22price%22:%2250.0%22,%22quantity%22:%2220%22},{%22productId%22:%224%22,%22mfrId%22:%22sqr%22,%22description%22:%22fexo%20fenadin%22,%22price%22:%22300.0%22,%22quantity%22:%225%22}]
-23:03:11.797 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-23:03:11.798 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-23:03:11.798 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder()
-23:03:11.800 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from sql is: 19
-23:03:11.800 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from order bean is: 20
-23:03:11.800 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",20,3,"ulv",20);
-23:03:11.800 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",20,4,"sqr",5);
-23:03:12.012 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",20,3,"ulv",20);
-23:03:12.216 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",20,4,"sqr",5);
-23:03:12.217 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - feedbackOrderSql is: select orderId, productId, mfrId, quantity from OrdersTemp where uName = "saif"and orderId = 20;
-23:03:12.238 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 20
-23:03:12.238 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 3
-23:03:12.239 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: ulv
-23:03:12.242 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 20
-23:03:12.243 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 20
-23:03:12.244 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 4
-23:03:12.244 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: sqr
-23:03:12.244 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 5
-23:03:38.530 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter()
-23:03:38.531 [http-listener-1(4)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-23:03:38.532 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing()
-23:03:38.533 [http-listener-1(4)] DEBUG javax.servlet.Filter - getContextRelativeUri()= /authorize/MakeOrder?cartJson=[{%22productId%22:%22654%22,%22mfrId%22:%22sss%22,%22description%22:%22adsfadf%22,%22price%22:%22345.0%22,%22quantity%22:%224%22},{%22productId%22:%225%22,%22mfrId%22:%22sd%22,%22description%22:%22sdf%22,%22price%22:%223.0%22,%22quantity%22:%22245%22}]
-23:03:38.533 [http-listener-1(4)] DEBUG javax.servlet.Filter - Redirect url from filter: /jsp/request/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired.+Please+login..&origUrl=%2Fauthorize%2FMakeOrder%3FcartJson%3D%5B%7B%2522productId%2522%3A%2522654%2522%2C%2522mfrId%2522%3A%2522sss%2522%2C%2522description%2522%3A%2522adsfadf%2522%2C%2522price%2522%3A%2522345.0%2522%2C%2522quantity%2522%3A%25224%2522%7D%2C%7B%2522productId%2522%3A%25225%2522%2C%2522mfrId%2522%3A%2522sd%2522%2C%2522description%2522%3A%2522sdf%2522%2C%2522price%2522%3A%25223.0%2522%2C%2522quantity%2522%3A%2522245%2522%7D%5D
-23:03:38.537 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(): after redirect
-23:03:38.538 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-23:03:38.538 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-23:03:38.538 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder()
-23:03:38.540 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from sql is: 20
-23:03:38.540 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from order bean is: 21
-23:03:38.550 [http-listener-1(4)] DEBUG javax.servlet.Filter - doAfterProcessing()
-23:03:54.068 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-23:03:54.071 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Redirect url from Authenticate: /jsp/request/SignUp.jsp?notSignedUp=You+are+not+registered+to+our+Online+shopping.+Please+Sign+up..&origUrl=/authorize/MakeOrder?cartJson=[{%22productId%22:%22654%22,%22mfrId%22:%22sss%22,%22description%22:%22adsfadf%22,%22price%22:%22345.0%22,%22quantity%22:%224%22},{%22productId%22:%225%22,%22mfrId%22:%22sd%22,%22description%22:%22sdf%22,%22price%22:%223.0%22,%22quantity%22:%22245%22}]
-23:04:04.781 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost()
-23:04:05.009 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): customer not null
-23:04:05.010 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): origUrl is - /authorize/MakeOrder?cartJson=[{"productId":"654","mfrId":"sss","description":"adsfadf","price":"345.0","quantity":"4"},{"productId":"5","mfrId":"sd","description":"sdf","price":"3.0","quantity":"245"}]
-23:04:05.011 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.authorize.MakeOrder - processRequest()
-23:04:05.011 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-23:04:05.012 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder()
-23:04:05.014 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from sql is: 20
-23:04:05.016 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - orderId from order bean is: 21
-23:04:05.018 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("pinky",21,654,"sss",4);
-23:04:05.021 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("pinky",21,5,"sd",245);
-23:04:05.148 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("pinky",21,654,"sss",4);
-23:04:05.259 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("pinky",21,5,"sd",245);
-23:04:05.260 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - feedbackOrderSql is: select orderId, productId, mfrId, quantity from OrdersTemp where uName = "pinky"and orderId = 21;
-23:04:05.272 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 21
-23:04:05.272 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 654
-23:04:05.273 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: sss
-23:04:05.273 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 4
-23:04:05.273 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): orderId: 21
-23:04:05.273 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): productId: 5
-23:04:05.273 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): mfrId: sd
-23:04:05.273 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - makeOrder(): quantity: 245
+17:07:28.068 [http-nio-8080-exec-365] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+17:07:28.393 [http-nio-8080-exec-365] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+17:07:28.403 [http-nio-8080-exec-365] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), ends: 
+17:07:28.434 [http-nio-8080-exec-365] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:07:28.434 [http-nio-8080-exec-365] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:21:08.243 [http-nio-8080-exec-360] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), starts: 
+17:21:08.253 [http-nio-8080-exec-360] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), customer is null: 
+17:21:08.253 [http-nio-8080-exec-360] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), ends: 
+17:21:13.592 [http-nio-8080-exec-365] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+17:21:13.592 [http-nio-8080-exec-365] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+17:21:13.592 [http-nio-8080-exec-365] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+08:30:20.130 [http-nio-8080-exec-2] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+08:30:22.490 [http-nio-8080-exec-2] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+08:30:28.747 [http-nio-8080-exec-3] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), starts: 
+08:30:29.263 [http-nio-8080-exec-3] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), ends: 
+09:54:25.715 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:54:28.278 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:54:37.458 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), starts: 
+09:54:37.896 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), ends: 
+09:54:58.622 [http-nio-8080-exec-24] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), starts: 
+09:54:58.638 [http-nio-8080-exec-24] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), ends: 
+09:55:57.678 [http-nio-8080-exec-28] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+09:56:07.230 [http-nio-8080-exec-25] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:56:07.239 [http-nio-8080-exec-25] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:56:20.421 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+09:56:20.472 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+09:58:30.265 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+09:58:30.281 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+09:59:53.627 [http-nio-8080-exec-28] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+09:59:53.643 [http-nio-8080-exec-28] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+09:59:54.402 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+09:59:54.402 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+09:59:55.591 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:59:55.591 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:59:56.617 [http-nio-8080-exec-24] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:59:56.617 [http-nio-8080-exec-24] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+10:00:07.808 [http-nio-8080-exec-29] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+10:01:17.524 [http-nio-8080-exec-26] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+10:06:17.985 [http-nio-8080-exec-38] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:06:19.525 [http-nio-8080-exec-38] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:06:59.185 [http-nio-8080-exec-34] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:06:59.451 [http-nio-8080-exec-34] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+10:07:48.397 [http-nio-8080-exec-38] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+10:07:54.426 [http-nio-8080-exec-33] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:07:54.440 [http-nio-8080-exec-33] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:08:07.621 [http-nio-8080-exec-35] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:08:07.633 [http-nio-8080-exec-35] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+10:23:32.505 [http-nio-8080-exec-10] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:23:35.536 [http-nio-8080-exec-10] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:23:52.259 [http-nio-8080-exec-3] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:23:52.400 [http-nio-8080-exec-3] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:23:52.400 [http-nio-8080-exec-3] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:24:09.448 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), starts: 
+10:24:09.917 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), ends: 
+10:24:25.729 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), starts: 
+10:24:25.744 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.Detail - doGet(), ends: 
+10:24:29.545 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+10:24:29.576 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+10:24:34.006 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), starts: 
+10:24:34.006 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), customer is null: 
+10:24:34.006 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), ends: 
+10:24:39.437 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:24:39.453 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:24:39.468 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:24:41.459 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+10:24:41.459 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+10:24:43.175 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+10:24:43.175 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+10:24:43.175 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+10:24:58.459 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:24:58.474 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:24:58.474 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:41:04.498 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:41:06.148 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:41:17.860 [http-nio-8080-exec-21] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:41:18.141 [http-nio-8080-exec-21] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:41:18.141 [http-nio-8080-exec-21] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:43:48.136 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:43:49.839 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:04:32.515 [http-nio-8080-exec-39] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:04:32.532 [http-nio-8080-exec-39] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:04:42.986 [http-nio-8080-exec-43] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:04:43.078 [http-nio-8080-exec-43] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:04:43.087 [http-nio-8080-exec-43] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:04:45.262 [http-nio-8080-exec-36] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:04:45.280 [http-nio-8080-exec-36] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:04:45.292 [http-nio-8080-exec-36] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:06:01.064 [http-nio-8080-exec-36] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:06:02.926 [http-nio-8080-exec-36] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:08:52.845 [http-nio-8080-exec-45] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:08:54.441 [http-nio-8080-exec-45] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:15:28.798 [http-nio-8080-exec-58] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:15:30.328 [http-nio-8080-exec-58] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:18:42.043 [http-nio-8080-exec-68] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+12:18:49.806 [http-nio-8080-exec-72] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+12:19:39.673 [http-nio-8080-exec-67] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:19:39.690 [http-nio-8080-exec-67] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:19:43.116 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+12:20:52.072 [http-nio-8080-exec-73] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:20:52.083 [http-nio-8080-exec-73] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:37:01.918 [http-nio-8080-exec-72] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:37:03.635 [http-nio-8080-exec-72] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:37:39.771 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:37:39.785 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:38:02.897 [http-nio-8080-exec-70] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:38:02.909 [http-nio-8080-exec-70] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:38:04.781 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+12:38:04.794 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+12:38:06.327 [http-nio-8080-exec-75] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+12:38:06.328 [http-nio-8080-exec-75] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+12:38:06.328 [http-nio-8080-exec-75] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+12:39:56.858 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:39:56.871 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:40:55.862 [http-nio-8080-exec-76] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:40:55.875 [http-nio-8080-exec-76] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:41:05.466 [http-nio-8080-exec-83] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:41:05.483 [http-nio-8080-exec-83] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:41:50.079 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:41:51.646 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:43:10.934 [http-nio-8080-exec-86] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:43:10.948 [http-nio-8080-exec-86] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:44:29.165 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:44:29.177 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:45:32.614 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:45:34.347 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:40:08.096 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:40:10.067 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:40:39.971 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:40:40.100 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:40:40.107 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:43:23.232 [http-nio-8080-exec-18] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:43:23.246 [http-nio-8080-exec-18] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:45:13.124 [http-nio-8080-exec-25] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:45:13.140 [http-nio-8080-exec-25] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:45:17.544 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:45:17.566 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:45:23.642 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:45:23.662 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:45:31.486 [http-nio-8080-exec-21] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:45:31.507 [http-nio-8080-exec-21] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:45:35.756 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+13:47:16.106 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:47:16.118 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:47:24.322 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:47:24.351 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:47:24.365 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:47:29.912 [http-nio-8080-exec-24] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+13:53:23.051 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+13:53:27.016 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:53:27.045 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:53:29.569 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:53:29.591 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:53:40.208 [http-nio-8080-exec-25] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:53:40.227 [http-nio-8080-exec-25] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:53:40.257 [http-nio-8080-exec-25] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:53:44.783 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+13:54:19.923 [http-nio-8080-exec-24] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:54:22.060 [http-nio-8080-exec-24] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:54:38.340 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:54:38.428 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:54:38.440 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:54:43.743 [http-nio-8080-exec-30] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+13:57:12.483 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:57:12.489 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:57:20.341 [http-nio-8080-exec-30] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:57:20.369 [http-nio-8080-exec-30] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:57:20.380 [http-nio-8080-exec-30] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:57:27.738 [http-nio-8080-exec-32] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+13:58:45.737 [http-nio-8080-exec-28] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+14:04:53.253 [http-nio-8080-exec-35] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+14:06:37.887 [http-nio-8080-exec-31] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:06:37.903 [http-nio-8080-exec-31] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:19:21.184 [http-nio-8080-exec-35] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:19:23.106 [http-nio-8080-exec-35] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:19:46.532 [http-nio-8080-exec-31] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:19:46.601 [http-nio-8080-exec-31] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:19:46.601 [http-nio-8080-exec-31] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:20:59.864 [http-nio-8080-exec-37] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:20:59.872 [http-nio-8080-exec-37] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:21:01.923 [http-nio-8080-exec-39] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:21:01.937 [http-nio-8080-exec-39] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:21:16.658 [http-nio-8080-exec-41] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:21:16.681 [http-nio-8080-exec-41] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:21:16.700 [http-nio-8080-exec-41] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:25:41.571 [http-nio-8080-exec-40] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:25:41.586 [http-nio-8080-exec-40] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:26:33.745 [http-nio-8080-exec-39] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+14:26:34.309 [http-nio-8080-exec-39] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+14:28:21.744 [http-nio-8080-exec-41] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:28:21.758 [http-nio-8080-exec-41] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:28:44.935 [http-nio-8080-exec-39] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+14:28:45.294 [http-nio-8080-exec-39] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+14:31:27.193 [http-nio-8080-exec-41] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:31:27.208 [http-nio-8080-exec-41] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:35:13.691 [http-nio-8080-exec-43] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:35:15.496 [http-nio-8080-exec-43] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:35:31.897 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:35:31.976 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:35:31.982 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:44:02.698 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:44:02.707 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:44:08.582 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:44:08.593 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:44:09.979 [http-nio-8080-exec-55] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:44:09.981 [http-nio-8080-exec-55] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:44:11.403 [http-nio-8080-exec-49] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:44:11.404 [http-nio-8080-exec-49] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:44:12.709 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:44:12.710 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:44:13.495 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:44:13.496 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:44:15.597 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+14:44:15.598 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+14:44:16.547 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+14:44:16.548 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+14:44:17.805 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+14:44:17.806 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+14:44:47.219 [http-nio-8080-exec-53] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), starts: 
+14:44:47.219 [http-nio-8080-exec-53] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), customer is null: 
+14:44:47.220 [http-nio-8080-exec-53] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), ends: 
+14:45:01.462 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+14:45:01.462 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+14:45:01.463 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+14:45:09.858 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:45:09.872 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:45:52.983 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+14:45:59.166 [http-nio-8080-exec-49] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:45:59.180 [http-nio-8080-exec-49] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:46:02.653 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:46:02.675 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:46:04.701 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:46:04.702 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:46:05.676 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+14:46:05.677 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+14:46:06.227 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:46:06.228 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:46:06.951 [http-nio-8080-exec-53] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+14:46:06.952 [http-nio-8080-exec-53] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+14:46:07.502 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:46:07.503 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:46:08.320 [http-nio-8080-exec-55] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:46:08.321 [http-nio-8080-exec-55] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:46:09.688 [http-nio-8080-exec-49] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:46:09.694 [http-nio-8080-exec-49] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:46:23.078 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:46:23.332 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:46:23.352 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:47:07.072 [http-nio-8080-exec-55] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+14:47:17.068 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:47:17.082 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:47:19.319 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:47:19.336 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:47:47.469 [http-nio-8080-exec-49] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:47:47.759 [http-nio-8080-exec-49] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:47:47.779 [http-nio-8080-exec-49] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:48:07.675 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+14:48:10.970 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:48:10.980 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:48:12.463 [http-nio-8080-exec-53] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:48:12.478 [http-nio-8080-exec-53] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:48:31.638 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:48:31.911 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:48:31.924 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:48:46.871 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+14:48:47.074 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+14:49:27.663 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:49:27.675 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:49:30.370 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+14:49:30.371 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+14:49:30.371 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+14:49:39.451 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+14:49:39.580 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+14:50:39.690 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+14:50:39.834 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+14:50:48.841 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+14:50:48.842 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+14:50:48.842 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+14:50:52.499 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+14:50:52.608 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+14:50:58.403 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+14:50:58.567 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+14:51:56.857 [http-nio-8080-exec-53] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+14:51:56.990 [http-nio-8080-exec-53] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+14:52:08.242 [http-nio-8080-exec-51] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+14:52:10.710 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:52:10.722 [http-nio-8080-exec-56] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:52:12.551 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:52:12.563 [http-nio-8080-exec-47] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:52:20.879 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:52:21.140 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:52:21.158 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+15:04:03.803 [http-nio-8080-exec-55] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+15:04:57.663 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+15:04:59.396 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+15:05:12.533 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+15:05:12.921 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+15:05:12.936 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+15:05:17.081 [http-nio-8080-exec-57] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+15:05:17.090 [http-nio-8080-exec-57] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+15:05:20.773 [http-nio-8080-exec-58] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+15:05:20.774 [http-nio-8080-exec-58] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+15:05:20.774 [http-nio-8080-exec-58] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+15:05:27.236 [http-nio-8080-exec-60] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+15:05:28.004 [http-nio-8080-exec-60] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+15:05:45.053 [http-nio-8080-exec-61] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+15:05:45.515 [http-nio-8080-exec-61] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+15:05:51.266 [http-nio-8080-exec-62] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+15:05:51.278 [http-nio-8080-exec-62] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+15:05:53.508 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+15:05:53.508 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+15:05:53.509 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+15:06:36.624 [http-nio-8080-exec-57] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+15:06:36.625 [http-nio-8080-exec-57] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+15:06:36.625 [http-nio-8080-exec-57] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+16:00:24.146 [http-nio-8080-exec-58] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:00:25.899 [http-nio-8080-exec-58] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:02:03.742 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+16:02:04.088 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:02:04.118 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:02:07.644 [http-nio-8080-exec-73] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+16:02:07.645 [http-nio-8080-exec-73] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+16:02:07.646 [http-nio-8080-exec-73] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+16:02:13.639 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+16:03:36.742 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+16:13:56.369 [http-nio-8080-exec-68] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:13:58.432 [http-nio-8080-exec-68] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:14:05.754 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+16:14:05.840 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:14:05.852 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:14:32.596 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:14:32.606 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:14:33.634 [http-nio-8080-exec-70] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:14:33.635 [http-nio-8080-exec-70] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:14:35.208 [http-nio-8080-exec-67] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+16:14:35.208 [http-nio-8080-exec-67] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+16:14:35.208 [http-nio-8080-exec-67] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+16:14:41.356 [http-nio-8080-exec-75] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+16:16:30.055 [http-nio-8080-exec-75] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+16:17:24.734 [http-nio-8080-exec-83] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+16:17:24.735 [http-nio-8080-exec-83] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+16:17:24.735 [http-nio-8080-exec-83] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+16:17:34.553 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+16:24:03.177 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:24:03.192 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:24:35.220 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+16:24:35.242 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:24:35.255 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:24:39.522 [http-nio-8080-exec-83] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:39.523 [http-nio-8080-exec-83] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:40.530 [http-nio-8080-exec-84] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:40.531 [http-nio-8080-exec-84] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:41.384 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+16:24:41.385 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+16:24:42.582 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:42.583 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:43.692 [http-nio-8080-exec-85] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:43.693 [http-nio-8080-exec-85] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:45.736 [http-nio-8080-exec-81] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:45.737 [http-nio-8080-exec-81] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:46.973 [http-nio-8080-exec-86] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:46.974 [http-nio-8080-exec-86] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:48.492 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:48.493 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:49.666 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:49.667 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:51.741 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:51.742 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:52.727 [http-nio-8080-exec-83] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:24:52.728 [http-nio-8080-exec-83] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:24:56.171 [http-nio-8080-exec-84] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+16:24:56.171 [http-nio-8080-exec-84] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+16:24:56.172 [http-nio-8080-exec-84] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+16:25:01.645 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+16:25:02.268 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+16:25:32.668 [http-nio-8080-exec-81] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:25:32.681 [http-nio-8080-exec-81] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:25:34.061 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+16:25:34.062 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+16:25:34.063 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+16:25:36.796 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:25:36.814 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:26:23.600 [http-nio-8080-exec-81] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+16:26:24.297 [http-nio-8080-exec-81] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+16:26:54.584 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:26:54.597 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:59:48.591 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:59:50.512 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:00:00.330 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+17:00:00.570 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:00:00.579 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:00:03.605 [http-nio-8080-exec-88] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+17:00:03.613 [http-nio-8080-exec-88] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+17:00:04.948 [http-nio-8080-exec-85] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+17:00:04.949 [http-nio-8080-exec-85] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+17:00:06.507 [http-nio-8080-exec-90] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+17:00:06.508 [http-nio-8080-exec-90] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+17:00:09.121 [http-nio-8080-exec-81] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+17:00:09.121 [http-nio-8080-exec-81] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+17:00:09.122 [http-nio-8080-exec-81] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+17:00:13.759 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+17:00:14.521 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+17:00:22.819 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:00:22.834 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:00:40.165 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+17:00:40.353 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+17:01:12.000 [http-nio-8080-exec-91] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+17:01:16.724 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:01:16.737 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:02:26.051 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:02:26.067 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:02:28.283 [http-nio-8080-exec-95] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:02:28.298 [http-nio-8080-exec-95] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:02:48.463 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:02:48.476 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:02:50.401 [http-nio-8080-exec-95] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+17:02:50.403 [http-nio-8080-exec-95] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+17:02:51.369 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+17:02:51.370 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+17:02:52.474 [http-nio-8080-exec-87] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+17:02:52.475 [http-nio-8080-exec-87] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+17:02:53.971 [http-nio-8080-exec-88] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+17:02:53.972 [http-nio-8080-exec-88] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+17:02:56.555 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+17:02:56.556 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+17:02:57.526 [http-nio-8080-exec-89] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+17:02:57.527 [http-nio-8080-exec-89] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+17:02:59.037 [http-nio-8080-exec-90] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+17:02:59.038 [http-nio-8080-exec-90] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+17:03:16.293 [http-nio-8080-exec-91] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+17:03:16.432 [http-nio-8080-exec-91] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+17:03:45.129 [http-nio-8080-exec-89] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+17:03:50.040 [http-nio-8080-exec-90] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:03:50.058 [http-nio-8080-exec-90] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:03:52.017 [http-nio-8080-exec-96] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:03:52.036 [http-nio-8080-exec-96] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:05:56.129 [http-nio-8080-exec-89] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+17:05:56.423 [http-nio-8080-exec-89] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:05:56.441 [http-nio-8080-exec-89] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:06:15.333 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+17:06:15.334 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+17:06:15.334 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+17:06:18.673 [http-nio-8080-exec-91] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), starts: 
+17:06:18.673 [http-nio-8080-exec-91] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), customer is null: 
+17:06:18.673 [http-nio-8080-exec-91] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), ends: 
+17:06:31.637 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+17:06:31.638 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+17:06:31.638 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+17:06:36.078 [http-nio-8080-exec-87] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+17:06:36.373 [http-nio-8080-exec-87] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+17:06:41.584 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+17:06:41.584 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+17:06:41.585 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+17:07:18.906 [http-nio-8080-exec-96] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+17:07:21.561 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:07:21.577 [http-nio-8080-exec-92] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:07:28.739 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+17:07:28.860 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:07:28.875 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:07:32.579 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+17:07:32.580 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+17:07:32.580 [http-nio-8080-exec-94] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+09:08:30.838 [http-nio-8080-exec-4] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:08:34.432 [http-nio-8080-exec-4] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:10:38.513 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+09:10:38.560 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+09:10:39.934 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+09:10:39.934 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+09:10:41.919 [http-nio-8080-exec-14] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:10:41.919 [http-nio-8080-exec-14] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:10:43.591 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:10:43.591 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:10:45.106 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:10:45.106 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:10:47.809 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:10:47.809 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:10:51.622 [http-nio-8080-exec-18] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), starts: 
+09:10:51.622 [http-nio-8080-exec-18] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), customer is null: 
+09:10:51.622 [http-nio-8080-exec-18] DEBUG com.saif.web.practice.shop.servlet.Wish - doGet(), ends: 
+09:10:57.342 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+09:10:57.342 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+09:10:57.342 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+09:11:03.487 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:11:03.487 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:11:25.482 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+09:11:41.736 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+09:11:48.151 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+09:11:52.229 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+09:11:52.229 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+09:11:52.229 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+09:11:55.188 [http-nio-8080-exec-14] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+09:12:20.044 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:12:20.059 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:12:29.577 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+09:12:29.639 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:12:29.655 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:12:32.311 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+09:12:32.311 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+09:12:32.311 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+09:12:35.777 [http-nio-8080-exec-14] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+09:12:36.683 [http-nio-8080-exec-14] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+09:12:53.389 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:12:53.420 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:13:01.263 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+09:13:01.404 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+09:13:19.575 [http-nio-8080-exec-14] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+09:13:52.440 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:13:52.440 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:13:54.597 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:13:54.612 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:14:04.311 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+09:14:29.074 [http-nio-8080-exec-18] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:14:29.086 [http-nio-8080-exec-18] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:14:37.847 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+09:14:50.655 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:14:50.669 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:14:56.398 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:14:56.399 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:14:57.231 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:14:57.232 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:14:58.919 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+09:14:58.920 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+09:14:58.920 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+09:15:00.960 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+09:16:33.698 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:16:35.277 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:16:47.948 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+09:17:30.518 [http-nio-8080-exec-21] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:17:30.529 [http-nio-8080-exec-21] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:17:33.219 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:17:33.231 [http-nio-8080-exec-22] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:17:34.653 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:17:34.654 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:17:35.918 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+09:17:35.918 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+09:17:35.919 [http-nio-8080-exec-17] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+09:17:38.671 [http-nio-8080-exec-18] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+09:17:49.083 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+09:26:24.289 [http-nio-8080-exec-26] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:26:25.883 [http-nio-8080-exec-26] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:27:02.639 [http-nio-8080-exec-31] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+09:48:44.696 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:48:47.712 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:48:56.082 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:48:56.098 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:48:57.856 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:48:57.858 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:48:59.205 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+09:48:59.205 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+09:48:59.205 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+09:49:02.823 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+09:50:02.719 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+09:50:02.976 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:50:02.983 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:50:06.104 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), starts: 
+09:50:06.105 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), customer is null: 
+09:50:06.105 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Cart - doGet(), ends: 
+09:50:08.843 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+09:50:10.170 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+09:50:24.049 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:50:24.064 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:50:32.789 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+09:50:32.930 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+09:50:45.742 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:50:45.752 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:50:52.178 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+09:50:52.192 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+10:38:04.178 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+10:38:30.271 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:38:33.338 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:38:46.063 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+10:38:46.085 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+10:38:47.417 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+10:38:47.419 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+10:39:09.243 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:39:09.254 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:39:11.411 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+10:39:11.412 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+10:39:12.552 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+10:39:12.553 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+10:39:40.185 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter(), starts
+10:39:40.187 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(), starts: 
+10:39:40.188 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(), ends: 
+10:39:40.839 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+10:39:40.841 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter(), ends
+10:40:05.202 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:48:08.281 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:48:16.427 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:48:16.434 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:48:28.423 [http-listener-1(2)] DEBUG javax.servlet.Filter - doFilter(), starts
+10:48:28.425 [http-listener-1(2)] DEBUG javax.servlet.Filter - processing(), starts: 
+10:48:28.425 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+10:48:29.436 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+10:48:29.438 [http-listener-1(2)] DEBUG javax.servlet.Filter - doFilter(), ends
+10:48:43.529 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+10:49:29.600 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:49:29.612 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:49:38.403 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), starts
+10:49:38.405 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(), starts: 
+10:49:38.406 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(), ends: 
+10:49:38.418 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+10:49:38.419 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), ends
+10:50:05.573 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:50:21.486 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:54:18.055 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:54:18.068 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:54:26.732 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+10:54:39.205 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:54:39.216 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:54:48.438 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+10:54:48.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:54:48.463 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:55:09.282 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), starts
+10:55:09.283 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(), starts: 
+10:55:09.284 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+10:55:09.492 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+10:55:09.493 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), ends
+10:55:24.872 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:55:24.888 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+10:55:26.627 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+10:55:26.628 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+10:55:27.573 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+10:55:27.573 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+10:55:28.552 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+10:55:28.553 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+10:55:29.760 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+10:55:29.761 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+10:55:33.629 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), starts
+10:55:33.631 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(), starts: 
+10:55:33.631 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+10:55:34.171 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+10:55:34.174 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), ends
+10:56:16.333 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:56:16.342 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:01:23.393 [admin-listener(1)] DEBUG javax.servlet.Filter - destroy()
+11:01:38.284 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:01:40.827 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:02:01.095 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter(), starts
+11:02:01.097 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(), starts: 
+11:02:01.098 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(), ends: 
+11:02:01.509 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:02:01.511 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter(), ends
+11:02:09.186 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:05:52.925 [admin-listener(1)] DEBUG javax.servlet.Filter - destroy()
+11:06:08.890 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:06:11.345 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:06:24.407 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), starts
+11:06:24.408 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(), starts: 
+11:06:24.409 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(), ends: 
+11:06:24.942 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:06:24.945 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), ends
+11:06:30.386 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:06:30.463 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:11:10.084 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+11:11:28.340 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:11:30.918 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:11:45.197 [http-listener-1(5)] DEBUG javax.servlet.Filter - doFilter(), starts
+11:11:45.200 [http-listener-1(5)] DEBUG javax.servlet.Filter - processing(), starts: 
+11:11:45.201 [http-listener-1(5)] DEBUG javax.servlet.Filter - processing(), ends: 
+11:11:45.666 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:11:45.667 [http-listener-1(5)] DEBUG javax.servlet.Filter - doFilter(), ends
+11:11:51.835 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:13:25.880 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:27:55.897 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+11:28:09.357 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:28:12.444 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:28:23.357 [http-listener-1(2)] DEBUG javax.servlet.Filter - doFilter(), starts
+11:28:23.359 [http-listener-1(2)] DEBUG javax.servlet.Filter - processing(), starts: 
+11:28:23.360 [http-listener-1(2)] DEBUG javax.servlet.Filter - processing(), ends: 
+11:28:23.743 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:28:23.744 [http-listener-1(2)] DEBUG javax.servlet.Filter - doFilter(), ends
+11:28:33.301 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:32:44.017 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:35:00.260 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:35:00.270 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:35:05.924 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+11:35:14.846 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:35:14.859 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:35:21.465 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), starts
+11:35:21.468 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(), starts: 
+11:35:21.469 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(), ends: 
+11:35:21.474 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:35:21.475 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), ends
+11:35:29.190 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:35:29.198 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:36:41.050 [RunLevelControllerThread-1588138600825] DEBUG javax.servlet.Filter - destroy()
+11:41:24.583 [http-nio-8080-exec-10] DEBUG javax.servlet.Filter - destroy()
+11:41:33.883 [http-nio-8080-exec-4] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:41:36.257 [http-nio-8080-exec-4] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:42:13.154 [http-nio-8080-exec-11] DEBUG javax.servlet.Filter - doFilter(), starts
+11:42:13.156 [http-nio-8080-exec-11] DEBUG javax.servlet.Filter - processing(), starts: 
+11:42:13.163 [http-nio-8080-exec-11] DEBUG javax.servlet.Filter - processing(), ends: 
+11:42:13.623 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:42:13.624 [http-nio-8080-exec-11] DEBUG javax.servlet.Filter - doFilter(), ends
+11:42:21.840 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:42:21.900 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:43:30.522 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:43:30.533 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:43:31.855 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+11:43:31.866 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+11:43:32.699 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+11:43:32.701 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+11:43:38.465 [http-nio-8080-exec-12] DEBUG javax.servlet.Filter - doFilter(), starts
+11:43:38.466 [http-nio-8080-exec-12] DEBUG javax.servlet.Filter - processing(), starts: 
+11:43:38.467 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+11:43:39.328 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+11:43:39.329 [http-nio-8080-exec-12] DEBUG javax.servlet.Filter - doFilter(), ends
+11:43:46.329 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+11:43:48.848 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:43:48.868 [http-nio-8080-exec-16] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:43:50.697 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+11:43:50.700 [http-nio-8080-exec-11] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+11:43:51.281 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+11:43:51.282 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+11:43:52.348 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+11:43:52.349 [http-nio-8080-exec-12] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+11:43:55.647 [http-nio-8080-exec-19] DEBUG javax.servlet.Filter - doFilter(), starts
+11:43:55.647 [http-nio-8080-exec-19] DEBUG javax.servlet.Filter - processing(), starts: 
+11:43:55.648 [http-nio-8080-exec-19] DEBUG javax.servlet.Filter - processing(), ends: 
+11:43:55.654 [http-nio-8080-exec-19] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+11:43:55.655 [http-nio-8080-exec-19] DEBUG javax.servlet.Filter - doFilter(), ends
+11:44:00.537 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:44:00.547 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+11:47:42.292 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:47:42.305 [http-nio-8080-exec-15] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:47:49.394 [http-nio-8080-exec-13] DEBUG javax.servlet.Filter - doFilter(), starts
+11:47:49.395 [http-nio-8080-exec-13] DEBUG javax.servlet.Filter - processing(), starts: 
+11:47:49.395 [http-nio-8080-exec-13] DEBUG javax.servlet.Filter - processing(), ends: 
+11:47:49.401 [http-nio-8080-exec-13] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:47:49.401 [http-nio-8080-exec-13] DEBUG javax.servlet.Filter - doFilter(), ends
+11:47:54.581 [http-nio-8080-exec-14] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:47:54.598 [http-nio-8080-exec-14] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:57:40.562 [http-nio-8080-exec-18] DEBUG javax.servlet.Filter - destroy()
+11:57:46.781 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:57:48.497 [http-nio-8080-exec-20] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:59:35.883 [http-nio-8080-exec-23] DEBUG javax.servlet.Filter - doFilter(), starts
+11:59:35.885 [http-nio-8080-exec-23] DEBUG javax.servlet.Filter - processing(), starts: 
+11:59:35.885 [http-nio-8080-exec-23] DEBUG javax.servlet.Filter - processing(), ends: 
+11:59:36.221 [http-nio-8080-exec-23] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+11:59:36.221 [http-nio-8080-exec-23] DEBUG javax.servlet.Filter - doFilter(), ends
+11:59:40.834 [http-nio-8080-exec-24] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:59:40.874 [http-nio-8080-exec-24] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+12:16:36.925 [http-nio-8080-exec-25] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:16:36.933 [http-nio-8080-exec-25] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:17:49.569 [http-nio-8080-exec-22] DEBUG javax.servlet.Filter - destroy()
+12:17:55.198 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:17:56.836 [http-nio-8080-exec-27] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:18:58.523 [http-nio-8080-exec-34] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:18:58.531 [http-nio-8080-exec-34] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:22:00.035 [http-nio-8080-exec-38] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:22:00.053 [http-nio-8080-exec-38] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:22:15.513 [http-nio-8080-exec-40] DEBUG javax.servlet.Filter - doFilter(), starts
+12:22:15.516 [http-nio-8080-exec-40] DEBUG javax.servlet.Filter - processing(), starts: 
+12:22:15.516 [http-nio-8080-exec-40] DEBUG javax.servlet.Filter - processing(), ends: 
+12:22:15.798 [http-nio-8080-exec-40] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+12:22:15.798 [http-nio-8080-exec-40] DEBUG javax.servlet.Filter - doFilter(), ends
+12:22:22.150 [http-nio-8080-exec-31] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:22:22.203 [http-nio-8080-exec-31] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+12:22:39.878 [http-nio-8080-exec-38] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:22:39.906 [http-nio-8080-exec-38] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+12:22:39.920 [http-nio-8080-exec-38] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+12:22:45.409 [http-nio-8080-exec-39] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+12:41:36.476 [Catalina-utility-1] DEBUG javax.servlet.Filter - destroy()
+13:11:57.295 [http-nio-8080-exec-46] DEBUG javax.servlet.Filter - destroy()
+13:12:02.900 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:12:04.796 [http-nio-8080-exec-50] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:12:23.388 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:12:23.466 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:12:23.466 [http-nio-8080-exec-48] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:14:33.739 [http-nio-8080-exec-54] DEBUG com.saif.web.practice.shop.core.Operations - 
+13:17:25.555 [http-nio-8080-exec-57] DEBUG javax.servlet.Filter - destroy()
+13:17:30.607 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:17:32.222 [http-nio-8080-exec-52] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:18:59.044 [http-nio-8080-exec-62] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:18:59.075 [http-nio-8080-exec-62] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), ends else: 
+13:19:18.034 [http-nio-8080-exec-64] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:19:18.034 [http-nio-8080-exec-64] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), ends else: 
+13:19:31.072 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:19:31.072 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), ends else: 
+13:19:55.025 [http-nio-8080-exec-67] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:19:55.056 [http-nio-8080-exec-67] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:19:55.072 [http-nio-8080-exec-67] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:20:58.176 [http-nio-8080-exec-67] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+13:21:02.012 [http-nio-8080-exec-68] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:21:02.012 [http-nio-8080-exec-68] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:21:04.246 [http-nio-8080-exec-66] DEBUG javax.servlet.Filter - destroy()
+13:21:09.856 [http-nio-8080-exec-68] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:21:11.356 [http-nio-8080-exec-68] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:21:16.374 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:21:16.436 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:21:16.452 [http-nio-8080-exec-65] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:21:40.744 [http-nio-8080-exec-72] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:21:40.759 [http-nio-8080-exec-72] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:21:40.775 [http-nio-8080-exec-72] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:23:41.635 [http-nio-8080-exec-76] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:23:41.651 [http-nio-8080-exec-76] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:04:30.308 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:04:30.339 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:04:37.975 [http-nio-8080-exec-76] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:04:37.975 [http-nio-8080-exec-76] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:04:39.569 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:04:39.569 [http-nio-8080-exec-71] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:04:40.429 [http-nio-8080-exec-72] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:04:40.429 [http-nio-8080-exec-72] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:04:41.335 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:04:41.335 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:04:42.225 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:04:42.225 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:04:54.157 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:04:54.157 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), ends else: 
+14:05:01.767 [http-nio-8080-exec-74] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:05:01.767 [http-nio-8080-exec-74] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), ends else: 
+14:05:27.244 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:05:27.276 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:05:27.291 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:05:50.500 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+14:06:02.855 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:06:02.871 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:06:11.142 [http-nio-8080-exec-74] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:06:11.298 [http-nio-8080-exec-74] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:06:11.314 [http-nio-8080-exec-74] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:40:43.455 [http-nio-8080-exec-72] DEBUG com.saif.web.practice.shop.servlet.Home - processRequest(), starts: 
+14:40:46.313 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:40:46.332 [http-nio-8080-exec-78] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:40:53.722 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:40:53.741 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:40:53.754 [http-nio-8080-exec-79] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:44:14.731 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:44:14.753 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:44:22.290 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:44:22.315 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:44:22.327 [http-nio-8080-exec-77] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:51:44.150 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:51:44.174 [http-nio-8080-exec-80] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:16:00.510 [http-nio-8080-exec-78] DEBUG javax.servlet.Filter - destroy()
+16:16:06.617 [http-nio-8080-exec-75] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:16:09.530 [http-nio-8080-exec-75] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:40:44.282 [http-nio-8080-exec-88] DEBUG javax.servlet.Filter - destroy()
+16:40:49.702 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:40:51.528 [http-nio-8080-exec-82] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:42:37.753 [http-nio-8080-exec-85] DEBUG javax.servlet.Filter - destroy()
+16:42:42.339 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:42:44.221 [http-nio-8080-exec-93] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:42:55.529 [http-nio-8080-exec-95] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+16:42:55.567 [http-nio-8080-exec-95] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+16:42:58.944 [http-nio-8080-exec-87] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+16:42:58.945 [http-nio-8080-exec-87] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+16:43:00.009 [http-nio-8080-exec-85] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+16:43:00.010 [http-nio-8080-exec-85] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+16:43:01.106 [http-nio-8080-exec-98] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+16:43:01.107 [http-nio-8080-exec-98] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+16:43:15.422 [http-nio-8080-exec-99] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:43:15.423 [http-nio-8080-exec-99] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:43:17.872 [http-nio-8080-exec-104] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:43:17.874 [http-nio-8080-exec-104] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:43:19.158 [http-nio-8080-exec-105] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:43:19.159 [http-nio-8080-exec-105] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:46:53.108 [http-nio-8080-exec-100] DEBUG javax.servlet.Filter - destroy()
+16:46:57.717 [http-nio-8080-exec-104] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:46:59.610 [http-nio-8080-exec-104] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:47:14.437 [http-nio-8080-exec-106] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+16:47:14.448 [http-nio-8080-exec-106] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+16:47:18.467 [http-nio-8080-exec-103] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+16:47:18.468 [http-nio-8080-exec-103] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+16:47:30.856 [http-nio-8080-exec-111] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:47:30.857 [http-nio-8080-exec-111] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:47:32.488 [http-nio-8080-exec-112] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:47:32.489 [http-nio-8080-exec-112] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:47:34.036 [http-nio-8080-exec-113] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:47:34.037 [http-nio-8080-exec-113] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:47:35.212 [http-nio-8080-exec-114] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:47:35.213 [http-nio-8080-exec-114] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:47:36.797 [http-nio-8080-exec-110] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:47:36.799 [http-nio-8080-exec-110] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:47:38.310 [http-nio-8080-exec-116] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:47:38.311 [http-nio-8080-exec-116] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:48:18.203 [http-nio-8080-exec-112] DEBUG javax.servlet.Filter - doFilter(), starts
+16:48:18.208 [http-nio-8080-exec-112] DEBUG javax.servlet.Filter - processing(), starts: 
+16:48:18.212 [http-nio-8080-exec-112] DEBUG javax.servlet.Filter - processing(), ends: 
+16:48:18.481 [http-nio-8080-exec-112] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+16:48:18.481 [http-nio-8080-exec-112] DEBUG javax.servlet.Filter - doFilter(), ends
+16:48:30.631 [http-nio-8080-exec-110] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+16:48:30.686 [http-nio-8080-exec-110] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+16:49:20.326 [http-nio-8080-exec-116] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+16:49:42.159 [http-nio-8080-exec-114] DEBUG javax.servlet.Filter - doFilter(), starts
+16:49:42.161 [http-nio-8080-exec-114] DEBUG javax.servlet.Filter - processing(), starts: 
+16:49:42.161 [http-nio-8080-exec-114] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+16:49:43.230 [http-nio-8080-exec-114] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+16:49:43.230 [http-nio-8080-exec-114] DEBUG javax.servlet.Filter - doFilter(), ends
+16:52:03.566 [http-nio-8080-exec-110] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:52:03.568 [http-nio-8080-exec-110] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:52:05.374 [http-nio-8080-exec-115] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:52:05.375 [http-nio-8080-exec-115] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:52:06.464 [http-nio-8080-exec-109] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:52:06.465 [http-nio-8080-exec-109] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:52:08.873 [http-nio-8080-exec-117] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:52:08.874 [http-nio-8080-exec-117] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:52:09.876 [http-nio-8080-exec-116] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:52:09.878 [http-nio-8080-exec-116] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:52:10.736 [http-nio-8080-exec-118] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:52:10.737 [http-nio-8080-exec-118] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:52:11.495 [http-nio-8080-exec-111] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:52:11.496 [http-nio-8080-exec-111] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:52:19.415 [http-nio-8080-exec-115] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:52:19.439 [http-nio-8080-exec-115] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+16:53:43.859 [http-nio-8080-exec-118] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+16:58:03.603 [http-nio-8080-exec-112] DEBUG javax.servlet.Filter - doFilter(), starts
+16:58:03.604 [http-nio-8080-exec-112] DEBUG javax.servlet.Filter - processing(), starts: 
+16:58:03.604 [http-nio-8080-exec-112] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+16:58:04.734 [http-nio-8080-exec-112] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+16:58:04.735 [http-nio-8080-exec-112] DEBUG javax.servlet.Filter - doFilter(), ends
+17:02:08.417 [http-nio-8080-exec-116] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:02:08.437 [http-nio-8080-exec-116] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:02:31.649 [http-nio-8080-exec-118] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+17:04:37.557 [http-nio-8080-exec-111] DEBUG javax.servlet.Filter - doFilter(), starts
+17:04:37.560 [http-nio-8080-exec-111] DEBUG javax.servlet.Filter - processing(), starts: 
+17:04:37.560 [http-nio-8080-exec-111] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), starts: 
+17:04:37.818 [http-nio-8080-exec-111] DEBUG com.saif.web.practice.shop.servlet.authorize.BuyNow - processRequest(), ends: 
+17:04:37.819 [http-nio-8080-exec-111] DEBUG javax.servlet.Filter - doFilter(), ends
+17:05:20.550 [http-nio-8080-exec-117] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+17:05:20.558 [http-nio-8080-exec-117] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+17:05:24.807 [http-nio-8080-exec-111] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+17:05:24.815 [http-nio-8080-exec-111] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+17:05:32.260 [http-nio-8080-exec-114] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+17:05:32.270 [http-nio-8080-exec-114] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+17:05:37.121 [http-nio-8080-exec-116] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+17:05:37.130 [http-nio-8080-exec-116] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+07:52:32.997 [http-nio-8080-exec-118] DEBUG javax.servlet.Filter - destroy()
+07:52:38.429 [http-nio-8080-exec-117] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+07:52:41.100 [http-nio-8080-exec-117] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+07:55:37.373 [http-nio-8080-exec-124] DEBUG javax.servlet.Filter - destroy()
+07:55:44.257 [http-nio-8080-exec-125] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+07:55:46.266 [http-nio-8080-exec-125] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+08:51:22.366 [http-nio-8080-exec-134] DEBUG javax.servlet.Filter - destroy()
+08:51:26.913 [http-nio-8080-exec-136] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:06:06.399 [http-nio-8080-exec-141] DEBUG javax.servlet.Filter - destroy()
+09:06:11.501 [http-nio-8080-exec-145] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:11:17.107 [http-nio-8080-exec-152] DEBUG javax.servlet.Filter - destroy()
+09:11:21.287 [http-nio-8080-exec-156] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:13:51.116 [http-nio-8080-exec-159] DEBUG javax.servlet.Filter - destroy()
+09:13:55.523 [http-nio-8080-exec-166] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:34:33.195 [http-nio-8080-exec-172] DEBUG javax.servlet.Filter - destroy()
+09:34:37.708 [http-nio-8080-exec-168] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:36:13.438 [http-nio-8080-exec-180] DEBUG javax.servlet.Filter - destroy()
+09:36:18.212 [http-nio-8080-exec-179] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:40:12.689 [http-nio-8080-exec-186] DEBUG javax.servlet.Filter - destroy()
+09:40:17.009 [http-nio-8080-exec-188] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:14:19.409 [http-nio-8080-exec-200] DEBUG javax.servlet.Filter - destroy()
+10:14:25.041 [http-nio-8080-exec-196] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:48:03.156 [http-nio-8080-exec-208] DEBUG javax.servlet.Filter - destroy()
+13:48:07.895 [http-nio-8080-exec-211] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:49:05.181 [http-nio-8080-exec-216] DEBUG javax.servlet.Filter - destroy()
+13:49:09.803 [http-nio-8080-exec-206] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:50:20.821 [http-nio-8080-exec-219] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:54:36.072 [http-nio-8080-exec-225] DEBUG javax.servlet.Filter - destroy()
+13:54:40.779 [http-nio-8080-exec-220] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:54:42.964 [http-nio-8080-exec-220] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:54:52.455 [http-nio-8080-exec-224] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:56:00.807 [http-nio-8080-exec-235] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:56:00.823 [http-nio-8080-exec-235] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:56:10.485 [http-nio-8080-exec-230] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+13:56:10.497 [http-nio-8080-exec-230] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+13:56:11.772 [http-nio-8080-exec-231] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+13:56:11.773 [http-nio-8080-exec-231] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+13:56:12.606 [http-nio-8080-exec-237] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+13:56:12.607 [http-nio-8080-exec-237] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+13:56:13.471 [http-nio-8080-exec-232] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+13:56:13.472 [http-nio-8080-exec-232] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+13:56:14.226 [http-nio-8080-exec-233] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+13:56:14.228 [http-nio-8080-exec-233] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+13:56:14.825 [http-nio-8080-exec-239] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+13:56:14.826 [http-nio-8080-exec-239] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+13:56:15.877 [http-nio-8080-exec-234] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+13:56:15.878 [http-nio-8080-exec-234] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+13:56:16.594 [http-nio-8080-exec-235] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+13:56:16.595 [http-nio-8080-exec-235] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+13:56:17.183 [http-nio-8080-exec-236] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+13:56:17.184 [http-nio-8080-exec-236] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+13:56:20.831 [http-nio-8080-exec-230] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+13:56:20.832 [http-nio-8080-exec-230] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+13:56:30.654 [http-nio-8080-exec-237] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+13:57:07.753 [http-nio-8080-exec-235] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:57:07.772 [http-nio-8080-exec-235] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:58:01.227 [http-nio-8080-exec-232] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:02:33.343 [Catalina-utility-1] DEBUG javax.servlet.Filter - destroy()
+14:07:56.635 [Catalina-utility-2] DEBUG javax.servlet.Filter - destroy()
+14:08:30.198 [Catalina-utility-1] DEBUG javax.servlet.Filter - destroy()
+14:08:33.269 [http-nio-8080-exec-241] DEBUG javax.servlet.Filter - destroy()
+14:08:38.868 [http-nio-8080-exec-231] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:08:41.750 [http-nio-8080-exec-231] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:26:53.896 [http-nio-8080-exec-252] DEBUG javax.servlet.Filter - destroy()
+14:26:58.583 [http-nio-8080-exec-256] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:27:00.463 [http-nio-8080-exec-256] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:27:23.556 [http-nio-8080-exec-254] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:28:12.997 [http-nio-8080-exec-253] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:28:13.006 [http-nio-8080-exec-253] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:28:13.881 [http-nio-8080-exec-262] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+14:28:13.882 [http-nio-8080-exec-262] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+14:28:14.917 [http-nio-8080-exec-257] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+14:28:14.919 [http-nio-8080-exec-257] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+14:28:15.720 [http-nio-8080-exec-258] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+14:28:15.721 [http-nio-8080-exec-258] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+14:28:16.523 [http-nio-8080-exec-263] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+14:28:16.524 [http-nio-8080-exec-263] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+14:28:47.407 [http-nio-8080-exec-265] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:28:47.422 [http-nio-8080-exec-265] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:29:11.388 [http-nio-8080-exec-266] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:29:29.021 [http-nio-8080-exec-258] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:29:29.046 [http-nio-8080-exec-258] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:29:50.090 [http-nio-8080-exec-259] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+14:31:15.403 [http-nio-8080-exec-261] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:31:15.426 [http-nio-8080-exec-261] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:35:25.711 [Catalina-utility-2] DEBUG javax.servlet.Filter - destroy()
+14:52:40.506 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+14:52:43.534 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+14:53:15.273 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:22:14.310 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:27:16.394 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:43:22.065 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:45:14.300 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:45:59.481 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:48:18.053 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:51:41.062 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:52:29.577 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:53:35.387 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:55:09.668 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:58:45.838 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+15:59:31.437 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:04:22.303 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:04:59.523 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:06:37.662 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:13:14.541 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:13:35.751 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:14:59.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:15:33.169 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:16:40.317 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:17:07.556 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:18:05.843 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:19:29.936 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:19:50.070 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:20:28.554 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:21:50.835 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:22:32.737 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:23:28.809 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:24:27.109 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:25:08.291 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+16:34:07.009 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+16:34:28.070 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+16:34:30.674 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+18:00:17.551 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+18:00:34.869 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+18:00:37.309 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+18:01:27.368 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+18:01:40.963 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+18:01:43.740 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+07:45:32.148 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+07:45:54.496 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+07:45:57.663 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+07:47:34.240 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+07:58:34.187 [admin-listener(1)] DEBUG javax.servlet.Filter - destroy()
+08:03:29.713 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+08:06:46.946 [RunLevelControllerThread-1588385206789] DEBUG javax.servlet.Filter - destroy()
+08:08:07.611 [http-nio-8080-exec-8] DEBUG javax.servlet.Filter - destroy()
+10:38:01.214 [http-nio-8080-exec-15] DEBUG javax.servlet.Filter - destroy()
+10:40:32.433 [http-nio-8080-exec-27] DEBUG javax.servlet.Filter - destroy()
+10:41:48.220 [http-nio-8080-exec-26] DEBUG javax.servlet.Filter - destroy()
+10:47:44.464 [http-nio-8080-exec-42] DEBUG javax.servlet.Filter - destroy()
+11:13:07.791 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+11:13:33.670 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:13:37.183 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:13:58.627 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:18:08.782 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:20:40.662 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:23:29.706 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:36:07.771 [admin-listener(5)] DEBUG javax.servlet.Filter - destroy()
+11:36:23.424 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:36:26.076 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:36:40.204 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:38:00.122 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+11:49:35.860 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:04:16.736 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:04:53.114 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:07:14.268 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:08:12.135 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:09:07.424 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:12:21.504 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:15:03.841 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:17:02.979 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:17:34.679 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:22:11.492 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:24:01.178 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:25:08.463 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:25:45.303 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:26:26.753 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:46:48.405 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:49:42.599 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Login - doGet(), starts: 
+12:54:11.369 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+12:54:11.370 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+12:54:13.501 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+12:54:13.502 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+12:54:15.507 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+12:54:15.508 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+12:54:16.589 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+12:54:16.589 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+12:54:19.087 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+12:54:19.087 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+12:54:20.295 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+12:54:20.296 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+12:54:23.298 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+12:54:23.299 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+12:54:26.048 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+12:54:26.049 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+12:54:35.395 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+12:54:35.396 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+12:54:38.777 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+12:54:38.778 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:18:49.046 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+15:18:49.074 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+15:18:53.434 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:18:55.368 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+15:18:55.369 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+15:18:57.251 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:19:35.646 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:19:37.993 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+15:19:37.993 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+15:19:42.484 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:20:21.009 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:22:44.593 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:22:44.603 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:22:48.715 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:22:48.719 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:26:33.566 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:26:33.567 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:30:40.848 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:30:43.131 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:30:45.292 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:30:49.379 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:31:57.643 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:31:57.644 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:32:07.604 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:32:07.605 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:33:00.776 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:33:00.777 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:52:31.197 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:52:31.197 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:52:37.413 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:52:37.414 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:52:42.066 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:52:42.067 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:57:15.556 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:57:15.557 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:58:32.637 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:58:32.638 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:58:39.965 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:58:39.966 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:58:47.143 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:58:47.144 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:58:52.471 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:58:52.472 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:58:57.729 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:58:57.730 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:59:02.006 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:59:02.007 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+15:59:05.823 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), starts: 
+15:59:05.824 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.AddToWish - doPost(), ends: 
+16:23:34.631 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:23:36.700 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:23:38.161 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:23:40.661 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:23:50.135 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:23:51.280 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:26:15.539 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:26:15.540 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:26:16.743 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:26:16.744 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:26:18.377 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:26:18.378 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:27:52.999 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:27:53.000 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+16:27:57.989 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+16:27:57.990 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+08:30:42.686 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+08:31:11.816 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+08:31:14.800 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+08:31:47.071 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+08:31:47.093 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+08:31:52.942 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+08:31:52.949 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+08:32:13.572 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter(), starts
+08:32:13.582 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(), starts: 
+08:32:13.582 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(), ends: 
+08:32:14.212 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.authorize.BuyNow - processRequest(), starts: 
+08:32:14.228 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter(), ends
+08:32:21.415 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+08:32:21.775 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.authorize.BuyNow - processRequest(), starts: 
+08:32:39.337 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+08:56:39.619 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+08:56:52.247 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+08:56:52.255 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:07:17.836 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:07:17.866 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:07:23.479 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+09:07:23.490 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+09:07:27.737 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+09:07:27.743 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+09:07:32.612 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), starts: 
+09:07:32.620 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.AddToWish - doPost(), ends: 
+09:07:37.897 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), starts: 
+09:07:37.905 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.AddToCart - doPost(), ends: 
+09:21:01.154 [http-listener-1(2)] DEBUG javax.servlet.Filter - doFilter(), starts
+09:21:01.155 [http-listener-1(2)] DEBUG javax.servlet.Filter - processing(), starts: 
+09:21:01.156 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.authorize.Order - processRequest(), starts: 
+09:21:01.942 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.authorize.Order - processRequest(), ends: 
+09:21:01.943 [http-listener-1(2)] DEBUG javax.servlet.Filter - doFilter(), ends
+09:28:54.280 [http-listener-1(3)] DEBUG javax.servlet.Filter - doFilter(), starts
+09:28:54.283 [http-listener-1(3)] DEBUG javax.servlet.Filter - processing(), starts: 
+09:28:54.283 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.authorize.BuyNow - processRequest(), starts: 
+09:28:54.480 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.authorize.BuyNow - processRequest(), ends: 
+09:28:54.482 [http-listener-1(3)] DEBUG javax.servlet.Filter - doFilter(), ends
+09:30:10.659 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter(), starts
+09:30:10.661 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(), starts: 
+09:30:10.661 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlets.authorize.BuyNow - processRequest(), starts: 
+09:30:10.708 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter(), ends
+09:30:40.646 [http-listener-1(3)] DEBUG javax.servlet.Filter - doFilter(), starts
+09:30:40.648 [http-listener-1(3)] DEBUG javax.servlet.Filter - processing(), starts: 
+09:30:40.648 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.authorize.BuyNow - processRequest(), starts: 
+09:30:40.785 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.authorize.BuyNow - processRequest(), ends: 
+09:30:40.787 [http-listener-1(3)] DEBUG javax.servlet.Filter - doFilter(), ends
+10:54:33.561 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+11:00:50.645 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+11:07:44.605 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+11:07:47.936 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+11:34:51.933 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+14:53:41.933 [RunLevelControllerThread-1589014421039] DEBUG javax.servlet.Filter - destroy()
+15:07:46.244 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+15:07:51.599 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+15:08:26.521 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+15:08:26.538 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+13:28:20.524 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+13:28:20.852 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+15:56:11.291 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+15:56:11.336 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:33:05.229 [RunLevelControllerThread-1589542379930] DEBUG javax.servlet.Filter - destroy()
+14:03:05.383 [RunLevelControllerThread-1590048185166] DEBUG javax.servlet.Filter - destroy()
+10:44:22.416 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+10:44:35.540 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+10:47:09.666 [admin-listener(5)] DEBUG javax.servlet.Filter - destroy()
+10:47:25.533 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+10:47:28.706 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:31:35.926 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+17:31:36.896 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+17:29:45.918 [RunLevelControllerThread-1590406183103] DEBUG javax.servlet.Filter - destroy()
+09:41:27.900 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+09:42:06.107 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.Operations - getAllProducts() starts: 
+09:42:09.124 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.core.AppStore - total number of proeducts : 15
+09:43:17.654 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlets.Login - doGet(), starts: 
+09:45:17.190 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), starts
+09:45:17.190 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(), starts: 
+09:45:17.190 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), starts: 
+09:45:18.063 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.authorize.Order - processRequest(), ends: 
+09:45:18.063 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter(), ends
+17:05:34.810 [RunLevelControllerThread-1591614320879] DEBUG javax.servlet.Filter - destroy()
+15:42:01.296 [RunLevelControllerThread-1592214116600] DEBUG javax.servlet.Filter - destroy()
+19:42:38.073 [RunLevelControllerThread-1592314957589] DEBUG javax.servlet.Filter - destroy()
+09:47:40.595 [RunLevelControllerThread-1592365659708] DEBUG javax.servlet.Filter - destroy()
+12:54:57.695 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+13:00:04.006 [admin-listener(5)] DEBUG javax.servlet.Filter - destroy()
+13:03:29.975 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+13:03:56.268 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+13:05:46.666 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+13:06:00.217 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+13:06:37.906 [admin-listener(5)] DEBUG javax.servlet.Filter - destroy()
+13:06:50.603 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+13:07:39.924 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+13:11:05.947 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+13:11:34.613 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+13:12:05.460 [admin-listener(1)] DEBUG javax.servlet.Filter - destroy()
+13:12:34.943 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+13:14:37.379 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+13:18:25.497 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+13:22:06.187 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+13:22:20.402 [admin-listener(5)] DEBUG javax.servlet.Filter - destroy()
+13:22:37.193 [admin-listener(5)] DEBUG javax.servlet.Filter - destroy()
+13:22:51.837 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+13:23:07.138 [admin-listener(2)] DEBUG javax.servlet.Filter - destroy()
+13:25:46.305 [admin-listener(1)] DEBUG javax.servlet.Filter - destroy()
+13:27:34.391 [admin-listener(1)] DEBUG javax.servlet.Filter - destroy()
+14:20:33.921 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+14:20:53.984 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
+14:34:37.495 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()

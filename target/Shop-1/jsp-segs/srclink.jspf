@@ -1,0 +1,13 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<script src="${pageContext.request.contextPath}/prevented/global/jquery-3.5.0.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/prevented/global/global-style.css">
+<script src="${pageContext.request.contextPath}/prevented/global/global-action-util.js"></script>
+<script src="${pageContext.request.contextPath}/prevented/global/global-action.js"></script>
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/prevented/header/header-style.css">
+<script src="${pageContext.request.contextPath}/prevented/header/header-action.js"></script>
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/prevented/footer/footer-style.css">
+<script src="${pageContext.request.contextPath}/prevented/footer/footer-action.js"></script>

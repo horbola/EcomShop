@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2020, 7:57:56 PM
+    Author     : Saif
+*/
+
+
+html, body {height: 100%;}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {border: 3px solid #f1f1f1;}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar{
+  width: 40%;
+  border-radius: 50%;
+}
+
+input[type=text], input[type=password] {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+}
+
+button {
+  border: none;
+  display: inline-block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 14px 20px;
+  background-color: #4caf50;
+  color: white;
+}
+
+button:hover {opacity: 0.7;}
+
+.both{
+  width: auto;
+  padding: 10px 18px;
+}
+
+.cancelbtn {
+  background-color: #f44336;
+}
+
+.resetbtn {
+  background-color: burlywood
+}
+
+.container {
+  padding: 16px;
+}
+
+
+span.pass {
+  float: right;
+  padding-top: 16px;
+}
+
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

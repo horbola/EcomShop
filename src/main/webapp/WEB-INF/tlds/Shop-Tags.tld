@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>st</short-name>
+  <uri>Shop-Tags</uri>
+  <!-- A validator verifies that the tags are used correctly at JSP
+          translation time. Validator entries look like this: 
+       <validator>
+           <validator-class>com.mycompany.TagLibValidator</validator-class>
+           <init-param>
+              <param-name>parameter</param-name>
+              <param-value>value</param-value>
+           </init-param>
+       </validator>
+    -->
+  <!-- A tag library can register Servlet Context event listeners in
+         case it needs to react to such events. Listener entries look
+         like this: 
+      <listener>
+          <listener-class>com.mycompany.TagLibListener</listener-class> 
+      </listener>
+    -->
+  <tag>
+    <name>ccount</name>
+    <tag-class>com.saif.web.practice.shop.tags.CCount</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+  <tag>
+    <name>wcount</name>
+    <tag-class>com.saif.web.practice.shop.tags.WCount</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+  <tag>
+    <name>updateProfile</name>
+    <tag-class>com.saif.web.practice.shop.tags.UpdateProfile</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag-file>
+    <name>logincheck</name>
+    <path>/WEB-INF/tags/logincheck.tag</path>
+  </tag-file>
+</taglib>

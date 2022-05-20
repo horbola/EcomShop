@@ -1,0 +1,125 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 9, 2020, 10:33:46 AM
+    Author     : Saif
+*/
+
+
+
+
+
+
+/* Main Style */
+
+main {
+    
+}
+
+main>article {
+    padding-top: 10px;
+}
+
+
+
+
+.items {
+    border: 1px solid;
+    height: 25px;
+    overflow: hidden;
+}
+
+.items>ul>li {
+    float: left;
+    margin: 2px 10px;;
+}
+
+.active {
+    background-color: #e0e0e0;
+}
+
+
+
+.products {
+    overflow: hidden;
+}
+
+.products>ul>li {
+    float: left;
+}
+
+.products>ul>li:hover {
+    background-color: #fbfbfb;
+}
+
+.products>ul>li>.img {
+    text-align: center;
+}
+
+.products>ul>li>.img img{
+    height: 128px;
+    width: 128px;
+}
+
+
+.products>ul>li .info {
+    padding: 17px 20px 0 19px;
+}
+
+
+.products>ul>li .info>a {
+    display: inline-block;
+    font-weight: bold;
+    width: 150px;
+    font-size: 11px;
+    line-height: 16px;
+    color: #4b4b4b;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.products>ul>li .info a {
+    text-decoration: none;
+}
+
+.products>ul>li .info .price {
+    height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.products>ul>li .info .price>.st, .products>ul>li .info .price strong {
+    float: left;
+}
+
+.products>ul>li .info .price strong {
+    padding-left: 5px;
+}
+
+.products>ul>li .info .price>.buy {
+    display: inline-block;
+    float: right;
+}
+
+.products>ul>li .info>.actions {
+    height: 20px;
+    margin-bottom: 3px;
+}
+
+.products>ul>li .info>.actions>span:first-child {
+    float: left;
+}
+
+.products>ul>li .info>.actions>span:last-child {
+    float: right;
+}
+
+
+
+
+
+
+

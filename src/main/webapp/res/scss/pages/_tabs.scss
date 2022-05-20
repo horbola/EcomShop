@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 30, 2020, 12:11:33 PM
+    Author     : Saif
+*/
+
+
+main article{
+    height: 2000px;
+}
+
+section[title="tabs"] {
+    width: 20%;
+    border: 1px solid;
+    margin-top: 10px;
+}
+
+section[title="detail"] {
+    width: 75%;
+    border: 1px solid;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+main>article>section {
+    float: left;
+}
+
+

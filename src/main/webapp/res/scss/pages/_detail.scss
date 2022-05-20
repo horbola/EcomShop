@@ -1,0 +1,84 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 26, 2020, 8:40:58 PM
+    Author     : Saif
+*/
+
+
+
+
+
+
+
+
+
+/* Main Style */
+
+main>article {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main article:first-child {
+    border: 1px solid;
+    height: 520px;
+
+}
+
+main article section {    
+    float: left;
+}
+
+main>article>section.preview>div:first-child{
+    border: 1px solid;
+    margin-top: 3px;
+    margin-left: 3px;
+    height: 300px;
+}
+
+main>article>section.preview>div:last-child{
+    border: 1px solid;
+    margin-top: 3px;
+    margin-left: 3px;
+    height: 200px;
+}
+
+main>article>section:first-child {
+    width: 50%;
+}
+
+main>article>section:last-child {   /* same: main>article>section:nth-of-type(2) {} */
+    width: 49%;
+    border: 1px solid;
+    height: 510px;
+    margin: 3px;
+}
+
+.config>div {
+    border: 1px solid;
+    margin: 5px;
+}
+
+.config span {
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid;
+}
+
+.config ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.config ul>li {
+    flex-grow: 1;
+}
+
+

@@ -1,0 +1,289 @@
+CREATE TABLE Suppliers (
+    supplierID CHAR (3)      PRIMARY KEY ASC ON CONFLICT ABORT
+                             NOT NULL ON CONFLICT ABORT
+                             UNIQUE ON CONFLICT ABORT,
+    shortName  VARCHAR (15)  NOT NULL
+                             UNIQUE,
+    fullName   VARCHAR (100) NOT NULL
+                             UNIQUE,
+    house      VARCHAR (10)  NOT NULL,
+    road       VARCHAR (10)  NOT NULL,
+    area       VARCHAR (15)  NOT NULL,
+    thana      VARCHAR (15)  NOT NULL,
+    district   VARCHAR (15)  NOT NULL
+)
+// WITHOUT ROWID; if "without rowid" is to specify then it's declared like this.
+// if no column is set as primary key then a column named rowid alias _rowid_ alias oid 
+// is created ad primary key in sqlite by defalt. But if any column is defined as 
+// integer primary key then the column gets the behaviour of the rowid. rowid and auto_increment
+// can be used interchangeably in sqlite and they have a difference. auto_increment works like
+// others. But in case of row id: generally it's incremented normally, only when table is full
+// and if any integer remains unused because of being skipped or deleted then that integer
+// is used for the new row inserted. If the rowid isn't specified in the dql then the increment
+// function works normally in ascending order. But if the rowid is specified with another number
+// not in the normal sequence then the number is used and the mean numbers are skipped and
+// the normal sequence works from the subsequent dqls if those doesn't specify the rowid.
+
+
+
+// when i've tried to create this table without rowid, this error has been thrown.
+[16:01:31] Cannot create table WITHOUT ROWID, if it has no primary key defined. Either uncheck the WITHOUT ROWID, or define a primary key.
+
+CREATE TABLE SupplierBranches (
+    supplierID CHAR (3)     NOT NULL ON CONFLICT ABORT
+                            CONSTRAINT branchOf REFERENCES Suppliers (supplierID) ON DELETE CASCADE,
+    branchID   INTEGER (2)  NOT NULL,
+    house      VARCHAR (10) NOT NULL,
+    road       VARCHAR (10) NOT NULL,
+    area       VARCHAR (15) NOT NULL,
+    thana      VARCHAR (15) NOT NULL,
+    district   VARCHAR (15) NOT NULL,
+    PRIMARY KEY (
+        supplierID,
+        branchID ASC
+    )
+);
+
+
+CREATE TABLE Products (
+    supplierID   CHAR (3)       NOT NULL
+                                CONSTRAINT productFrom REFERENCES Suppliers (supplierID) ON DELETE NO ACTION,
+    productID    VARCHAR (30)   NOT NULL,
+    domain       VARCHAR (15)   NOT NULL,
+    kingdom      VARCHAR (15),
+    phylum       VARCHAR (15),
+    klass        VARCHAR (15),
+    orderr       VARCHAR (15),
+    family       VARCHAR (15),
+    genus        VARCHAR (15),
+    species      VARCHAR (15),
+    shortDescrip VARCHAR (50)   NOT NULL,
+    longDescrip  VARCHAR,
+    size         INTEGER (3),
+    color        VARCHAR (15),
+    style        VARCHAR (15),
+    weight       INTEGER,
+    price        DECIMAL (9, 2) NOT NULL,
+    stock        INTEGER        NOT NULL
+                                DEFAULT (0),
+    quantity     INTEGER        NOT NULL
+                                DEFAULT (1),
+    arrived      DATE           NOT NULL,
+    path         VARCHAR,
+    PRIMARY KEY (
+        supplierID,
+        productID
+    )
+);
+
+
+
+
+CREATE TABLE CustomerProducts (
+    customerID   VARCHAR (30)   NOT NULL
+                                REFERENCES Customers (customerID) ON DELETE CASCADE,
+    orderID      INTEGER,
+    supplierID   CHAR (3)       NOT NULL,
+    productID    VARCHAR (30)   NOT NULL,
+    type         VARCHAR (15)   NOT NULL ON CONFLICT ROLLBACK,
+    domain       VARCHAR (15)   NOT NULL,
+    kingdom      VARCHAR (15),
+    phylum       VARCHAR (15),
+    klass        VARCHAR (15),
+    orderr       VARCHAR (15),
+    family       VARCHAR (15),
+    genus        VARCHAR (15),
+    species      VARCHAR (15),
+    shortDescrip VARCHAR (50)   NOT NULL,
+    longDescrip  VARCHAR,
+    size         INTEGER (3),
+    color        VARCHAR (15),
+    style        VARCHAR (15),
+    weight       INTEGER,
+    price        DECIMAL (9, 2) NOT NULL,
+    quantity     INTEGER        NOT NULL
+                                DEFAULT (1) 
+);
+
+
+
+
+
+
+CREATE TABLE Customers (
+    customerID VARCHAR (30) PRIMARY KEY ON CONFLICT ROLLBACK
+                            NOT NULL ON CONFLICT ROLLBACK
+                            UNIQUE ON CONFLICT ROLLBACK,
+    password   VARCHAR (15) NOT NULL
+                            DEFAULT ('noPassword'),
+    name       VARCHAR (50) 
+);
+
+
+
+CREATE TABLE Addresses (
+    customerID  VARCHAR (30) CONSTRAINT shipFor REFERENCES Customers (customerID) ON DELETE CASCADE
+                             NOT NULL,
+    addressID   INTEGER (3)  NOT NULL,
+    addressType VARCHAR (8)  NOT NULL
+                             DEFAULT ('both'),
+    flat        VARCHAR (10) NOT NULL,
+    house       VARCHAR (10) NOT NULL,
+    road        VARCHAR (10) NOT NULL,
+    area        VARCHAR (15) NOT NULL,
+    thana       VARCHAR (15) NOT NULL,
+    district    VARCHAR (15) NOT NULL,
+    PRIMARY KEY (
+        customerID,
+        addressID ASC
+    )
+    ON CONFLICT ABORT
+);
+
+
+
+
+
+
+CREATE TABLE Wishes (
+    customerID VARCHAR (30)   NOT NULL
+                              CONSTRAINT wishOf REFERENCES Customers (customerID) ON DELETE CASCADE,
+    supplierID CHAR (3)       NOT NULL,
+    productID  VARCHAR (30)   NOT NULL,
+    prevPrice  DECIMAL (9, 2) NOT NULL,
+    quantity   INTEGER        NOT NULL
+                              DEFAULT (1),
+    placed     DATE           NOT NULL
+                              DEFAULT current,
+    PRIMARY KEY (
+        customerID,
+        supplierID,
+        productID
+    )
+);
+
+
+
+
+
+CREATE TABLE Carts (
+    customerID        VARCHAR (30)   NOT NULL
+                                     CONSTRAINT wishOf REFERENCES Customers (customerID) ON DELETE CASCADE,
+    shippingAddressID INTEGER (3),
+    billingAddressID  INTEGER (3),
+    deliveryMethod    INTEGER (2),
+    paymentMethod     INTEGER (2),
+    supplierID        CHAR (3)       NOT NULL,
+    productID         VARCHAR (30)   NOT NULL,
+    prevPrice         DECIMAL (9, 2) NOT NULL,
+    quantity          INTEGER        NOT NULL
+                                     DEFAULT (1),
+    placed            DATE           NOT NULL
+                                     DEFAULT current,
+    PRIMARY KEY (
+        customerID,
+        supplierID,
+        productID
+    )
+);
+
+
+
+
+CREATE TABLE Orders (
+    customerID        VARCHAR (30)   NOT NULL,
+    orderID           INTEGER        NOT NULL,
+    shippingAddressID INTEGER (3)    NOT NULL,
+    billingAddressID  INTEGER (3)    NOT NULL,
+    deliveryMethod    INTEGER (2)    NOT NULL,
+    paymentMethod     INTEGER (2)    NOT NULL,
+    supplierID        CHAR (3)       NOT NULL,
+    productID         VARCHAR (30)   NOT NULL,
+    price             DECIMAL (9, 2) NOT NULL,
+    quantity          INTEGER        NOT NULL
+                                     DEFAULT (1),
+    placed            DATE           NOT NULL
+                                     DEFAULT current,
+    status            INTEGER (1)    NOT NULL
+                                     DEFAULT (1),
+    PRIMARY KEY (
+        orderID,
+        supplierID,
+        productID
+    )
+);
+
+
+
+
+CREATE TABLE Payments (
+    paymentID     INTEGER        PRIMARY KEY
+                                 UNIQUE
+                                 NOT NULL,
+    orderID       INTEGER        NOT NULL,
+    paymentMethod INTEGER (2)    NOT NULL,
+    amount        DECIMAL (9, 2) NOT NULL,
+    transactionID VARCHAR (30)   NOT NULL
+                                 UNIQUE,
+    date          DATE           NOT NULL
+);
+
+
+
+
+
+
+
+
+
+
+
+//This is table is deleted. Actually I don't need three different table to keep
+//same type of data.
+CREATE TABLE OrdersTemp (
+    orderID           INTEGER        PRIMARY KEY
+                                     UNIQUE
+                                     NOT NULL,
+    customerID        VARCHAR (30)   NOT NULL,
+    shippingAddressID INTEGER (3)    NOT NULL,
+    billingAddressID  INTEGER (3)    NOT NULL,
+    deliveryMethod    INTEGER (2)    NOT NULL,
+    paymentMethod     INTEGER (2)    NOT NULL,
+    supplierID        CHAR (3)       NOT NULL,
+    productID         VARCHAR (20)   NOT NULL,
+    price             DECIMAL (9, 2) NOT NULL,
+    quantity          INTEGER        NOT NULL
+                                     DEFAULT (1),
+    date              DATE           NOT NULL
+                                     DEFAULT current
+);
+
+
+
+//This is table is deleted. Actually I don't need three different table to keep
+//same type of data.
+CREATE TABLE OrdersCan (
+    orderID           INTEGER        PRIMARY KEY
+                                     UNIQUE
+                                     NOT NULL,
+    customerID        VARCHAR (30)   NOT NULL,
+    shippingAddressID INTEGER (3)    NOT NULL,
+    billingAddressID  INTEGER (3)    NOT NULL,
+    deliveryMethod    INTEGER (2)    NOT NULL,
+    paymentMethod     INTEGER (2)    NOT NULL,
+    supplierID        CHAR (3)       NOT NULL,
+    productID         VARCHAR (20)   NOT NULL,
+    price             DECIMAL (9, 2) NOT NULL,
+    quantity          INTEGER        NOT NULL
+                                     DEFAULT (1),
+    date              DATE           NOT NULL
+                                     DEFAULT current
+);
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+
+<footer>
+    <div class="privacy">
+        Online shop from bdmart © 2020 <a href="#">Privacy Policy</a><br />
+        Sells all kinds of products
+    </div>
+</footer>

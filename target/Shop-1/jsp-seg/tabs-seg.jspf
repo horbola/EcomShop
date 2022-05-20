@@ -1,0 +1,21 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+
+<section title="tabs">
+    <ul>
+        <li><a href="http://localhost:8080/Shop/prevented/profile/profile-page.jsp">Dashboard</a></li>
+        <li>Edit Account</li>
+        <li>Change Password</li>
+        <li>Wallet</li>
+        <li>Size Measurement</li>
+        <li><a href="http://localhost:8080/Shop/prevented/addressBook/addressBook-page.jsp">Address Book</a></li>
+        <li><a href="http://localhost:8080/Shop/prevented/cart/cart-page.jsp">Cart</a></li>
+        <li><a href="http://localhost:8080/Shop/prevented/wish/wish-page.jsp">Wish List</a></li>
+        <li><a href="http://localhost:8080/Shop/prevented/order/order-page.jsp">Orders</a></li>
+        <li>Transactions</li>
+        <li>Returns</li>
+        <li>NewsLetter</li>
+        <li><a href="http://localhost:8080/Shop/prevented/logout/logout-page.jsp">Logout</a></li>
+    </ul>
+</section>

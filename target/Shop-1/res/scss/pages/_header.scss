@@ -1,0 +1,165 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 29, 2020, 12:17:07 PM
+    Author     : Saif
+*/
+
+
+
+/* Header Style */
+
+header nav {
+    height: 30px;
+    background-color: #009432;
+}
+
+
+header nav span, header nav div {
+    display: inline-block;
+    margin: 4px 10px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav div:last-child {
+    float: right;
+}
+
+.acc a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+/*
+.dropbtn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    float: left;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+}
+
+.dropdown-content a {
+    display: block;
+}
+*/
+
+/*
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown-content a:hover {background-color: #ddd;}
+*/
+
+
+
+/*
+ Dropdown Button 
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+ The container <div> - needed to position the dropdown content 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+ Dropdown Content (Hidden by Default) 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+ Links inside the dropdown 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+ Change color of dropdown links on hover 
+.dropdown-content a:hover {background-color: #ddd;}
+
+ Show the dropdown menu on hover 
+.dropdown:hover .dropdown-content {display: block;}
+
+ Change the background color of the dropdown button when the dropdown content is shown 
+.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
+
+
+
+
+.menu>ul>li>a:hover {
+    background-color: #e0e0e0;
+}
+
+.buzz-words {
+    display: flex;
+}
+
+.buzz-words div {
+    flex-grow: 1;
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    height: 25px;
+    text-align: center;
+}
+
+
+
+
+.index {
+    height: 30px;
+    border: 1px solid;
+    padding-top: 5px;
+}
+
+.index>div {
+    float: left;
+    margin: 4px 10px;
+    font-weight: bold;
+}
+
+.index>div:last-child {
+    float: right;
+}
+
+.index form>input {
+    height: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.index form>input[type="submit"] {
+    float: right;
+    border-left: none;
+    height: 24px;
+}
+
+.index form>input[type="text"] {
+
+}

@@ -1,0 +1,170 @@
+public class Methods{
+
+
+    private void close(){
+        try(Connection conn = sqlite.getConnection();
+            Statement s = conn.createStatement()){
+        
+            String sql = "";
+            try(ResultSet rs = s.executeQuery(sql)){
+                
+            }catch (SQLException ex) {
+                java.util.logging.Logger.getLogger(Operations.class.getName()).log(Level.SEVERE, null, ex);
+                l().debug("");
+            }
+            
+        }catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Operations.class.getName()).log(Level.SEVERE, null, ex);
+            l().debug("");
+        }
+    }
+
+
+
+
+    public void sync(ResultSet rs) throws SQLException {
+        if(products == null) products = new HashMap<String, ProductBean>();
+            
+        while(rs.next()){
+            String sID = rs.getString("cp.supplierID");
+            String pID = rs.getString("cp.productID");
+            if(products.containsKey(sID+pID)) continue;
+            
+            SupplierBean supplier = containsSupplier(sID);
+            ProductBean product = new ProductBean();
+            
+            if(supplier != null) product.setSupplier(supplier);
+            else product.setSupplier(new SupplierBean(sID));
+            product.setProductID(pID);
+            product.setDomain(rs.getString("cp.domain"));
+            product.setKingdom(rs.getString("cp.kingdom"));
+            product.setPhylum(rs.getString("cp.phylum"));
+            product.setKlass(rs.getString("cp.klass"));
+            product.setOrderr(rs.getString("cp.orderr"));
+            product.setFamily(rs.getString("cp.family"));
+            product.setGenus(rs.getString("cp.genus"));
+            product.setSpecies(rs.getString("cp.species"));
+            product.setShortDescrip(rs.getString("cp.shortDescrip"));
+            product.setLongDescrip(rs.getString("cp.longDescrip"));
+            product.setSize(rs.getInt("cp.size"));
+            product.setColor(rs.getString("cp.color"));
+            product.setStyle(rs.getString("cp.style"));
+            product.setWeight(rs.getInt("cp.weight"));
+            product.setPrice(rs.getFloat("cp.price"));
+            product.setQuantity(rs.getInt("cp.quantity"));
+            addToProducts(product);
+        }
+        if(rs.last()){date = rs.getDate("w.date");}
+    }
+
+    public void syncProducts(ResultSet rs) throws SQLException {
+        if(products == null) products = new HashMap<String, ProductBean>();
+            
+        while(rs.next()){
+            String sID = rs.getString("supplierID");
+            String pID = rs.getString("productID");
+            if(products.containsKey(sID+pID)) continue;
+            
+            SupplierBean supplier = containsSupplier(sID);
+            ProductBean product = new ProductBean();
+            
+            if(supplier != null) product.setSupplier(supplier);
+            else product.setSupplier(new SupplierBean(sID));
+            product.setProductID(pID);
+            product.setPrevPrice(rs.getFloat("prevPrice"));
+            product.setQuantity(rs.getInt("quantity"));
+            addToProducts(product);
+        }
+        if(rs.last()){date = rs.getDate("date");}
+    }
+
+
+
+    public boolean add(HttpServletRequest request){
+        if(products == null){products = new HashMap<String, ProductBean>();}
+        
+        String sID = request.getParameter("supplierID");
+        SupplierBean supplier = containsSupplier(sID);
+        
+        ProductBean product = new ProductBean();
+        if(supplier != null) product.setSupplier(supplier);
+        else product.setSupplier(new SupplierBean(sID));
+        product.setProductID(request.getParameter("productID"));
+        product.setDomain("domain");
+        product.setKingdom("kingdom");
+        product.setPhylum("phylum");
+        product.setKlass("klass");
+        product.setOrderr("order");
+        product.setFamily("family");
+        product.setGenus("genus");
+        product.setSpecies("species");
+        product.setShortDescrip(request.getParameter("shortDescrip"));
+        product.setLongDescrip(request.getParameter("longDescrip"));
+        product.setSize(request.getParameter("size"));
+        product.setColor(request.getParameter("color"));
+        product.setStyle(request.getParameter("style"));
+        product.setWeight(request.getParameter("weight"));
+        product.setPrice(request.getParameter("price"));
+        product.setQuantity(request.getParameter("quantity"));
+        
+        date = new Date();
+        boolean isAdded = addToProducts(product);
+        return isAdded;
+    }
+
+
+    public void fillRequestShippingAddress(HttpServletRequest request){
+        //if shipping address is null at unloggedin means no address is defined by customer.
+        //so new address from request can be formed with a new instance. but if not null means
+        //customer saved an address previously. and if request contains address then this address
+        //should override the previous address in the previous instance.
+        if(shippingAddress == null) shippingAddress = new AddressBean(customer);
+        shippingAddress.setAddressType(request.getParameter("addressTypeS"));
+        shippingAddress.setFlat(request.getParameter("flatS"));
+        shippingAddress.setHouse(request.getParameter("houseS"));
+        shippingAddress.setRoad(request.getParameter("roadS"));
+        shippingAddress.setArea(request.getParameter("areaS"));
+        shippingAddress.setThana(request.getParameter("thanaS"));
+        shippingAddress.setDistrict(request.getParameter("districtS"));
+    }
+    
+    public void fillPrevShippingAddress(ResultSet rs) throws SQLException{
+        if(prevShippingAddress == null) prevShippingAddress = new AddressBean(customer);
+        prevShippingAddress.setAddressType(rs.getString("AddressType"));
+        prevShippingAddress.setAddressID(rs.getString("addressID"));
+        prevShippingAddress.setFlat(rs.getString("flat"));
+        prevShippingAddress.setHouse(rs.getString("house"));
+        prevShippingAddress.setRoad(rs.getString("road"));
+        prevShippingAddress.setArea(rs.getString("area"));
+        prevShippingAddress.setThana(rs.getString("thana"));
+        prevShippingAddress.setDistrict(rs.getString("district"));
+    }
+    
+    public void fillRequestBillingAddress(HttpServletRequest request){
+        //if shipping address is null at unloggedin means no address is defined by customer.
+        //so new address from request can be formed with a new instance. but if not null means
+        //customer saved an address previously. and if request contains address then this address
+        //should override the previous address with the previous instance
+        if(billingAddress == null) billingAddress = new AddressBean(customer);
+        billingAddress.setAddressType(request.getParameter("addressTypeB"));
+        billingAddress.setFlat(request.getParameter("flatB"));
+        billingAddress.setHouse(request.getParameter("houseB"));
+        billingAddress.setRoad(request.getParameter("roadB"));
+        billingAddress.setArea(request.getParameter("areaB"));
+        billingAddress.setThana(request.getParameter("thanaB"));
+        billingAddress.setDistrict(request.getParameter("districtB"));
+    }
+    
+    public void fillPrevBillingAddress(ResultSet rs) throws SQLException{
+        if(prevBillingAddress == null) prevBillingAddress = new AddressBean(customer);
+        prevBillingAddress.setAddressType(rs.getString("AddressType"));
+        prevBillingAddress.setAddressID(rs.getString("addressID"));
+        prevBillingAddress.setFlat(rs.getString("flat"));
+        prevBillingAddress.setHouse(rs.getString("house"));
+        prevBillingAddress.setRoad(rs.getString("road"));
+        prevBillingAddress.setArea(rs.getString("area"));
+        prevBillingAddress.setThana(rs.getString("thana"));
+        prevBillingAddress.setDistrict(rs.getString("district"));
+    }
+
+}
