@@ -6,7 +6,7 @@
 package com.saif.web.practice.shop.servlet;
 
 import com.saif.web.practice.shop.bean.Customer;
-import com.saif.web.practice.shop.bean.Operations;
+import com.saif.web.practice.shop.core.Operations;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URLEncoder;
@@ -33,12 +33,9 @@ public class Authenticate extends HttpServlet {
         String origUrl = request.getParameter("origUrl");
         String productsPage = request.getServletContext().getInitParameter("productsPage");
         
-        Customer loginCust = new Customer();
-        loginCust.setUserName(request.getParameter("uName"));
-        loginCust.setPass(request.getParameter("pass"));
-        
         Operations operations = (Operations)request.getServletContext().getAttribute("operations");
         // if customer is null then the Customer isn't signed Up. Ask her to sign Up.
+        Customer loginCust = getLoginCust(request);
         Customer customer = operations.authenticate(loginCust);
         
         
@@ -66,6 +63,13 @@ public class Authenticate extends HttpServlet {
             LOGGER.debug("Redirect url from Authenticate: " + uri.toString());
             request.getRequestDispatcher(uri.toString()).forward(request, response);
         }
+    }
+    
+    private Customer getLoginCust(HttpServletRequest request){
+        Customer loginCust = new Customer();
+        loginCust.setUserName(request.getParameter("uName"));
+        loginCust.setPass(request.getParameter("pass"));
+        return loginCust;
     }
 
     @Override

@@ -5,7 +5,7 @@
  */
 package com.saif.web.practice.shop.servlet;
 
-import com.saif.web.practice.shop.bean.Operations;
+import com.saif.web.practice.shop.core.Operations;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.SortedMap;

@@ -6,7 +6,7 @@
 package com.saif.web.practice.shop.servlet;
 
 import com.saif.web.practice.shop.bean.Customer;
-import com.saif.web.practice.shop.bean.Operations;
+import com.saif.web.practice.shop.core.Operations;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URLEncoder;
@@ -31,13 +31,9 @@ public class MakeCustomer extends HttpServlet {
         String origUrl = request.getParameter("origUrl");
         String productsPage = request.getServletContext().getInitParameter("productsPage");
         
-        Customer signUpCust = new Customer();
-        signUpCust.setUserName(request.getParameter("uName"));
-        signUpCust.setPass(request.getParameter("pass"));
-        signUpCust.setName(request.getParameter("name"));
-        
         Operations operations = (Operations)request.getServletContext().getAttribute("operations");
         // if customer is null then the Customer coudn't be signed Up. Ask her to try to sign Up again.
+        Customer signUpCust = getSignUpCust(request);
         Customer customer = operations.makeCustomer(signUpCust);
         
         if(customer != null){
@@ -63,6 +59,14 @@ public class MakeCustomer extends HttpServlet {
             LOGGER.debug("Redirect url from MakeCustomer(): " + uri.toString());
             request.getRequestDispatcher(uri.toString()).forward(request, response);
         }
+    }
+    
+    private Customer getSignUpCust(HttpServletRequest request){
+        Customer signUpCust = new Customer();
+        signUpCust.setUserName(request.getParameter("uName"));
+        signUpCust.setPass(request.getParameter("pass"));
+        signUpCust.setName(request.getParameter("name"));
+        return signUpCust;
     }
 
     /**

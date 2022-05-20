@@ -140,7 +140,7 @@ function makeContent(){
         console.log(JSON.stringify(cart.cart));
         var xhr = new XMLHttpRequest();
         var cartJson = "?cartJson="+JSON.stringify(cart.cart);
-        var url = "http://localhost:8080/Shop/protectet/MakeOrder"+cartJson;
+        var url = "http://localhost:8080/Shop/authorize/MakeOrder"+cartJson;
         // window.location = url;
         
         xhr.open('GET', url, true);
@@ -178,7 +178,4 @@ function Cart(){
         return this.cart[i];
     };
     
-    this.testMsg = function(){
-        return "This is a message";
-    };
 }

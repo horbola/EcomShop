@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
     <!--    *******************************************************************************************
+    Security Constraint
+    *******************************************************************************************-->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Admin Resource</web-resource-name>
+            <url-pattern>/jsp/admin/*</url-pattern>
+            <url-pattern>/admin/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>director</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>file</realm-name>
+    </login-config>
+    <!--    *******************************************************************************************
     Listeners
     *******************************************************************************************-->
     <listener>
@@ -10,21 +29,27 @@
     <!--    *******************************************************************************************
     Filters
     *******************************************************************************************-->
+    <!--    <filter-mapping>
+        <filter-name>Home</filter-name>
+        <url-pattern>/jsp/*</url-pattern>
+        <url-pattern>/authorize/*</url-pattern>
+        <url-pattern>/Authenticate</url-pattern>
+        <url-pattern>/MakeCustomer</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>-->
+    <filter-mapping>
+        <filter-name>Authorize</filter-name>
+        <url-pattern>/authorize/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    <!--    <filter>
+        <filter-name>Home</filter-name>
+        <filter-class>com.saif.web.practice.shop.filter.Home</filter-class>
+    </filter>-->
     <filter>
         <filter-name>Authorize</filter-name>
         <filter-class>com.saif.web.practice.shop.filter.Authorize</filter-class>
     </filter>
-    <filter-mapping>
-        <filter-name>Authorize</filter-name>
-        <url-pattern>/protectet/*</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-    </filter-mapping>
-    <filter-mapping>
-        <filter-name>Authorize</filter-name>
-        <url-pattern>/jsp/protected/*</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-        <dispatcher>FORWARD</dispatcher>
-    </filter-mapping>
     <!--    *******************************************************************************************
     Servlets
     *******************************************************************************************-->
@@ -44,15 +69,15 @@
     <!--Servlet Names (Protected)-->
     <servlet>
         <servlet-name>MakeOrder</servlet-name>
-        <servlet-class>com.saif.web.practice.shop.servlet.protectet.MakeOrder</servlet-class>
+        <servlet-class>com.saif.web.practice.shop.servlet.authorize.MakeOrder</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ShowOrders</servlet-name>
-        <servlet-class>com.saif.web.practice.shop.servlet.protectet.ShowOrders</servlet-class>
+        <servlet-class>com.saif.web.practice.shop.servlet.authorize.ShowOrders</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UpdateProfile</servlet-name>
-        <servlet-class>com.saif.web.practice.shop.servlet.protectet.UpdateProfile</servlet-class>
+        <servlet-class>com.saif.web.practice.shop.servlet.authorize.UpdateProfile</servlet-class>
     </servlet>
     <!--Servlet Names (Admin)-->
     <servlet>
@@ -64,10 +89,6 @@
         <servlet-class>com.saif.web.practice.shop.servlet.admin.ShowOrdersTemp</servlet-class>
     </servlet>
     <!--Servlet Names (Test)-->
-    <servlet>
-        <servlet-name>LogTest</servlet-name>
-        <servlet-class>com.saif.web.practice.shop.servlet.test.LogTest</servlet-class>
-    </servlet>
     <!--Servlet Mappings (Non Protected)-->
     <servlet-mapping>
         <servlet-name>Authenticate</servlet-name>
@@ -84,15 +105,15 @@
     <!--Servlet Mappings (Protected)-->
     <servlet-mapping>
         <servlet-name>MakeOrder</servlet-name>
-        <url-pattern>/protectet/MakeOrder</url-pattern>
+        <url-pattern>/authorize/MakeOrder</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ShowOrders</servlet-name>
-        <url-pattern>/protectet/ShowOrders</url-pattern>
+        <url-pattern>/authorize/ShowOrders</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UpdateProfile</servlet-name>
-        <url-pattern>/protectet/UpdateProfile</url-pattern>
+        <url-pattern>/authorize/UpdateProfile</url-pattern>
     </servlet-mapping>
     <!--Servlet Mappings (Admin)-->
     <servlet-mapping>
@@ -104,10 +125,6 @@
         <url-pattern>/admin/ShowOrdersTemp</url-pattern>
     </servlet-mapping>
     <!--Servlet Mappings (Test)-->
-    <servlet-mapping>
-        <servlet-name>LogTest</servlet-name>
-        <url-pattern>/LogTest</url-pattern>
-    </servlet-mapping>
     <!--    *******************************************************************************************
     Session Config
     *******************************************************************************************-->
@@ -122,11 +139,11 @@
     <!--html-->
     <context-param>
         <param-name>loginPage</param-name>
-        <param-value>/jsp/Login.jsp</param-value>
+        <param-value>/jsp/request/Login.jsp</param-value>
     </context-param>
     <context-param>
         <param-name>signUpPage</param-name>
-        <param-value>/jsp/SignUp.jsp</param-value>
+        <param-value>/jsp/request/SignUp.jsp</param-value>
     </context-param>
     <context-param>
         <param-name>indexPage</param-name>
@@ -135,44 +152,24 @@
     <!--jsp Paths(Non Protected)-->
     <context-param>
         <param-name>productsPage</param-name>
-        <param-value>/jsp/Products.jsp</param-value>
-    </context-param>
-    <context-param>
-        <param-name>cartPage</param-name>
-        <param-value>/jsp/Cart.jsp</param-value>
+        <param-value>/jsp/forward/Products.jsp</param-value>
     </context-param>
     <context-param>
         <param-name>orderFeedbackPage</param-name>
-        <param-value>/jsp/OrderFeedback.jsp</param-value>
+        <param-value>/jsp/forward/OrderFeedback.jsp</param-value>
     </context-param>
     <context-param>
         <param-name>invalidateSessionPage</param-name>
-        <param-value>/jsp/InvalidateSession.jsp</param-value>
+        <param-value>/jsp/request/InvalidateSession.jsp</param-value>
     </context-param>
     <!--jsp Paths (Protected)-->
     <context-param>
-        <param-name>confirmOrderPage</param-name>
-        <param-value>/jsp/protected/ConfirmOrder.jsp</param-value>
-    </context-param>
-    <context-param>
-        <param-name>confirmCustomerPage</param-name>
-        <param-value>/jsp/ConfirmCustomer.jsp</param-value>
-    </context-param>
-    <context-param>
-        <param-name>confirmUpdateProfilePage</param-name>
-        <param-value>/jsp/protected/ConfirmUpdateProfile.jsp</param-value>
-    </context-param>
-    <context-param>
-        <param-name>ordersPage</param-name>
-        <param-value>/jsp/protected/Orders.jsp</param-value>
-    </context-param>
-    <context-param>
         <param-name>profilePage</param-name>
-        <param-value>/jsp/protected/Profile.jsp</param-value>
+        <param-value>/jsp/forward/Profile.jsp</param-value>
     </context-param>
     <context-param>
         <param-name>profileEditPage</param-name>
-        <param-value>/jsp/protected/ProfileEdit.jsp</param-value>
+        <param-value>/jsp/request/ProfileEdit.jsp</param-value>
     </context-param>
     <!--jsp Paths (Admin)-->
     <context-param>
@@ -184,22 +181,6 @@
         <param-value>/jsp/admin/ReviewOrder.jsp</param-value>
     </context-param>
     <!--jsp Paths (Error)-->
-    <context-param>
-        <param-name>loginRequiredErrorPage</param-name>
-        <param-value>/jsp/error/LoginRequiredError.jsp</param-value>
-    </context-param>
-    <context-param>
-        <param-name>loginErrorPage</param-name>
-        <param-value>/jsp/error/LoginError.jsp</param-value>
-    </context-param>
-    <context-param>
-        <param-name>notSignedUpErrorPage</param-name>
-        <param-value>/jsp/error/NotSignedUpError.jsp</param-value>
-    </context-param>
-    <context-param>
-        <param-name>signUpErrorPage</param-name>
-        <param-value>/jsp/error/SignUpError.jsp</param-value>
-    </context-param>
     <!--jsp Paths (Segment)-->
     <context-param>
         <param-name>navBar</param-name>
@@ -221,15 +202,15 @@
     <!--Servlet Paths (Protected)-->
     <context-param>
         <param-name>makeOrder</param-name>
-        <param-value>/protectet/MakeOrder</param-value>
+        <param-value>/authorize/MakeOrder</param-value>
     </context-param>
     <context-param>
         <param-name>showOrders</param-name>
-        <param-value>/protectet/ShowOrders</param-value>
+        <param-value>/authorize/ShowOrders</param-value>
     </context-param>
     <context-param>
         <param-name>updateProfile</param-name>
-        <param-value>/protectet/UpdateProfile</param-value>
+        <param-value>/authorize/UpdateProfile</param-value>
     </context-param>
     <!--Servlet Paths (Admin)-->
     <context-param>

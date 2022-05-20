@@ -70,4 +70,12 @@ public class Customer {
         return buff.toString();
     }
     
+    public String getUpdateFeedbackSql() {
+        StringBuffer buff = new StringBuffer();
+        buff.append("SELECT * FROM Customers where uName = ");
+        buff.append("\"" +userName +"\"");
+        buff.append(";");
+        return buff.toString();
+    }
+    
 }

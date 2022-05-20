@@ -5,7 +5,7 @@
  */
 package com.saif.web.practice.shop.servlet.admin;
 
-import com.saif.web.practice.shop.bean.Operations;
+import com.saif.web.practice.shop.core.Operations;
 import com.saif.web.practice.shop.bean.Order;
 import java.io.IOException;
 import java.io.PrintWriter;

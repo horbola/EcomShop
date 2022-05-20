@@ -94,4 +94,9 @@ public class Product {
         buff.append("'"+mfrId+"';");
         return buff.toString();
     }
+    
+    public String getSelectAllSql(){
+        String s = "SELECT * FROM Products;";
+        return s;
+    }
 }

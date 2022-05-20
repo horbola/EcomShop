@@ -5,7 +5,7 @@
  */
 package com.saif.web.practice.shop.listener;
 
-import com.saif.web.practice.shop.bean.Operations;
+import com.saif.web.practice.shop.core.Operations;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

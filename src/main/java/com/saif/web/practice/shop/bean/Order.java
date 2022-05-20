@@ -5,7 +5,6 @@
  */
 package com.saif.web.practice.shop.bean;
 
-import com.saif.web.practice.shop.util.ParseJson;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -134,7 +133,7 @@ public class Order {
     }
     
     public String getHighestOrderIdSql(){
-        return "select max(orderId) from Orders;";
+        return "select max(orderId) from OrdersTemp;";
     }
     
     public String getFeedbackOrderSql(){
