@@ -24,102 +24,50 @@ import org.apache.logging.log4j.Logger;
  * @author Saif
  */
 public class Authenticate extends HttpServlet {
-    private final Logger logger = LogManager.getLogger(Authenticate.class);
-    String debug = null;
+    private final Logger LOGGER = LogManager.getLogger(Authenticate.class);
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        String uName = request.getParameter("uName");
-        String pass = request.getParameter("pass");
+        LOGGER.debug("doGet()");
         String origUrl = request.getParameter("origUrl");
+        String productsPage = request.getServletContext().getInitParameter("productsPage");
+        
+        Customer loginCust = new Customer();
+        loginCust.setUserName(request.getParameter("uName"));
+        loginCust.setPass(request.getParameter("pass"));
         
         Operations operations = (Operations)request.getServletContext().getAttribute("operations");
         // if customer is null then the Customer isn't signed Up. Ask her to sign Up.
-        Customer customer = operations.authenticate(uName, pass);
-//        customer = null; // made null for debugging pupose.
+        Customer customer = operations.authenticate(loginCust);
         
-
-//        logger.debug("Authenticated User Name: " + customer.getUserName());
-//        logger.debug("Authenticated Password: " + customer.getPass());
-//        logger.debug("Authenticated Name: " + customer.getName());
-//
-//        logger.debug("Entered processRequest()");
-//        logger.debug("origUrl is: "+ origUrl);
-//        logger.debug("Direct uName is: "+ uName);
-//        logger.debug("Direct pass is: "+ pass);
-//        logger.debug("all three executed");
+        
         
         if(customer != null){
-            // if(login page is invoded from redirection then redirect it to the original page)
-            // else if(login page is invoked from any page staticaly, then stay on that page after logged in)
-            // else if(login page is invoked directly from start then redirect to products page)
+            LOGGER.debug("doGet(): customer not null");
             request.getSession().setAttribute("customer", customer);
-            String forwardPage = request.getServletContext().getInitParameter("productsPage");
-            request.getRequestDispatcher(origUrl).forward(request, response);
+            if(origUrl != null && !origUrl.equals("")){
+                LOGGER.debug("doGet(): origUrl is - " +origUrl);
+                request.getRequestDispatcher(origUrl).forward(request, response);
+            }else {
+                LOGGER.debug("doGet(): origUrl is null");
+                request.getRequestDispatcher(productsPage).forward(request, response);
+            }
         }else {
             // Not Signed Up. Send an error message to the NotSignedUpErrorPage
             // as a query parameter asking her to sign up.
-            
-            String notSignedUp = new String("notSignedUp=You+are+not+registered+to+our+online+shopping.+Please+sign+in+first.+Its+very+easy.");
-            StringBuffer uri = new StringBuffer(request.getContextPath());
+            StringBuffer uri = new StringBuffer();
             uri.append(request.getServletContext().getInitParameter("signUpPage"));
-            uri.append("?");
-            uri.append(notSignedUp);
-            uri.append("&");
-            uri.append("origUrl=");
-            uri.append(URLEncoder.encode(origUrl, "UTF-8"));
+            uri.append("?notSignedUp=");
+            uri.append(URLEncoder.encode("You are not registered to our Online shopping. Please Sign up..", "UTF-8"));
+            uri.append("&origUrl=");
+            uri.append(origUrl);
             
-            // String redirectPage = request.getServletContext().getInitParameter("notSignedUpErrorPage");
-            // String redirectUrl = request.getContextPath()+redirectPage+"?"+notSignedUp;
-            
-            logger.debug(uri.toString());
-            response.sendRedirect(uri.toString());
+            LOGGER.debug("Redirect url from Authenticate: " + uri.toString());
+            request.getRequestDispatcher(uri.toString()).forward(request, response);
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";

@@ -38,4 +38,36 @@ public class Customer {
         this.name = name;
     }
     
+    public String getSelectSql(){
+        String customerSelect = "SELECT * FROM Customers WHERE uName = \"" +userName +"\";";
+        return customerSelect;
+    }
+    
+    public String getInsertSql(){
+        StringBuffer buff = new StringBuffer("INSERT INTO Customers (uName, pass, name) VALUES (");
+        buff.append("\"" +userName +"\"");
+        buff.append(",");
+        buff.append("\"" +pass +"\"");
+        buff.append(",");
+        buff.append("\"" +name +"\"");
+        buff.append(");");
+        return buff.toString();
+    }
+    
+    public String getUpdateSql(Customer old){
+        StringBuffer buff = new StringBuffer();
+        buff.append("UPDATE Customers SET uName = ");
+        buff.append("\"" +userName +"\"");
+        buff.append(",");
+        buff.append("pass = ");
+        buff.append("\"" +pass +"\"");
+        buff.append(",");
+        buff.append("name = ");
+        buff.append("\"" +name +"\"");
+        buff.append("WHERE uName = ");
+        buff.append("\"" +old.userName +"\"");
+        buff.append(";");
+        return buff.toString();
+    }
+    
 }

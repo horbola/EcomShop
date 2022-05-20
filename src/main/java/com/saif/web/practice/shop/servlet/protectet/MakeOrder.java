@@ -7,11 +7,13 @@ package com.saif.web.practice.shop.servlet.protectet;
 
 import com.saif.web.practice.shop.bean.Customer;
 import com.saif.web.practice.shop.bean.Operations;
+import com.saif.web.practice.shop.bean.Order;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.SortedMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -34,9 +36,9 @@ import org.json.simple.parser.JSONParser;
 
 
 public class MakeOrder extends HttpServlet {
-    private final Logger logger = LogManager.getLogger(MakeOrder.class);
+    private final Logger LOGGER = LogManager.getLogger(MakeOrder.class);
     private boolean debug = true;
-    private String confirmOrderPage;
+    private String orderFeedbackPage;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -48,25 +50,60 @@ public class MakeOrder extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
+        LOGGER.debug("processRequest()");
+        
+        Customer customer = (Customer) request.getSession().getAttribute("customer");
+        String cartJson = request.getParameter("cartJson");
+        
+        Order order = new Order(customer, cartJson);
+        
+        Operations operations = (Operations) request.getServletContext().getAttribute("operations");
+        SortedMap[] orderFeedback = operations.makeOrder(order);
+        
+        // the next line doesn't work. I don't get this variable in jsp with the el.
+        // request.setAttribute("parsedJson", parsedJson);
+
+        if(order != null){
+            request.setAttribute("orderFeedback", orderFeedback);
+            orderFeedbackPage = request.getServletContext().getInitParameter("orderFeedbackPage");
+            request.getRequestDispatcher(orderFeedbackPage).forward(request, response);
+        }
+        
+    }
+    
+    
+    
+    /*
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+        LOGGER.debug("processRequest()");
         Customer customer = (Customer) request.getSession().getAttribute("customer");
         String uName = null;
         if(customer != null){uName = customer.getUserName();}
-        
         String cartJson = request.getParameter("cartJson");
-        // String cartJson = "[{\"productId\":\"1\",\"mfrId\":\"aci\",\"description\":\"Mosquito Coil\",\"price\":\"100.0\",\"quantity\":\"500\"},{\"productId\":\"2\",\"mfrId\":\"aci\",\"description\":\"Mosquito Spray\",\"price\":\"100.0\",\"quantity\":\"500\"}]";
-        request.setAttribute("cartJson", cartJson);
+        
+        Order ordered = new Order(customer, cartJson);
+        ordered.setOrderId(10);
+        for(StringBuffer b : ordered.getInserts()){
+            LOGGER.debug(b.toString());
+        }
         
         Operations operations = (Operations) request.getServletContext().getAttribute("operations");
-        operations.makeOrder(uName, cartJson);
+        SortedMap[] order = operations.makeOrder(uName, cartJson);
+        
         // the next line doesn't work. I don't get this variable in jsp with the el.
         // request.setAttribute("parsedJson", parsedJson);
-        
-        confirmOrderPage = request.getServletContext().getInitParameter("confirmOrderPage");
-        if(debug){
-            request.getRequestDispatcher(confirmOrderPage).forward(request, response);
+
+        if(order != null){
+            request.setAttribute("order", order);
+            orderFeedbackPage = request.getServletContext().getInitParameter("orderFeedbackPage");
+            request.getRequestDispatcher(orderFeedbackPage).forward(request, response);
         }
+        
     }
     
+    
+    */
     
     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

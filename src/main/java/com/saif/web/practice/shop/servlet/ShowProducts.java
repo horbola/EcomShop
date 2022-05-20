@@ -34,8 +34,8 @@ public class ShowProducts extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         Operations operations = (Operations) request.getServletContext().getAttribute("operations");
-        SortedMap[] result = operations.showAllProducts();
-        request.setAttribute("products", result);
+        SortedMap[] products = operations.showAllProducts();
+        request.setAttribute("products", products);
         
         String productsPage = request.getServletContext().getInitParameter("productsPage");
         request.getRequestDispatcher(productsPage).forward(request, response);

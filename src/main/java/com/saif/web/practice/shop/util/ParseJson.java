@@ -23,18 +23,16 @@ import org.json.simple.parser.ParseException;
  * @author Saif
  */
 public class ParseJson {
-    private static final Logger logger = LogManager.getLogger(ParseJson.class);
-    
-    static String json = "[{\"productId\":\"1\",\"mfrId\":\"aci\",\"description\":\"Mosquito Coil\",\"price\":\"100.0\",\"quantity\":\"500\"},{\"productId\":\"2\",\"mfrId\":\"aci\",\"description\":\"Mosquito Spray\",\"price\":\"100.0\",\"quantity\":\"500\"}]";
+    private final Logger LOGGER = LogManager.getLogger(ParseJson.class);
+    private int orderId;
 
-    public static void main(String ...s){
-        ArrayList<StringBuffer> parsedJson = parseJson(json);
-        for(StringBuffer buff : parsedJson){
-            System.out.println(buff.toString());
-        }
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
     
-    public static ArrayList<StringBuffer> parseJson(String cartJson){ 
+    
+    public ArrayList<StringBuffer> parseCart(String uName, String cartJson){ 
+        LOGGER.debug("parse()");
         JSONArray ja = null;
         try {
             Object obj = new JSONParser().parse(cartJson);
@@ -42,10 +40,10 @@ public class ParseJson {
         }
         catch(ParseException ex) {}
         
-        Iterator itr = ja.iterator(); 
+        Iterator itr = ja.iterator();
         Iterator rowItr = null;
-        StringBuffer colBuff = new StringBuffer();
-        colBuff.append("INSERT INTO Orders (productId, mfrId, description, price, quantity) values (");
+        StringBuffer colBuff = new StringBuffer("INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES (");
+        
         StringBuffer values;
         ArrayList<StringBuffer> buffs = new ArrayList<>();
         
@@ -54,21 +52,19 @@ public class ParseJson {
             Map row = (Map) itr.next();
             values = new StringBuffer(colBuff);
             
+            values.append("\"" +uName +"\"");
+            values.append(",");
+            
+            values.append(orderId);
+            values.append(",");
+            
             String productId = (String) row.get("productId");
             values.append(productId);
-            values.append(", ");
+            values.append(",");
             
             String mfrId = (String) row.get("mfrId");
-            values.append(mfrId);
-            values.append(", ");
-            
-            String description = (String) row.get("description");
-            values.append(description);
-            values.append(", ");
-            
-            String price = (String) row.get("price");
-            values.append(price);
-            values.append(", ");
+            values.append("\"" +mfrId +"\"");
+            values.append(",");
             
             String quantity = (String) row.get("quantity");
             values.append(quantity);
@@ -79,29 +75,4 @@ public class ParseJson {
         return buffs;
     }
     
-    
-    
-    /**
-     * public static String parseJson(String cartJson){ 
-        Object obj = null; 
-        try {obj = new JSONParser().parse(cartJson);
-        }catch(ParseException ex) {}
-        JSONArray ja = (JSONArray) obj; 
-          
-        Iterator itr = ja.iterator(); 
-        Iterator rowItr = null;
-        String parsedJson = "";
-          
-        while (itr.hasNext())  
-        { 
-            rowItr = ((Map) itr.next()).entrySet().iterator(); 
-            while (rowItr.hasNext()) { 
-                Map.Entry pair = (Map.Entry) rowItr.next(); 
-                parsedJson += pair.getKey() + " : " + pair.getValue() +"\n";
-            }
-        }
-        
-        return parsedJson;
-    }
-     */
 }

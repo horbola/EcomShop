@@ -30,22 +30,9 @@ public class LogTest extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        Logger logger = LogManager.getRootLogger();
-        logger.debug("this is from LogTest again");
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LogTest</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LogTest at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+    throws ServletException, IOException {
+        String productsEntryPage = request.getServletContext().getInitParameter("productsEntryPage");
+        request.getRequestDispatcher(productsEntryPage).forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

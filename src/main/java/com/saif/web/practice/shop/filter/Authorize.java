@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -27,23 +28,21 @@ import org.apache.logging.log4j.Logger;
  * @author Saif
  */
 public class Authorize implements Filter {
-    private final Logger logger = LogManager.getLogger(Filter.class);
-    
-    private static final boolean debug = true;
+    private final Logger LOGGER = LogManager.getLogger(Filter.class);
+    private final boolean DEBUG = true;
 
     // The filter configuration object we are associated with.  If
-    // this value is null, this filter instance is not currently
-    // configured. 
+    // this value is null, this filter instance is not currentl configured. 
     private FilterConfig filterConfig = null;
     private HttpServletRequest req;
     private HttpServletResponse res;
     
-    public Authorize() {
-    }    
+    public Authorize() {}    
     
     private void doBeforeProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
-        if (debug) {
+        LOGGER.debug("doBeforeProcessing()");
+        if (DEBUG) {
             log("Authorize:DoBeforeProcessing");
         }
 
@@ -67,99 +66,19 @@ public class Authorize implements Filter {
 	    log(buf.toString());
 	}
          */
-        
-        req = (HttpServletRequest) request;
-        res = (HttpServletResponse) response;
-        
-        Customer customer = (Customer) req.getSession().getAttribute("customer");
-        // This line is for debugging purpose. Remove it.
-//        customer = null;
-        if(customer == null){
-            // redirect to login with the original url.
-            String notLoggedIn = "notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired+Please+log+in";
-            
-            StringBuffer uri = new StringBuffer(req.getContextPath());
-            uri.append(req.getServletContext().getInitParameter("loginPage"));
-            uri.append("?");
-            uri.append(notLoggedIn);
-            uri.append("&");
-            uri.append("origUrl=");
-            uri.append(URLEncoder.encode(getContextRelativeUri(req), "UTF-8"));
-            
-//            String origUrl = "origUrl="+req.getRequestURL().toString();
-//            logger.debug("This is original url from filter: " + origUrl);
-//            String queryString = req.getQueryString();
-//            if(queryString != null){origUrl += "?" +queryString;}
-//            logger.debug("This is query string from filter: " + queryString);
-//            
-//            String redirectPage = req.getServletContext().getInitParameter("loginPage");
-            
-
-            // if i exclude queryString from origUrl then the login page dosen't show form's
-            // subelemenmts. and if i exclude whole of the origUrl then the login page is rendered
-            // properly. in the fist case only the form's action link is shown.
-//            String redirectUrl = req.getContextPath()+redirectPage+"?"+notLoggedIn+"&"+origUrl;
-            
-            logger.debug("This is redirect url from filter: " + uri.toString());
-            res.sendRedirect(uri.toString());
-            
-        }
     }    
     
-    
-    
-//    private String getForwardURI(HttpServletRequest request) {
-//        StringBuffer uri = new StringBuffer(loginPage);
-//        uri.append("?errorMsg=Please+log+in+first&origURL=").
-//            append(URLEncoder.encode(getContextRelativeUri(req)));
-//        return uri.toString();
-//    }
 
     /**
      * Returns a context-relative path for the request, including
      * the query string, if any.
      */
-    private String getContextRelativeUri(HttpServletRequest req) {
-        int ctxPathLength = req.getContextPath().length();
-        String requestURI = req.getRequestURI();
-        StringBuffer uri = new StringBuffer(requestURI.substring(ctxPathLength));
-        String query = req.getQueryString();
-        if (query != null) {
-            uri.append("?").append(query);
-        }
-        return uri.toString();
-    }
     
-    
-    
-    private void requestInfo(ServletRequest req){
-        HttpServletRequest request = (HttpServletRequest) req;
-        logger.debug("insert requestInfo");
-        String url = request.getRequestURL().toString();
-        logger.debug(url);
-        String queryString = request.getQueryString();
-        logger.debug(queryString);
-        String uri = request.getRequestURI();
-        logger.debug(uri);
-        String scheme = request.getScheme();
-        logger.debug(scheme);
-        String serverName = request.getServerName();
-        logger.debug(serverName);
-        int portNumber = request.getServerPort();
-        logger.debug(portNumber);
-        String contextPath = request.getContextPath();
-        logger.debug(contextPath);
-        String servletPath = request.getServletPath();
-        logger.debug(servletPath);
-        String pathInfo = request.getPathInfo();
-        logger.debug(pathInfo);
-        String query = request.getQueryString();
-        logger.debug(query);
-    }
     
     private void doAfterProcessing(ServletRequest request, ServletResponse response)
-            throws IOException, ServletException {
-        if (debug) {
+    throws IOException, ServletException {
+        LOGGER.debug("doAfterProcessing()");
+        if (DEBUG) {
             log("Authorize:DoAfterProcessing");
         }
 
@@ -191,16 +110,15 @@ public class Authorize implements Filter {
      * @exception IOException if an input/output error occurs
      * @exception ServletException if a servlet error occurs
      */
-    public void doFilter(ServletRequest request, ServletResponse response,
-            FilterChain chain)
-            throws IOException, ServletException {
-        
-        if (debug) {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+    throws IOException, ServletException {
+        LOGGER.debug("doFilter()");
+        if (DEBUG) {
             log("Authorize:doFilter()");
         }
         
-        requestInfo(request);
         doBeforeProcessing(request, response);
+        processing(request, response);
         
         Throwable problem = null;
         try {
@@ -248,6 +166,7 @@ public class Authorize implements Filter {
      * Destroy method for this filter
      */
     public void destroy() {        
+        LOGGER.debug("destroy()");
     }
 
     /**
@@ -256,7 +175,8 @@ public class Authorize implements Filter {
     public void init(FilterConfig filterConfig) {        
         this.filterConfig = filterConfig;
         if (filterConfig != null) {
-            if (debug) {                
+            LOGGER.debug("init()");
+            if (DEBUG) {                
                 log("Authorize:Initializing filter");
             }
         }
@@ -322,6 +242,72 @@ public class Authorize implements Filter {
     
     public void log(String msg) {
         filterConfig.getServletContext().log(msg);        
+    }
+
+
+    
+    
+    private void processing(ServletRequest request, ServletResponse response) throws UnsupportedEncodingException, IOException, ServletException{
+        LOGGER.debug("processing()");
+        req = (HttpServletRequest) request;
+        res = (HttpServletResponse) response;
+        Customer customer = (Customer) req.getSession().getAttribute("customer");
+        
+        if(customer == null){
+            // redirect to login with the original url.
+            StringBuffer uri = new StringBuffer();
+            uri.append(req.getServletContext().getInitParameter("loginPage"));
+            uri.append("?notLoggedIn=");
+            uri.append(URLEncoder.encode("You are not logged in or your session has been expired. Please login..", "UTF-8"));
+            uri.append("&origUrl=");
+            uri.append(URLEncoder.encode(getContextRelativeUri(req), "UTF-8"));
+            
+            // if i exclude queryString from origUrl then the login page dosen't show form's
+            // subelemenmts. and if i exclude whole of the origUrl then the login page is rendered
+            // properly. in the fist case only the form's action link is shown.
+            // The reason behind this is we need to encode url what i didn't do.
+            LOGGER.debug("Redirect url from filter: " + uri.toString());
+            // res.sendRedirect(uri.toString());
+            req.getRequestDispatcher(uri.toString()).forward(req, res);
+            LOGGER.debug("processing(): after redirect");
+        }
+    }
+    
+    private String getContextRelativeUri(HttpServletRequest req) {
+        int ctxPathLength = req.getContextPath().length();
+        String requestURI = req.getRequestURI();
+        StringBuffer uri = new StringBuffer(requestURI.substring(ctxPathLength));
+        String query = req.getQueryString();
+        if (query != null) {
+            uri.append("?").append(query);
+        }
+        LOGGER.debug("getContextRelativeUri()= " +uri.toString());
+        return uri.toString();
+    }
+    
+    private void requestInfo(ServletRequest req){
+        HttpServletRequest request = (HttpServletRequest) req;
+        LOGGER.debug("insert requestInfo");
+        String url = request.getRequestURL().toString();
+        LOGGER.debug(url);
+        String queryString = request.getQueryString();
+        LOGGER.debug(queryString);
+        String uri = request.getRequestURI();
+        LOGGER.debug(uri);
+        String scheme = request.getScheme();
+        LOGGER.debug(scheme);
+        String serverName = request.getServerName();
+        LOGGER.debug(serverName);
+        int portNumber = request.getServerPort();
+        LOGGER.debug(portNumber);
+        String contextPath = request.getContextPath();
+        LOGGER.debug(contextPath);
+        String servletPath = request.getServletPath();
+        LOGGER.debug(servletPath);
+        String pathInfo = request.getPathInfo();
+        LOGGER.debug(pathInfo);
+        String query = request.getQueryString();
+        LOGGER.debug(query);
     }
     
 }

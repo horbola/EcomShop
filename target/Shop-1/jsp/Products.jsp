@@ -25,15 +25,17 @@
         <!--here ${pageContext.request.contextPath} needs to be specified but not in case of servlet path.-->
         <!--<a href="<c:url value='${initParam.productsPage}' />">Products</a>-->
         
-        <table>
-            <c:forEach items="${requestScope.products}" var="row">
-                <tr data-productId="${row.get("productId")}" data-mfrId="${row.get("mfrId")}" data-quantity="${row.get("quantity")}">
-                    <td>${row.get("description")}</td>
-                    <td>${row.get("price")}</td>
-                    <td class="addToCart">Add To Cart</td>
-                </tr>
-            </c:forEach>
-        </table>
+        <div class="content">
+            <table>
+                <c:forEach items="${requestScope.products}" var="row">
+                    <tr data-productId="${row.get("productId")}" data-mfrId="${row.get("mfrId")}" data-quantity="${row.get("quantity")}">
+                        <td>${row.get("description")}</td>
+                        <td>${row.get("price")}</td>
+                        <td class="addToCart">Add To Cart</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
     </body>
 </html>
 

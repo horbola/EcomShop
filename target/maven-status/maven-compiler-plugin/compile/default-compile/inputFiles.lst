@@ -2,12 +2,16 @@ D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\ma
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\servlet\MakeCustomer.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\test\Json.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\servlet\ShowProducts.java
+D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\bean\Product.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\listener\AppStart.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\resources\JavaEE8Resource.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\test\ParsedJson.java
+D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\bean\Order.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\filter\Authorize.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\servlet\protectet\MakeOrder.java
+D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\util\SqlStatements.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\servlet\protectet\UpdateProfile.java
+D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\util\SqlBuilder.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\bean\Customer.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\bean\Sql.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\servlet\test\LogTest.java
@@ -15,3 +19,5 @@ D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\ma
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\bean\Operations.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\servlet\protectet\ShowOrders.java
 D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\JAXRSConfiguration.java
+D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\servlet\admin\ProductsEntry.java
+D:\Faysal2\System\Computer\Program\Web\Software\Development\Practice\Shop\src\main\java\com\saif\web\practice\shop\servlet\admin\ShowOrdersTemp.java

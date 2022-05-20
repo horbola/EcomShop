@@ -7,33 +7,45 @@
 
 window.onload = onLoad;
 function onLoad(){
-    document.getElementsByClassName("cart")[0].onclick = cartClick;
     registerCartEvent();
+    document.getElementsByClassName("cart")[0].onclick = makeContent;
 };
 
-
-function cartClick(){
-    makeDocument();
+function registerCartEvent(){
+    cart = new Cart();
+    var addToCart = document.getElementsByClassName("addToCart");
+    for(let i = 0; i<addToCart.length; i++){
+        addToCart[i].onclick = function(){
+            
+            var tr = this.parentNode;
+            var children = tr.childNodes;
+            
+            var row = {
+                productId     : tr.getAttribute("data-productId"),
+                mfrId         : tr.getAttribute("data-mfrId"),
+                description   : children[1].innerHTML,
+                price         : children[3].innerHTML,
+                quantity      : tr.getAttribute("data-quantity")
+            };
+            
+            cart.addToCart(row);
+        };
+    }
 }
 
-function makeDocument(){
-    function addCell(tr, val) {
-        var td = document.createElement('td');
-        td.innerHTML = val; 
-        tr.appendChild(td);
+function makeContent(){
+    document.body = buildBody();
+    
+    function buildBody(){
+        var body = document.createElement("body");
+        createNav(body);
+        body.appendChild(buildTable());
+        addButton(body);
+        var bodyText = document.getElementsByTagName('body')[0].innerHTML;
+        console.log(bodyText);
+        
+        return body;
     }
-
-
-    function addRow(table, val_1, val_2, val_3, val_4, val_5) {
-        var tr = document.createElement('tr');
-        addCell(tr, val_1); 
-        addCell(tr, val_2);
-        addCell(tr, val_3);
-        addCell(tr, val_4);
-        addCell(tr, val_5);
-        table.appendChild(tr);
-    };
-
     
     function createNav(body){
         var nav = document.createElement("nav");
@@ -86,6 +98,32 @@ function makeDocument(){
         body.appendChild(nav.appendChild(ul.appendChild(li)));
     }
     
+    function buildTable() {
+        var table = document.createElement('table');
+        
+        for(let i = 0; i<cart.cart.length; i++){
+            var aProduct = cart.getFromCart(i);
+            addRow(table, aProduct);
+        }
+        
+        function addRow(table, aProduct) {
+            var tr = document.createElement('tr');
+            addCell(tr, aProduct.productId); 
+            addCell(tr, aProduct.mfrId);
+            addCell(tr, aProduct.description);
+            addCell(tr, aProduct.price);
+            addCell(tr, aProduct.quantity);
+            table.appendChild(tr);
+        };
+    
+        function addCell(tr, val) {
+            var td = document.createElement('td');
+            td.innerHTML = val; 
+            tr.appendChild(td);
+        }
+        return table;
+    }
+    
     function addButton(body){
         var button = document.createElement("input");
         button.setAttribute("type", "button");
@@ -99,7 +137,6 @@ function makeDocument(){
     }
     
     function clickMakeOrder(){
-        window.alert("blabla");
         console.log(JSON.stringify(cart.cart));
         var xhr = new XMLHttpRequest();
         var cartJson = "?cartJson="+JSON.stringify(cart.cart);
@@ -111,58 +148,22 @@ function makeDocument(){
         xhr.onreadystatechange = processRequest;
         function processRequest(e) {
            if (xhr.readyState === 4 && xhr.status === 200) {
-               window.alert("From inside proccessRequest()");
                var htmlP = xhr.responseText;
                console.log(htmlP);
                makeDocumentFromXhr(htmlP);
             }
         }
-    }
-     
-    function buildTable() {
-        var table = document.createElement('table');
         
-        for(let i = 0; i<cart.cart.length; i++){
-            var aProduct = cart.getFromCart(i);
-            addRow(table, aProduct.productId, aProduct.mfrId, aProduct.description, aProduct.price, aProduct.quantity);
+        function makeDocumentFromXhr(htmlP){
+            var parser = new DOMParser();
+            doc = parser.parseFromString(htmlP, "text/html");
+            document.replaceChild( document.importNode(doc.documentElement, true), document.documentElement);
         }
-        
-        var body = document.createElement("body");
-        createNav(body);
-        body.appendChild(table);
-        addButton(body);
-        var bodyText = document.getElementsByTagName('body')[0].innerHTML;
-        console.log(bodyText);
-        
-        return body;
-    }
-    
-    document.body = buildTable();
-}
-
-
-
-function registerCartEvent(){
-    cart = new Cart();
-    var addToCart = document.getElementsByClassName("addToCart");
-    for(let i = 0; i<addToCart.length; i++){
-        addToCart[i].onclick = function(){
-            
-            var tr = this.parentNode;
-            var children = tr.childNodes;
-            
-            var row = {
-                productId     : tr.getAttribute("data-productId"),
-                mfrId         : tr.getAttribute("data-mfrId"),
-                description   : children[1].innerHTML,
-                price         : children[3].innerHTML,
-                quantity      : tr.getAttribute("data-quantity")
-            };
-            
-            cart.addToCart(row);
-        };
     }
 }
+
+
+
 
 
 var cart;
@@ -180,12 +181,4 @@ function Cart(){
     this.testMsg = function(){
         return "This is a message";
     };
-}
-
-
-
-function makeDocumentFromXhr(htmlP){
-    var parser = new DOMParser();
-    doc = parser.parseFromString(htmlP, "text/html");
-    document.replaceChild( document.importNode(doc.documentElement, true), document.documentElement);
 }

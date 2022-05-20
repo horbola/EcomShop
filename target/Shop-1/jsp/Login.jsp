@@ -15,17 +15,22 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/NavStyle.css" />
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Login Here</h1>
+        
         <%@include file="/WEB-INF/jspf/NavBar.jspf" %> <br />
-        <h5>Login required: ${param.notLoggedIn}</h5>
-        <h5>Original url is: ${param.origUrl}</h5>
-        <form action="${pageContext.request.contextPath}${initParam.authenticate}" method="get">
+        
+        <c:if test="${!empty param.notLoggedIn}">
+            <h3>Login Required: ${param.notLoggedIn}</h3>
+        </c:if>
+        
+        <form action="${pageContext.request.contextPath}${initParam.authenticate}" method="GET">
             User Name: <input type="text" name="uName"><br>
             Password: <input type="password" name="pass"><br>
             <button type="submit" value="submit">Submit</button>
             <button type="reset" value="reset">Reset</button>
-            <!--<input type="hidden" name="origUrl" value="<c:out value='${param.origUrl}' />" />-->
-            <input type="hidden" name="origUrl" value="${fn:escapeXml(param.origUrl)}">
+            <c:if test="${!empty param.origUrl}">
+                <input type="hidden" name="origUrl" value="${fn:escapeXml(param.origUrl)}">
+            </c:if>
         </form>
     </body>
 </html>
