@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <!--    *******************************************************************************************
+    Listeners
+    *******************************************************************************************-->
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>com.saif.web.practice.shop.listener.AppStart</listener-class>
+    </listener>
+    <!--    *******************************************************************************************
+    Filters
+    *******************************************************************************************-->
+    <!--Servlet Names (Non Protected)-->
+    <filter>
+        <filter-name>Authorize</filter-name>
+        <filter-class>com.saif.web.practice.shop.filter.Authorize</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Authorize</filter-name>
+        <url-pattern>/protectet/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Authorize</filter-name>
+        <url-pattern>/jsp/protected/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <!--    *******************************************************************************************
+    Servlets
+    *******************************************************************************************-->
+    <!--Servlet Names (Non Protected)-->
+    <servlet>
+        <servlet-name>Authenticate</servlet-name>
+        <servlet-class>com.saif.web.practice.shop.servlet.Authenticate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MakeCustomer</servlet-name>
+        <servlet-class>com.saif.web.practice.shop.servlet.MakeCustomer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowProducts</servlet-name>
+        <servlet-class>com.saif.web.practice.shop.servlet.ShowProducts</servlet-class>
+    </servlet>
+    <!--Servlet Names (Protected)-->
+    <servlet>
+        <servlet-name>MakeOrder</servlet-name>
+        <servlet-class>com.saif.web.practice.shop.servlet.protectet.MakeOrder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowOrders</servlet-name>
+        <servlet-class>com.saif.web.practice.shop.servlet.protectet.ShowOrders</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateProfile</servlet-name>
+        <servlet-class>com.saif.web.practice.shop.servlet.protectet.UpdateProfile</servlet-class>
+    </servlet>
+    <!--Servlet Names (Test)-->
+    <servlet>
+        <servlet-name>LogTest</servlet-name>
+        <servlet-class>com.saif.web.practice.shop.servlet.test.LogTest</servlet-class>
+    </servlet>
+    <!--Servlet Mappings (Non Protected)-->
+    
+    <servlet-mapping>
+        <servlet-name>Authenticate</servlet-name>
+        <url-pattern>/Authenticate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MakeCustomer</servlet-name>
+        <url-pattern>/MakeCustomer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowProducts</servlet-name>
+        <url-pattern>/ShowProducts</url-pattern>
+    </servlet-mapping>
+    <!--Servlet Mappings (Protected)-->
+    <servlet-mapping>
+        <servlet-name>MakeOrder</servlet-name>
+        <url-pattern>/protectet/MakeOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowOrders</servlet-name>
+        <url-pattern>/protectet/ShowOrders</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateProfile</servlet-name>
+        <url-pattern>/protectet/UpdateProfile</url-pattern>
+    </servlet-mapping>
+    <!--Servlet Mappings (Test)-->
+    <servlet-mapping>
+        <servlet-name>LogTest</servlet-name>
+        <url-pattern>/LogTest</url-pattern>
+    </servlet-mapping>
+    <!--    *******************************************************************************************
+    Session Config
+    *******************************************************************************************-->
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!--    *******************************************************************************************
+    Paths
+    *******************************************************************************************-->
+    <!--html-->
+    <context-param>
+        <param-name>loginPage</param-name>
+        <param-value>/jsp/Login.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>signUpPage</param-name>
+        <param-value>/jsp/SignUp.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>indexPage</param-name>
+        <param-value>/index.html</param-value>
+    </context-param>
+    <!--jsp Paths(Non Protected)-->
+    <context-param>
+        <param-name>productsPage</param-name>
+        <param-value>/jsp/Products.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>cartPage</param-name>
+        <param-value>/jsp/Cart.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>invalidateSessionPage</param-name>
+        <param-value>/jsp/InvalidateSession.jsp</param-value>
+    </context-param>
+    <!--jsp Paths (Protected)-->
+    <context-param>
+        <param-name>confirmOrderPage</param-name>
+        <param-value>/jsp/protected/ConfirmOrder.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>confirmCustomerPage</param-name>
+        <param-value>/jsp/ConfirmCustomer.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>confirmUpdateProfilePage</param-name>
+        <param-value>/jsp/protected/ConfirmUpdateProfile.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ordersPage</param-name>
+        <param-value>/jsp/protected/Orders.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>profilePage</param-name>
+        <param-value>/jsp/protected/Profile.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>profileEditPage</param-name>
+        <param-value>/jsp/protected/ProfileEdit.jsp</param-value>
+    </context-param>
+    <!--jsp Paths (Error)-->
+    <context-param>
+        <param-name>loginRequiredErrorPage</param-name>
+        <param-value>/jsp/error/LoginRequiredError.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>loginErrorPage</param-name>
+        <param-value>/jsp/error/LoginError.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>notSignedUpErrorPage</param-name>
+        <param-value>/jsp/error/NotSignedUpError.jsp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>signUpErrorPage</param-name>
+        <param-value>/jsp/error/SignUpError.jsp</param-value>
+    </context-param>
+    <!--jsp Paths (Segment)-->
+    <context-param>
+        <param-name>navBar</param-name>
+        <param-value>/WEB-INF/jspf/NavBar.jspf</param-value>
+    </context-param>
+    <!--Servlet Paths (Non Protected)-->
+    <context-param>
+        <param-name>authenticate</param-name>
+        <param-value>/Authenticate</param-value>
+    </context-param>
+    <context-param>
+        <param-name>makeCustomer</param-name>
+        <param-value>/MakeCustomer</param-value>
+    </context-param>
+    <context-param>
+        <param-name>showProducts</param-name>
+        <param-value>/ShowProducts</param-value>
+    </context-param>
+    <!--Servlet Paths (Protected)-->
+    <context-param>
+        <param-name>makeOrder</param-name>
+        <param-value>/protectet/MakeOrder</param-value>
+    </context-param>
+    <context-param>
+        <param-name>showOrders</param-name>
+        <param-value>/protectet/ShowOrders</param-value>
+    </context-param>
+    <context-param>
+        <param-name>updateProfile</param-name>
+        <param-value>/protectet/UpdateProfile</param-value>
+    </context-param>
+    <!--Database-->
+    <context-param>
+        <param-name>jdbcPath</param-name>
+        <param-value>jdbc:sqlite://D:\\MyDrive\\Faysal\\System\\Computer\\Program\\Database\\Sofware\\Databases\\Sqlite\\Shop\\ShopDB.db</param-value>
+    </context-param>
+    <context-param>
+        <param-name/>
+        <param-value/>
+    </context-param>
+</web-app>

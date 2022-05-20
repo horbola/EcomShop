@@ -1,0 +1,259 @@
+16:08:56.149 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - userName is: saif
+16:08:56.212 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - password is: 111
+16:08:56.213 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - name is: faysal
+16:08:56.213 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - confirmCustomerPage is: /jsp/ConfirmCustomer.jsp
+16:08:56.213 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - origUrl is: 
+16:08:56.213 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - Encoded origUrl is: 
+16:09:30.124 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Authenticated User Name: saif
+16:09:30.126 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Authenticated Password: 111
+16:09:30.126 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Authenticated Name: faysal
+16:09:30.126 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Entered processRequest()
+16:09:30.126 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - origUrl is: 
+16:09:30.126 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Direct uName is: saif
+16:09:30.127 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Direct pass is: 111
+16:09:30.127 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - all three executed
+16:09:30.127 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - /Shop/jsp/SignUp.jsp?notSignedUp=You+are+not+registered+to+our+online+shopping.+Please+sign+in+first.+Its+very+easy.&origUrl=
+17:15:02.966 [http-listener-1(4)] DEBUG javax.servlet.Filter - insert requestInfo
+17:15:03.031 [http-listener-1(4)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:15:03.031 [http-listener-1(4)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:15:03.031 [http-listener-1(4)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:15:03.032 [http-listener-1(4)] DEBUG javax.servlet.Filter - http
+17:15:03.032 [http-listener-1(4)] DEBUG javax.servlet.Filter - localhost
+17:15:03.037 [http-listener-1(4)] DEBUG javax.servlet.Filter - 8080
+17:15:03.038 [http-listener-1(4)] DEBUG javax.servlet.Filter - /Shop
+17:15:03.038 [http-listener-1(4)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:15:03.038 [http-listener-1(4)] DEBUG javax.servlet.Filter - null
+17:15:03.039 [http-listener-1(4)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:15:03.040 [http-listener-1(4)] DEBUG javax.servlet.Filter - This is redirect url from filter: /Shop/jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired+Please+log+in&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:15:03.080 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 2
+17:15:03.081 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:15:03.081 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:16:09.098 [http-listener-1(4)] DEBUG javax.servlet.Filter - insert requestInfo
+17:16:09.098 [http-listener-1(4)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:16:09.098 [http-listener-1(4)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:16:09.099 [http-listener-1(4)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:16:09.099 [http-listener-1(4)] DEBUG javax.servlet.Filter - http
+17:16:09.099 [http-listener-1(4)] DEBUG javax.servlet.Filter - localhost
+17:16:09.099 [http-listener-1(4)] DEBUG javax.servlet.Filter - 8080
+17:16:09.099 [http-listener-1(4)] DEBUG javax.servlet.Filter - /Shop
+17:16:09.099 [http-listener-1(4)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:16:09.099 [http-listener-1(4)] DEBUG javax.servlet.Filter - null
+17:16:09.099 [http-listener-1(4)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:16:09.146 [http-listener-1(4)] DEBUG javax.servlet.Filter - This is redirect url from filter: /Shop/jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired+Please+log+in&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:16:09.146 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 2
+17:16:09.147 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:16:09.147 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:16:17.565 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Authenticated User Name: saif
+17:16:17.566 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Authenticated Password: 111
+17:16:17.567 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Authenticated Name: faysal
+17:16:17.567 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Entered processRequest()
+17:16:17.568 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - origUrl is: /protectet/MakeOrder?cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:16:17.568 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Direct uName is: saif
+17:16:17.568 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Direct pass is: 111
+17:16:17.568 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - all three executed
+17:16:17.570 [http-listener-1(2)] DEBUG javax.servlet.Filter - insert requestInfo
+17:16:17.570 [http-listener-1(2)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:16:17.571 [http-listener-1(2)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:16:17.571 [http-listener-1(2)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:16:17.571 [http-listener-1(2)] DEBUG javax.servlet.Filter - http
+17:16:17.571 [http-listener-1(2)] DEBUG javax.servlet.Filter - localhost
+17:16:17.572 [http-listener-1(2)] DEBUG javax.servlet.Filter - 8080
+17:16:17.572 [http-listener-1(2)] DEBUG javax.servlet.Filter - /Shop
+17:16:17.572 [http-listener-1(2)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:16:17.572 [http-listener-1(2)] DEBUG javax.servlet.Filter - null
+17:16:17.572 [http-listener-1(2)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:16:17.574 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 2
+17:16:17.575 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:16:17.575 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:16:17.576 [http-listener-1(2)] DEBUG javax.servlet.Filter - insert requestInfo
+17:16:17.576 [http-listener-1(2)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/jsp/protected/ConfirmOrder.jsp
+17:16:17.576 [http-listener-1(2)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:16:17.577 [http-listener-1(2)] DEBUG javax.servlet.Filter - /Shop/jsp/protected/ConfirmOrder.jsp
+17:16:17.577 [http-listener-1(2)] DEBUG javax.servlet.Filter - http
+17:16:17.577 [http-listener-1(2)] DEBUG javax.servlet.Filter - localhost
+17:16:17.581 [http-listener-1(2)] DEBUG javax.servlet.Filter - 8080
+17:16:17.582 [http-listener-1(2)] DEBUG javax.servlet.Filter - /Shop
+17:16:17.582 [http-listener-1(2)] DEBUG javax.servlet.Filter - /jsp/protected/ConfirmOrder.jsp
+17:16:17.582 [http-listener-1(2)] DEBUG javax.servlet.Filter - null
+17:16:17.583 [http-listener-1(2)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:29:41.912 [http-listener-1(3)] DEBUG javax.servlet.Filter - insert requestInfo
+17:29:41.972 [http-listener-1(3)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:29:41.972 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:29:41.972 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:29:41.973 [http-listener-1(3)] DEBUG javax.servlet.Filter - http
+17:29:41.973 [http-listener-1(3)] DEBUG javax.servlet.Filter - localhost
+17:29:41.978 [http-listener-1(3)] DEBUG javax.servlet.Filter - 8080
+17:29:41.978 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop
+17:29:41.979 [http-listener-1(3)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:29:41.979 [http-listener-1(3)] DEBUG javax.servlet.Filter - null
+17:29:41.979 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:29:41.982 [http-listener-1(3)] DEBUG javax.servlet.Filter - This is redirect url from filter: /Shop/jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired+Please+log+in&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:29:42.036 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 2
+17:29:42.037 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:29:42.037 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:31:39.854 [http-listener-1(5)] DEBUG javax.servlet.Filter - insert requestInfo
+17:31:39.905 [http-listener-1(5)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:31:39.905 [http-listener-1(5)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:31:39.906 [http-listener-1(5)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:31:39.906 [http-listener-1(5)] DEBUG javax.servlet.Filter - http
+17:31:39.906 [http-listener-1(5)] DEBUG javax.servlet.Filter - localhost
+17:31:39.912 [http-listener-1(5)] DEBUG javax.servlet.Filter - 8080
+17:31:39.912 [http-listener-1(5)] DEBUG javax.servlet.Filter - /Shop
+17:31:39.912 [http-listener-1(5)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:31:39.913 [http-listener-1(5)] DEBUG javax.servlet.Filter - null
+17:31:39.913 [http-listener-1(5)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:31:39.914 [http-listener-1(5)] DEBUG javax.servlet.Filter - This is redirect url from filter: /Shop/jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired+Please+log+in&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:31:39.952 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 3
+17:31:39.953 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:31:39.953 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:31:39.953 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:31:56.793 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - /Shop/jsp/SignUp.jsp?notSignedUp=You+are+not+registered+to+our+online+shopping.+Please+sign+in+first.+Its+very+easy.&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:32:25.365 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - userName is: papiya
+17:32:25.366 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - password is: 333
+17:32:25.366 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - name is: pepe
+17:32:25.366 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - confirmCustomerPage is: /jsp/ConfirmCustomer.jsp
+17:32:25.367 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - origUrl is: /protectet/MakeOrder?cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:32:25.367 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - Encoded origUrl is: %2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:32:25.368 [http-listener-1(1)] DEBUG javax.servlet.Filter - insert requestInfo
+17:32:25.369 [http-listener-1(1)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:32:25.369 [http-listener-1(1)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:32:25.369 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:32:25.369 [http-listener-1(1)] DEBUG javax.servlet.Filter - http
+17:32:25.369 [http-listener-1(1)] DEBUG javax.servlet.Filter - localhost
+17:32:25.369 [http-listener-1(1)] DEBUG javax.servlet.Filter - 8080
+17:32:25.370 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop
+17:32:25.370 [http-listener-1(1)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:32:25.370 [http-listener-1(1)] DEBUG javax.servlet.Filter - null
+17:32:25.370 [http-listener-1(1)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:32:25.372 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 3
+17:32:25.372 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:32:25.372 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:32:25.372 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:32:25.373 [http-listener-1(1)] DEBUG javax.servlet.Filter - insert requestInfo
+17:32:25.374 [http-listener-1(1)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/jsp/protected/ConfirmOrder.jsp
+17:32:25.374 [http-listener-1(1)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:32:25.374 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop/jsp/protected/ConfirmOrder.jsp
+17:32:25.374 [http-listener-1(1)] DEBUG javax.servlet.Filter - http
+17:32:25.375 [http-listener-1(1)] DEBUG javax.servlet.Filter - localhost
+17:32:25.375 [http-listener-1(1)] DEBUG javax.servlet.Filter - 8080
+17:32:25.375 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop
+17:32:25.375 [http-listener-1(1)] DEBUG javax.servlet.Filter - /jsp/protected/ConfirmOrder.jsp
+17:32:25.375 [http-listener-1(1)] DEBUG javax.servlet.Filter - null
+17:32:25.376 [http-listener-1(1)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:32:46.126 [http-listener-1(3)] DEBUG javax.servlet.Filter - insert requestInfo
+17:32:46.127 [http-listener-1(3)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:32:46.127 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:32:46.127 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:32:46.127 [http-listener-1(3)] DEBUG javax.servlet.Filter - http
+17:32:46.128 [http-listener-1(3)] DEBUG javax.servlet.Filter - localhost
+17:32:46.128 [http-listener-1(3)] DEBUG javax.servlet.Filter - 8080
+17:32:46.128 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop
+17:32:46.128 [http-listener-1(3)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:32:46.128 [http-listener-1(3)] DEBUG javax.servlet.Filter - null
+17:32:46.129 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:32:46.130 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 3
+17:32:46.130 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:32:46.130 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:32:46.131 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:32:46.133 [http-listener-1(3)] DEBUG javax.servlet.Filter - insert requestInfo
+17:32:46.133 [http-listener-1(3)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/jsp/protected/ConfirmOrder.jsp
+17:32:46.133 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:32:46.134 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop/jsp/protected/ConfirmOrder.jsp
+17:32:46.134 [http-listener-1(3)] DEBUG javax.servlet.Filter - http
+17:32:46.134 [http-listener-1(3)] DEBUG javax.servlet.Filter - localhost
+17:32:46.134 [http-listener-1(3)] DEBUG javax.servlet.Filter - 8080
+17:32:46.134 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop
+17:32:46.134 [http-listener-1(3)] DEBUG javax.servlet.Filter - /jsp/protected/ConfirmOrder.jsp
+17:32:46.134 [http-listener-1(3)] DEBUG javax.servlet.Filter - null
+17:32:46.134 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:33:08.496 [http-listener-1(1)] DEBUG javax.servlet.Filter - insert requestInfo
+17:33:08.497 [http-listener-1(1)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:33:08.497 [http-listener-1(1)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:33:08.498 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:33:08.498 [http-listener-1(1)] DEBUG javax.servlet.Filter - http
+17:33:08.498 [http-listener-1(1)] DEBUG javax.servlet.Filter - localhost
+17:33:08.498 [http-listener-1(1)] DEBUG javax.servlet.Filter - 8080
+17:33:08.498 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop
+17:33:08.498 [http-listener-1(1)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:33:08.499 [http-listener-1(1)] DEBUG javax.servlet.Filter - null
+17:33:08.499 [http-listener-1(1)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:33:08.506 [http-listener-1(1)] DEBUG javax.servlet.Filter - This is redirect url from filter: /Shop/jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired+Please+log+in&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:33:08.507 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 4
+17:33:08.507 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:33:08.508 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:33:08.508 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:33:08.508 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:33:19.255 [http-listener-1(3)] DEBUG javax.servlet.Filter - insert requestInfo
+17:33:19.256 [http-listener-1(3)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:33:19.256 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:33:19.256 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:33:19.260 [http-listener-1(3)] DEBUG javax.servlet.Filter - http
+17:33:19.260 [http-listener-1(3)] DEBUG javax.servlet.Filter - localhost
+17:33:19.260 [http-listener-1(3)] DEBUG javax.servlet.Filter - 8080
+17:33:19.260 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop
+17:33:19.261 [http-listener-1(3)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:33:19.261 [http-listener-1(3)] DEBUG javax.servlet.Filter - null
+17:33:19.261 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:33:19.262 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 4
+17:33:19.262 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:33:19.262 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:33:19.262 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:33:19.262 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:33:19.264 [http-listener-1(3)] DEBUG javax.servlet.Filter - insert requestInfo
+17:33:19.264 [http-listener-1(3)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/jsp/protected/ConfirmOrder.jsp
+17:33:19.264 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:33:19.264 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop/jsp/protected/ConfirmOrder.jsp
+17:33:19.265 [http-listener-1(3)] DEBUG javax.servlet.Filter - http
+17:33:19.265 [http-listener-1(3)] DEBUG javax.servlet.Filter - localhost
+17:33:19.265 [http-listener-1(3)] DEBUG javax.servlet.Filter - 8080
+17:33:19.265 [http-listener-1(3)] DEBUG javax.servlet.Filter - /Shop
+17:33:19.265 [http-listener-1(3)] DEBUG javax.servlet.Filter - /jsp/protected/ConfirmOrder.jsp
+17:33:19.265 [http-listener-1(3)] DEBUG javax.servlet.Filter - null
+17:33:19.265 [http-listener-1(3)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:38:16.886 [http-listener-1(1)] DEBUG javax.servlet.Filter - insert requestInfo
+17:38:16.886 [http-listener-1(1)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:38:16.887 [http-listener-1(1)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:38:16.887 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:38:16.887 [http-listener-1(1)] DEBUG javax.servlet.Filter - http
+17:38:16.887 [http-listener-1(1)] DEBUG javax.servlet.Filter - localhost
+17:38:16.887 [http-listener-1(1)] DEBUG javax.servlet.Filter - 8080
+17:38:16.887 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop
+17:38:16.888 [http-listener-1(1)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:38:16.889 [http-listener-1(1)] DEBUG javax.servlet.Filter - null
+17:38:16.889 [http-listener-1(1)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:38:16.894 [http-listener-1(1)] DEBUG javax.servlet.Filter - This is redirect url from filter: /Shop/jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired+Please+log+in&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:38:16.895 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 2
+17:38:16.896 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:38:16.896 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:38:28.819 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - /Shop/jsp/SignUp.jsp?notSignedUp=You+are+not+registered+to+our+online+shopping.+Please+sign+in+first.+Its+very+easy.&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:38:56.615 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - userName is: monir
+17:38:56.616 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - password is: 111
+17:38:56.617 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - name is: Monir Khan
+17:38:56.617 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - confirmCustomerPage is: /jsp/ConfirmCustomer.jsp
+17:38:56.618 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - origUrl is: /protectet/MakeOrder?cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:38:56.619 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - Encoded origUrl is: %2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%5D
+17:38:56.622 [http-listener-1(4)] DEBUG javax.servlet.Filter - insert requestInfo
+17:38:56.623 [http-listener-1(4)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+17:38:56.624 [http-listener-1(4)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:38:56.624 [http-listener-1(4)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+17:38:56.625 [http-listener-1(4)] DEBUG javax.servlet.Filter - http
+17:38:56.626 [http-listener-1(4)] DEBUG javax.servlet.Filter - localhost
+17:38:56.626 [http-listener-1(4)] DEBUG javax.servlet.Filter - 8080
+17:38:56.627 [http-listener-1(4)] DEBUG javax.servlet.Filter - /Shop
+17:38:56.628 [http-listener-1(4)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+17:38:56.628 [http-listener-1(4)] DEBUG javax.servlet.Filter - null
+17:38:56.629 [http-listener-1(4)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:38:56.631 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - size of buff: 2
+17:38:56.632 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (1, aci, Mosquito Coil, 100.0, 500);
+17:38:56.633 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - this is from ArrayList: INSERT INTO Orders (productId, mfrId, description, price, quantity) values (2, aci, Mosquito Spray, 100.0, 500);
+17:38:56.636 [http-listener-1(4)] DEBUG javax.servlet.Filter - insert requestInfo
+17:38:56.637 [http-listener-1(4)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/jsp/protected/ConfirmOrder.jsp
+17:38:56.638 [http-listener-1(4)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
+17:38:56.639 [http-listener-1(4)] DEBUG javax.servlet.Filter - /Shop/jsp/protected/ConfirmOrder.jsp
+17:38:56.640 [http-listener-1(4)] DEBUG javax.servlet.Filter - http
+17:38:56.640 [http-listener-1(4)] DEBUG javax.servlet.Filter - localhost
+17:38:56.640 [http-listener-1(4)] DEBUG javax.servlet.Filter - 8080
+17:38:56.641 [http-listener-1(4)] DEBUG javax.servlet.Filter - /Shop
+17:38:56.641 [http-listener-1(4)] DEBUG javax.servlet.Filter - /jsp/protected/ConfirmOrder.jsp
+17:38:56.641 [http-listener-1(4)] DEBUG javax.servlet.Filter - null
+17:38:56.642 [http-listener-1(4)] DEBUG javax.servlet.Filter - cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]

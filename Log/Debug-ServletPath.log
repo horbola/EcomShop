@@ -1,0 +1,11 @@
+15:52:03.072 [http-listener-1(1)] DEBUG javax.servlet.Filter - insert requestInfo
+15:52:03.121 [http-listener-1(1)] DEBUG javax.servlet.Filter - http://localhost:8080/Shop/protectet/MakeOrder
+15:52:03.122 [http-listener-1(1)] DEBUG javax.servlet.Filter - null
+15:52:03.122 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop/protectet/MakeOrder
+15:52:03.122 [http-listener-1(1)] DEBUG javax.servlet.Filter - http
+15:52:03.122 [http-listener-1(1)] DEBUG javax.servlet.Filter - localhost
+15:52:03.130 [http-listener-1(1)] DEBUG javax.servlet.Filter - 8080
+15:52:03.131 [http-listener-1(1)] DEBUG javax.servlet.Filter - /Shop
+15:52:03.131 [http-listener-1(1)] DEBUG javax.servlet.Filter - /protectet/MakeOrder
+15:52:03.131 [http-listener-1(1)] DEBUG javax.servlet.Filter - null
+15:52:03.133 [http-listener-1(1)] DEBUG javax.servlet.Filter - null

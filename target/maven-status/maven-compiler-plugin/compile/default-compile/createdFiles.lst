@@ -1,0 +1,17 @@
+com\saif\web\practice\shop\bean\Sql.class
+com\saif\web\practice\shop\listener\AppStart.class
+com\saif\web\practice\shop\servlet\ShowProducts.class
+com\saif\web\practice\shop\servlet\MakeCustomer.class
+com\saif\web\practice\shop\test\Json.class
+com\saif\web\practice\shop\util\ParseJson.class
+com\saif\web\practice\shop\servlet\protectet\MakeOrder.class
+com\saif\web\practice\shop\servlet\protectet\UpdateProfile.class
+com\saif\web\practice\shop\bean\Customer.class
+com\saif\web\practice\shop\bean\Operations.class
+com\saif\web\practice\shop\servlet\test\LogTest.class
+com\saif\web\practice\shop\servlet\Authenticate.class
+com\saif\web\practice\shop\test\ParsedJson.class
+com\saif\web\practice\shop\JAXRSConfiguration.class
+com\saif\web\practice\shop\servlet\protectet\ShowOrders.class
+com\saif\web\practice\shop\filter\Authorize.class
+com\saif\web\practice\shop\resources\JavaEE8Resource.class
