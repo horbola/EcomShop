@@ -1,168 +1,819 @@
-15:28:59.483 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - showAllProducts()
-15:29:12.252 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-15:29:12.255 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-15:29:12.256 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is - /protectet/MakeOrder?cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"}]
-15:29:12.266 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.protectet.MakeOrder - processRequest()
-15:29:12.267 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-15:29:12.305 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder()
-15:29:28.069 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - orderId is: 16
-15:29:31.795 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,1,"aci",500);
-15:29:31.797 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,2,"aci",500);
-15:35:04.023 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - showAllProducts()
-15:35:10.196 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter()
-15:35:10.197 [http-listener-1(4)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-15:35:10.198 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing()
-15:35:10.198 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.protectet.MakeOrder - processRequest()
-15:35:10.199 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-15:35:10.200 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder()
-15:35:10.202 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - orderId is: 16
-15:35:10.202 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,1,"aci",500);
-15:35:10.202 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,2,"aci",500);
-15:35:10.202 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,3,"ulv",20);
-15:35:10.203 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,4,"sqr",5);
-15:35:10.203 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,654,"sss",4);
-15:35:10.203 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,5,"sd",245);
-15:35:10.203 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,4,"dff",45);
-15:35:10.328 [http-listener-1(4)] DEBUG javax.servlet.Filter - doAfterProcessing()
-15:35:14.471 [http-listener-1(5)] DEBUG javax.servlet.Filter - doFilter()
-15:35:14.472 [http-listener-1(5)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-15:35:14.473 [http-listener-1(5)] DEBUG javax.servlet.Filter - processing()
-15:35:14.473 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.protectet.MakeOrder - processRequest()
-15:35:14.473 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-15:35:14.475 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder()
-15:35:14.476 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - orderId is: 16
-15:35:14.477 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,1,"aci",500);
-15:35:14.477 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,2,"aci",500);
-15:35:14.477 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,3,"ulv",20);
-15:35:14.477 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,4,"sqr",5);
-15:35:14.478 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,654,"sss",4);
-15:35:14.478 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,5,"sd",245);
-15:35:14.478 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,4,"dff",45);
-15:35:14.615 [http-listener-1(5)] DEBUG javax.servlet.Filter - doAfterProcessing()
-15:35:43.366 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
-15:35:47.652 [admin-listener(1)] DEBUG javax.servlet.Filter - init()
-15:35:51.834 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - showAllProducts()
-15:36:00.566 [http-listener-1(4)] DEBUG javax.servlet.Filter - doFilter()
-15:36:00.567 [http-listener-1(4)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-15:36:00.568 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing()
-15:36:00.569 [http-listener-1(4)] DEBUG javax.servlet.Filter - getContextRelativeUri()= /protectet/MakeOrder?cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"3","mfrId":"ulv","description":"petrolium%20jelly","price":"50.0","quantity":"20"},{"productId":"4","mfrId":"sqr","description":"fexo%20fenadin","price":"300.0","quantity":"5"},{"productId":"654","mfrId":"sss","description":"adsfadf","price":"345.0","quantity":"4"},{"productId":"5","mfrId":"sd","description":"sdf","price":"3.0","quantity":"245"},{"productId":"4","mfrId":"dff","description":"sadfdf","price":"43.0","quantity":"45"},{"productId":"10","mfrId":"abc","description":"this%20is%20","price":"200.0","quantity":"150"},{"productId":"989","mfrId":"kkd","description":";akdjf","price":"9898.0","quantity":"8"},{"productId":"98","mfrId":"kkl","description":"i;kkkd","price":"999.0","quantity":"98"}]
-15:36:00.569 [http-listener-1(4)] DEBUG javax.servlet.Filter - Redirect url from filter: /jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired.+Please+login..&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%223%22%2C%22mfrId%22%3A%22ulv%22%2C%22description%22%3A%22petrolium%2520jelly%22%2C%22price%22%3A%2250.0%22%2C%22quantity%22%3A%2220%22%7D%2C%7B%22productId%22%3A%224%22%2C%22mfrId%22%3A%22sqr%22%2C%22description%22%3A%22fexo%2520fenadin%22%2C%22price%22%3A%22300.0%22%2C%22quantity%22%3A%225%22%7D%2C%7B%22productId%22%3A%22654%22%2C%22mfrId%22%3A%22sss%22%2C%22description%22%3A%22adsfadf%22%2C%22price%22%3A%22345.0%22%2C%22quantity%22%3A%224%22%7D%2C%7B%22productId%22%3A%225%22%2C%22mfrId%22%3A%22sd%22%2C%22description%22%3A%22sdf%22%2C%22price%22%3A%223.0%22%2C%22quantity%22%3A%22245%22%7D%2C%7B%22productId%22%3A%224%22%2C%22mfrId%22%3A%22dff%22%2C%22description%22%3A%22sadfdf%22%2C%22price%22%3A%2243.0%22%2C%22quantity%22%3A%2245%22%7D%2C%7B%22productId%22%3A%2210%22%2C%22mfrId%22%3A%22abc%22%2C%22description%22%3A%22this%2520is%2520%22%2C%22price%22%3A%22200.0%22%2C%22quantity%22%3A%22150%22%7D%2C%7B%22productId%22%3A%22989%22%2C%22mfrId%22%3A%22kkd%22%2C%22description%22%3A%22%3Bakdjf%22%2C%22price%22%3A%229898.0%22%2C%22quantity%22%3A%228%22%7D%2C%7B%22productId%22%3A%2298%22%2C%22mfrId%22%3A%22kkl%22%2C%22description%22%3A%22i%3Bkkkd%22%2C%22price%22%3A%22999.0%22%2C%22quantity%22%3A%2298%22%7D%5D
-15:36:01.105 [http-listener-1(4)] DEBUG javax.servlet.Filter - processing(): after redirect
-15:36:01.106 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.protectet.MakeOrder - processRequest()
-15:36:01.106 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-15:36:01.199 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder()
-15:36:01.202 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - orderId is: 16
-15:36:01.213 [http-listener-1(4)] DEBUG javax.servlet.Filter - doAfterProcessing()
-15:36:15.493 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-15:36:15.497 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-15:36:15.498 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is - /protectet/MakeOrder?cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"3","mfrId":"ulv","description":"petrolium%20jelly","price":"50.0","quantity":"20"},{"productId":"4","mfrId":"sqr","description":"fexo%20fenadin","price":"300.0","quantity":"5"},{"productId":"654","mfrId":"sss","description":"adsfadf","price":"345.0","quantity":"4"},{"productId":"5","mfrId":"sd","description":"sdf","price":"3.0","quantity":"245"},{"productId":"4","mfrId":"dff","description":"sadfdf","price":"43.0","quantity":"45"},{"productId":"10","mfrId":"abc","description":"this%20is%20","price":"200.0","quantity":"150"},{"productId":"989","mfrId":"kkd","description":";akdjf","price":"9898.0","quantity":"8"},{"productId":"98","mfrId":"kkl","description":"i;kkkd","price":"999.0","quantity":"98"}]
-15:36:15.498 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.protectet.MakeOrder - processRequest()
-15:36:15.499 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-15:36:15.501 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder()
-15:36:15.503 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - orderId is: 16
-15:36:15.504 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,1,"aci",500);
-15:36:15.504 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,2,"aci",500);
-15:36:15.504 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,3,"ulv",20);
-15:36:15.505 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,4,"sqr",5);
-15:36:15.505 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,654,"sss",4);
-15:36:15.505 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,5,"sd",245);
-15:36:15.505 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,4,"dff",45);
-15:36:15.505 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,10,"abc",150);
-15:36:15.506 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,989,"kkd",8);
-15:36:15.506 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,98,"kkl",98);
-15:40:15.080 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
-15:40:19.734 [admin-listener(1)] DEBUG javax.servlet.Filter - init()
-15:40:36.358 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - showAllProducts()
-15:40:43.666 [http-listener-1(1)] DEBUG javax.servlet.Filter - doFilter()
-15:40:43.667 [http-listener-1(1)] DEBUG javax.servlet.Filter - doBeforeProcessing()
-15:40:43.667 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing()
-15:40:43.668 [http-listener-1(1)] DEBUG javax.servlet.Filter - getContextRelativeUri()= /protectet/MakeOrder?cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"3","mfrId":"ulv","description":"petrolium%20jelly","price":"50.0","quantity":"20"},{"productId":"4","mfrId":"sqr","description":"fexo%20fenadin","price":"300.0","quantity":"5"},{"productId":"654","mfrId":"sss","description":"adsfadf","price":"345.0","quantity":"4"}]
-15:40:43.669 [http-listener-1(1)] DEBUG javax.servlet.Filter - Redirect url from filter: /jsp/Login.jsp?notLoggedIn=You+are+not+logged+in+or+your+session+has+been+expired.+Please+login..&origUrl=%2Fprotectet%2FMakeOrder%3FcartJson%3D%5B%7B%22productId%22%3A%221%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Coil%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%222%22%2C%22mfrId%22%3A%22aci%22%2C%22description%22%3A%22Mosquito%2520Spray%22%2C%22price%22%3A%22100.0%22%2C%22quantity%22%3A%22500%22%7D%2C%7B%22productId%22%3A%223%22%2C%22mfrId%22%3A%22ulv%22%2C%22description%22%3A%22petrolium%2520jelly%22%2C%22price%22%3A%2250.0%22%2C%22quantity%22%3A%2220%22%7D%2C%7B%22productId%22%3A%224%22%2C%22mfrId%22%3A%22sqr%22%2C%22description%22%3A%22fexo%2520fenadin%22%2C%22price%22%3A%22300.0%22%2C%22quantity%22%3A%225%22%7D%2C%7B%22productId%22%3A%22654%22%2C%22mfrId%22%3A%22sss%22%2C%22description%22%3A%22adsfadf%22%2C%22price%22%3A%22345.0%22%2C%22quantity%22%3A%224%22%7D%5D
-15:40:44.283 [http-listener-1(1)] DEBUG javax.servlet.Filter - processing(): after redirect
-15:40:44.284 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.protectet.MakeOrder - processRequest()
-15:40:44.284 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-15:40:44.333 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder()
-15:40:44.335 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - orderId is: 16
-15:40:44.338 [http-listener-1(1)] DEBUG javax.servlet.Filter - doAfterProcessing()
-15:40:49.492 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-15:40:49.494 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-15:40:49.495 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is - /protectet/MakeOrder?cartJson=[{"productId":"1","mfrId":"aci","description":"Mosquito%20Coil","price":"100.0","quantity":"500"},{"productId":"2","mfrId":"aci","description":"Mosquito%20Spray","price":"100.0","quantity":"500"},{"productId":"3","mfrId":"ulv","description":"petrolium%20jelly","price":"50.0","quantity":"20"},{"productId":"4","mfrId":"sqr","description":"fexo%20fenadin","price":"300.0","quantity":"5"},{"productId":"654","mfrId":"sss","description":"adsfadf","price":"345.0","quantity":"4"}]
-15:40:49.496 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.protectet.MakeOrder - processRequest()
-15:40:49.496 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - Order()
-15:40:49.498 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder()
-15:40:49.501 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - orderId is: 16
-15:40:49.502 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,1,"aci",500);
-15:40:49.502 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,2,"aci",500);
-15:40:49.502 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,3,"ulv",20);
-15:40:49.502 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,4,"sqr",5);
-15:40:49.503 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Order - INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,654,"sss",4);
-15:40:49.647 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,1,"aci",500);
-15:40:49.768 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,2,"aci",500);
-15:40:49.880 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,3,"ulv",20);
-15:40:49.987 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,4,"sqr",5);
-15:40:50.076 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - insertSql is: INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES ("saif",16,654,"sss",4);
-15:40:50.077 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - feedbackOrderSql is: select orderId, productId, mfrId, quantity from OrdersTemp where uName = "saif"and orderId = 16;
-15:40:50.101 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): orderId: 16
-15:40:50.101 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): productId: 1
-15:40:50.101 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): mfrId: aci
-15:40:50.102 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): quantity: 500
-15:40:50.102 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): orderId: 16
-15:40:50.102 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): productId: 1
-15:40:50.103 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): mfrId: aci
-15:40:50.103 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): quantity: 500
-15:40:50.103 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): orderId: 16
-15:40:50.103 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): productId: 2
-15:40:50.103 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): mfrId: aci
-15:40:50.104 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): quantity: 500
-15:40:50.104 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): orderId: 16
-15:40:50.104 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): productId: 3
-15:40:50.105 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): mfrId: ulv
-15:40:50.105 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): quantity: 20
-15:40:50.105 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): orderId: 16
-15:40:50.105 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): productId: 4
-15:40:50.105 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): mfrId: sqr
-15:40:50.106 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): quantity: 5
-15:40:50.106 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): orderId: 16
-15:40:50.106 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): productId: 654
-15:40:50.106 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): mfrId: sss
-15:40:50.106 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - makeOrder(): quantity: 4
-18:16:29.669 [admin-listener(6)] DEBUG javax.servlet.Filter - destroy()
-18:16:34.654 [admin-listener(2)] DEBUG javax.servlet.Filter - init()
-18:17:23.516 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost()
-18:17:24.417 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): customer not null
-18:17:24.418 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): origUrl is null
-18:17:48.746 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-18:17:48.748 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-18:17:48.749 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is null
-18:39:55.835 [admin-listener(6)] DEBUG javax.servlet.Filter - destroy()
-18:40:00.636 [admin-listener(3)] DEBUG javax.servlet.Filter - init()
-18:40:17.981 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-18:40:18.331 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-18:40:18.332 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is null
-18:40:38.370 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-18:40:38.374 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Redirect url from Authenticate: /jsp/SignUp.jsp?notSignedUp=You+are+not+registered+to+our+Online+shopping.+Please+Sign+up..&origUrl=null
-18:43:43.266 [admin-listener(5)] DEBUG javax.servlet.Filter - destroy()
-18:43:47.992 [admin-listener(4)] DEBUG javax.servlet.Filter - init()
-18:44:02.398 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - showAllProducts()
-18:44:17.289 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-18:44:17.292 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-18:44:17.293 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is null
-18:44:34.589 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-18:44:34.595 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Redirect url from Authenticate: /jsp/SignUp.jsp?notSignedUp=You+are+not+registered+to+our+Online+shopping.+Please+Sign+up..&origUrl=null
-18:44:53.035 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost()
-18:44:53.220 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): customer not null
-18:44:53.221 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): origUrl is - null
-18:46:18.111 [admin-listener(3)] DEBUG javax.servlet.Filter - destroy()
-18:46:22.759 [admin-listener(6)] DEBUG javax.servlet.Filter - init()
-18:46:31.606 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - showAllProducts()
-18:46:44.226 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost()
-18:46:44.388 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): customer not null
-18:46:44.389 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): origUrl is null
-18:46:55.538 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-18:46:55.541 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): customer not null
-18:46:55.541 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet(): origUrl is null
-18:47:03.098 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - doGet()
-18:47:03.101 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.servlet.Authenticate - Redirect url from Authenticate: /jsp/SignUp.jsp?notSignedUp=You+are+not+registered+to+our+Online+shopping.+Please+Sign+up..&origUrl=null
-18:47:32.277 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost()
-18:47:32.454 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): customer not null
-18:47:32.454 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.servlet.MakeCustomer - doPost(): origUrl is - null
+
+11:08:21.992 [admin-listener(4)] DEBUG javax.servlet.Filter - destroy()
+11:08:29.155 [admin-listener(5)] DEBUG javax.servlet.Filter - init()
+11:09:10.840 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+11:09:22.291 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.292 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.292 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.292 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.292 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.293 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.293 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.293 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.293 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:09:22.293 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:09:22.294 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:09:22.294 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:09:22.294 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:09:22.294 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:09:22.295 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:09:22.295 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.295 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.295 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.295 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.296 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:09:22.296 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+11:09:22.296 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+11:09:22.296 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+11:09:22.297 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+11:09:22.297 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+11:09:22.297 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+11:09:22.297 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+11:09:22.297 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+11:09:22.298 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+11:09:22.298 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+11:09:22.298 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+11:09:22.298 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+11:09:22.298 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+11:09:22.298 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+11:09:22.299 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+11:09:22.299 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+11:09:22.300 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+11:09:22.300 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+11:09:22.300 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+11:09:22.300 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+11:09:22.300 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+11:09:22.300 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+11:09:22.301 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+11:09:22.301 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+11:09:22.302 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+11:09:22.302 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+11:09:22.303 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+11:37:39.227 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+11:37:39.232 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.232 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.232 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.232 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.232 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.232 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.233 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.233 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.233 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:37:39.233 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:37:39.233 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:37:39.233 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:37:39.234 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:37:39.234 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:37:39.234 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:37:39.234 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.235 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.235 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.235 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.235 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:37:39.235 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+11:37:39.235 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+11:37:39.235 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+11:37:39.236 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+11:37:39.236 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+11:37:39.236 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+11:37:39.236 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+11:37:39.236 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+11:37:39.236 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+11:37:39.237 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+11:37:39.237 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+11:37:39.237 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+11:37:39.237 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+11:37:39.237 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+11:37:39.237 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+11:37:39.237 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+11:37:39.238 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+11:37:39.238 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+11:37:39.238 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+11:37:39.238 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+11:37:39.238 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+11:37:39.238 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+11:37:39.238 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+11:37:39.239 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+11:37:39.239 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+11:37:39.239 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+11:37:39.239 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+11:47:38.534 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+11:47:38.538 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.538 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.538 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.538 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.539 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.539 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.539 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.539 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.539 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:47:38.539 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:47:38.540 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:47:38.540 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:47:38.540 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:47:38.540 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:47:38.540 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+11:47:38.540 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.540 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.541 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.541 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.541 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+11:47:38.541 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+11:47:38.541 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+11:47:38.541 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+11:47:38.541 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+11:47:38.541 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+11:47:38.542 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+11:47:38.542 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+11:47:38.542 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+11:47:38.542 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+11:47:38.542 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+11:47:38.543 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+11:47:38.543 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+11:47:38.543 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+11:47:38.543 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+11:47:38.543 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+11:47:38.543 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+11:47:38.544 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+11:47:38.544 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+11:47:38.544 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+11:47:38.544 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+11:47:38.545 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+11:47:38.545 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+11:47:38.545 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+11:47:38.545 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+11:47:38.545 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+11:47:38.545 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+11:47:38.545 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:00:56.313 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:00:56.315 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.316 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.316 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.316 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.316 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.316 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.316 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.317 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.317 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:00:56.317 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:00:56.317 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:00:56.317 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:00:56.317 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:00:56.318 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:00:56.318 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:00:56.318 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.318 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.318 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.318 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.319 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:00:56.319 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:00:56.319 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:00:56.319 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:00:56.319 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:00:56.319 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:00:56.320 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:00:56.320 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:00:56.321 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:00:56.321 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:00:56.321 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:00:56.321 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:00:56.321 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:00:56.321 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:00:56.321 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:00:56.322 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:00:56.322 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:00:56.322 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:00:56.322 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:00:56.322 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:00:56.322 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:00:56.323 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:00:56.323 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:00:56.323 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:00:56.323 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:00:56.323 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:00:56.323 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:00:56.324 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:17:07.105 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:17:07.107 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.107 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.107 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.108 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.108 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.108 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.108 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.108 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.108 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:17:07.109 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:17:07.109 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:17:07.109 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:17:07.109 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:17:07.110 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:17:07.110 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:17:07.110 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.110 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.110 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.110 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.110 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:17:07.111 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:17:07.111 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:17:07.111 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:17:07.111 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:17:07.111 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:17:07.111 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:17:07.111 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:17:07.112 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:17:07.112 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:17:07.112 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:17:07.112 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:17:07.112 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:17:07.112 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:17:07.112 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:17:07.112 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:17:07.113 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:17:07.113 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:17:07.113 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:17:07.113 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:17:07.113 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:17:07.113 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:17:07.113 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:17:07.114 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:17:07.114 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:17:07.114 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:17:07.114 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:17:07.114 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:23:18.367 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:23:18.371 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.372 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.372 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.372 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.372 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.372 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.372 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.373 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.373 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:23:18.373 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:23:18.373 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:23:18.373 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:23:18.379 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:23:18.381 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:23:18.382 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:23:18.395 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.396 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.398 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.398 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.398 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:23:18.398 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:23:18.399 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:23:18.399 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:23:18.399 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:23:18.399 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:23:18.399 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:23:18.399 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:23:18.399 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:23:18.399 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:23:18.400 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:23:18.400 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:23:18.400 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:23:18.400 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:23:18.400 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:23:18.400 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:23:18.400 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:23:18.401 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:23:18.401 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:23:18.409 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:23:18.409 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:23:18.409 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:23:18.410 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:23:18.410 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:23:18.410 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:23:18.410 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:23:18.410 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:23:18.410 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:31:58.715 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:31:58.723 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.723 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.723 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.724 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.724 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.724 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.724 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.724 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.725 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:31:58.725 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:31:58.726 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:31:58.726 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:31:58.726 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:31:58.726 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:31:58.726 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:31:58.727 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.727 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.727 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.728 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.728 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:31:58.728 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:31:58.729 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:31:58.729 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:31:58.729 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:31:58.730 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:31:58.730 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:31:58.730 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:31:58.730 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:31:58.730 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:31:58.730 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:31:58.731 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:31:58.731 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:31:58.731 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:31:58.731 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:31:58.731 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:31:58.731 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:31:58.732 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:31:58.732 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:31:58.733 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:31:58.733 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:31:58.733 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:31:58.733 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:31:58.733 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:31:58.733 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:31:58.733 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:31:58.734 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:31:58.737 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:33:28.412 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:33:28.414 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.415 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.415 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.415 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.415 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.415 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.415 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.416 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.416 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:33:28.416 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:33:28.418 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:33:28.418 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:33:28.418 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:33:28.418 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:33:28.418 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:33:28.419 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.419 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.419 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.419 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.419 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:33:28.419 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:33:28.421 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:33:28.421 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:33:28.423 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:33:28.425 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:33:28.426 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:33:28.426 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:33:28.426 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:33:28.426 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:33:28.427 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:33:28.427 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:33:28.427 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:33:28.427 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:33:28.428 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:33:28.428 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:33:28.429 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:33:28.429 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:33:28.429 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:33:28.429 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:33:28.430 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:33:28.430 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:33:28.430 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:33:28.430 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:33:28.430 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:33:28.430 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:33:28.430 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:33:28.431 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:35:52.186 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:35:52.188 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.189 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.189 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.189 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.189 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.190 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.190 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.190 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.190 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:35:52.190 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:35:52.190 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:35:52.190 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:35:52.191 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:35:52.191 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:35:52.191 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:35:52.191 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.191 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.191 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.191 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.191 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:35:52.192 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:35:52.192 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:35:52.192 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:35:52.192 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:35:52.192 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:35:52.192 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:35:52.192 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:35:52.192 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:35:52.192 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:35:52.193 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:35:52.193 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:35:52.193 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:35:52.193 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:35:52.193 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:35:52.193 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:35:52.193 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:35:52.194 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:35:52.194 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:35:52.195 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:35:52.195 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:35:52.195 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:35:52.195 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:35:52.195 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:35:52.196 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:35:52.197 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:35:52.197 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:35:52.197 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:36:26.029 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:36:26.032 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.033 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.033 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.033 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.033 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.034 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.034 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.034 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.034 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:36:26.035 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:36:26.036 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:36:26.036 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:36:26.036 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:36:26.036 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:36:26.038 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:36:26.053 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.054 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.054 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.054 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.054 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:36:26.054 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:36:26.054 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:36:26.054 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:36:26.054 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:36:26.055 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:36:26.056 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:36:26.056 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:36:26.056 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:36:26.056 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:36:26.060 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:36:26.063 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:36:26.063 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:36:26.063 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:36:26.063 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:36:26.063 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:36:26.064 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:36:26.064 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:36:26.064 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:37:17.206 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:37:17.208 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.208 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.208 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.208 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.208 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.208 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.208 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.208 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.209 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.210 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.210 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:37:17.210 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:37:17.210 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:37:17.210 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:37:17.210 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:37:17.210 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:37:17.210 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:37:17.210 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:37:17.211 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:37:17.211 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:37:17.212 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:37:17.212 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:37:17.212 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:37:17.212 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:37:17.212 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:37:17.212 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:37:17.212 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:37:17.212 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:37:17.213 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:42:57.832 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:42:57.835 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.835 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.835 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.835 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.835 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.835 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.835 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.835 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.836 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:42:57.836 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:42:57.836 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:42:57.836 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:42:57.836 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:42:57.837 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:42:57.837 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:42:57.837 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.837 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.837 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.837 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.837 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:42:57.837 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:42:57.837 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:42:57.838 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:42:57.839 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:42:57.839 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:42:57.839 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:42:57.839 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:42:57.839 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:42:57.839 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:42:57.839 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:42:57.840 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:42:57.840 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:42:57.840 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:42:57.840 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:42:57.840 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:42:57.840 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:42:57.840 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+12:44:43.726 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+12:44:43.728 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.728 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.728 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.728 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.730 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.730 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.730 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.730 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.730 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:44:43.730 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:44:43.730 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:44:43.730 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+12:44:43.731 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+12:44:43.732 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+12:44:43.733 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+12:44:43.734 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+12:44:43.734 [http-listener-1(2)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+13:02:17.269 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+13:02:17.272 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.272 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.272 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.273 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.273 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.273 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.273 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.273 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.273 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:02:17.273 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:02:17.273 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:02:17.273 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:02:17.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:02:17.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:02:17.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:02:17.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:02:17.274 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+13:02:17.275 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+13:02:17.275 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+13:02:17.275 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+13:02:17.275 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+13:02:17.275 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+13:02:17.275 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+13:02:17.275 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+13:02:17.275 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+13:02:17.276 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+13:02:17.276 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+13:02:17.276 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+13:02:17.276 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+13:02:17.276 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+13:02:17.276 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+13:02:17.276 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+13:02:17.277 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+13:02:17.278 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+13:02:17.278 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+13:02:17.278 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+13:02:17.278 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+13:02:17.278 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+13:02:17.278 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+13:02:17.278 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+13:02:17.279 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+13:02:17.279 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+13:02:17.279 [http-listener-1(4)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+13:04:01.435 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+13:04:01.439 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.442 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.442 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.443 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.443 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.444 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.444 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.444 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.444 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:04:01.444 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:04:01.444 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:04:01.444 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:04:01.444 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:04:01.445 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:04:01.445 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:04:01.445 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.445 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.445 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.445 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.447 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:04:01.448 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+13:04:01.448 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+13:04:01.448 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+13:04:01.449 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+13:04:01.449 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+13:04:01.449 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+13:04:01.450 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+13:04:01.450 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+13:04:01.450 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+13:04:01.451 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+13:04:01.451 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+13:04:01.451 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+13:04:01.451 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+13:04:01.451 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+13:04:01.451 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+13:04:01.452 [http-listener-1(1)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+13:05:33.377 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:05:33.380 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+13:05:33.381 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+13:05:33.382 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+13:05:33.382 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+13:05:33.382 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+13:05:33.382 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+13:05:33.382 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+13:05:33.383 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+13:05:33.383 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+13:05:33.383 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+13:05:33.383 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+13:05:33.384 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+13:05:33.385 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+13:05:33.385 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+13:05:33.385 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+13:05:33.385 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+13:05:33.385 [http-listener-1(3)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun
+13:08:11.448 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - reviewOrder()
+13:08:11.451 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.451 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:08:11.452 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:08:11.453 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:08:11.453 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mamun
+13:08:11.453 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.453 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.453 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.453 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.453 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - saif
+13:08:11.454 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - mili
+13:08:11.455 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from parse(): 21
+13:08:11.455 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mili orderId: 15 productId: 3 mfrId: aci quantity: 500 status: 1
+13:08:11.455 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 2 mfrId: aci quantity: 500 status: 1
+13:08:11.455 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 1 mfrId: aci quantity: 500 status: 1
+13:08:11.455 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 3 mfrId: aci quantity: 500 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 11 productId: 4 mfrId: aci quantity: 500 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 4 mfrId: aci quantity: 500 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 2 mfrId: aci quantity: 500 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 3 mfrId: aci quantity: 500 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 12 productId: 5 mfrId: aci quantity: 500 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 1 mfrId: aci quantity: 500 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 2 mfrId: aci quantity: 500 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 3 mfrId: ulv quantity: 20 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 98 mfrId: kkl quantity: 98 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: saif orderId: 16 productId: 929 mfrId: kkr quantity: 1000 status: 1
+13:08:11.456 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 5 mfrId: aci quantity: 500 status: 1
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 3 mfrId: aci quantity: 500 status: 1
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 8 mfrId: aci quantity: 500 status: 1
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 13 productId: 7 mfrId: aci quantity: 500 status: 1
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 7 mfrId: aci quantity: 500 status: 1
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 4 mfrId: aci quantity: 500 status: 1
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - uName: mamun orderId: 14 productId: 3 mfrId: aci quantity: 500 status: 1
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - rowCount from logCustomers(): 21
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mili
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: saif
+13:08:11.457 [http-listener-1(5)] DEBUG com.saif.web.practice.shop.bean.Operations - Entry: mamun

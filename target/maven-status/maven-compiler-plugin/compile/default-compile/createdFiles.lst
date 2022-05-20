@@ -7,6 +7,7 @@ com\saif\web\practice\shop\servlet\admin\ProductsEntry.class
 com\saif\web\practice\shop\servlet\protectet\UpdateProfile.class
 com\saif\web\practice\shop\bean\Operations.class
 com\saif\web\practice\shop\util\SqlBuilder.class
+com\saif\web\practice\shop\test\ReviewOrderTest.class
 com\saif\web\practice\shop\test\ParsedJson.class
 com\saif\web\practice\shop\util\SqlStatements.class
 com\saif\web\practice\shop\JAXRSConfiguration.class

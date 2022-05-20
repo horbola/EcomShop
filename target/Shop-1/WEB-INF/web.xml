@@ -10,7 +10,6 @@
     <!--    *******************************************************************************************
     Filters
     *******************************************************************************************-->
-    <!--Servlet Names (Non Protected)-->
     <filter>
         <filter-name>Authorize</filter-name>
         <filter-class>com.saif.web.practice.shop.filter.Authorize</filter-class>

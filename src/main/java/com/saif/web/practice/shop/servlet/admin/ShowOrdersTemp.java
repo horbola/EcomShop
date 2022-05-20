@@ -5,8 +5,14 @@
  */
 package com.saif.web.practice.shop.servlet.admin;
 
+import com.saif.web.practice.shop.bean.Operations;
+import com.saif.web.practice.shop.bean.Order;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,20 +34,14 @@ public class ShowOrdersTemp extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ShowOrdersTemp</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ShowOrdersTemp at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+    throws ServletException, IOException {
+        Operations operations = (Operations) request.getServletContext().getAttribute("operations");
+        HashMap<String, ArrayList<Order>> customers = operations.reviewOrder();
+        Set<Entry<String, ArrayList<Order>>> customersSet = customers.entrySet();
+        
+        request.setAttribute("customersSet", customersSet);
+        String reviewOrderPage = request.getServletContext().getInitParameter("reviewOrderPage");
+        request.getRequestDispatcher(reviewOrderPage).forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

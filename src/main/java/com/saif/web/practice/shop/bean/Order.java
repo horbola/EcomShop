@@ -23,10 +23,16 @@ import org.json.simple.parser.ParseException;
 public class Order {
     private final Logger LOGGER = LogManager.getLogger(Order.class);
     
+    private static final int NOT_VIEWED = 1;
+    private static final int PENDING = 2;
+    private static final int EXECUTING = 3;
+    
     private Customer customer;
     private int orderId;
+    private int status = NOT_VIEWED;
     ArrayList<Product> products;
-
+    
+    public Order(){}
     
     public Order(Customer customer, String cartJson){
         LOGGER.debug("Order()");
@@ -58,11 +64,44 @@ public class Order {
     public void setOrderId(int orderId) {
         this.orderId = orderId+1;
     }
+    
+    public void setOrderIdReview(int orderId) {
+        this.orderId = orderId;
+    }
 
     public int getOrderId() {
         return orderId;
     }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(ArrayList<Product> products) {
+        this.products = products;
+    }
     
+    public void setProduct(Product product){
+        if(products == null)
+            products = new ArrayList<Product>();
+        products.add(product);
+    }
     
     public ArrayList<StringBuffer> getInsertSql(){
         StringBuffer columns = new StringBuffer("INSERT INTO OrdersTemp (uName, orderId, productId, mfrId, quantity) VALUES (");
